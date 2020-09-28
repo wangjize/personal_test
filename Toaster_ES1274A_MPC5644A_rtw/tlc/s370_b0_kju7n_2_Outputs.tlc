@@ -1,0 +1,90 @@
+%implements s370_b0_kju7n_2_Outputs "C"
+
+%function Outputs(block, system) Output
+%assign cfgTxt = ""
+%openfile cfgTxt
+%assign localVarDecl = ""
+%openfile localVarDecl
+
+uint32_T qY;
+%closefile localVarDecl
+/* Chart: '<S164>/trigger1' */
+/*@>410bc*/if (/*@>50761*/localDW->/*@>50a68*/is_active_c8_Toaster_ES1274A/*@>410bb*/ == /*@>4ff0a*/0U) {
+    /*@>5076f*/localDW->/*@>50a6e*/is_active_c8_Toaster_ES1274A/*@>4110b*/ = /*@>509e8*/1U;
+    /*@>50776*/localDW->/*@>50a71*/is_c8_Toaster_ES1274A/*@>4110e*/ = /*@>4ff2f*/IN_ini_a;
+    *valid_out/*@>41112*/ = /*@>4ff30*/true;
+    /*@>5078b*/localDW->/*@>50a7a*/counter/*@>41113*/ = /*@>4ff33*/0U;
+} else {
+/*@>410bd*/    switch (/*@>50768*/localDW->/*@>50a6b*/is_c8_Toaster_ES1274A) {
+      case /*@>4ff0b*/IN_increase:
+        /*@>4ff7f*/qY/*@>4ff81*/ = /*@>504e3*/delay/*@>4ff7e*/ - /*MW:OvSatOk*/ /*@>4ffda*/1U;
+        /*@>4ff90*/if (/*@>4ff86*/qY/*@>4ff89*/ > /*@>504e7*/delay) {
+            /*@>4ff8c*/qY/*@>4ff8e*/ = /*@>4ff8b*/0U;
+        }
+        /*@>410df*/if (/*@>50799*/localDW->/*@>50a80*/counter/*@>410e9*/ >= /*@>501ac*/qY) {
+            *valid_out/*@>41100*/ = /*@>4ff27*/false;
+            /*@>507ae*/localDW->/*@>50a89*/is_c8_Toaster_ES1274A/*@>410e1*/ = /*@>4ff18*/IN_selected;
+        } else /*@>410e0*/if (!/*@<4111b*//*@>504ef*/selected_in) {
+            /*@>507a7*/localDW->/*@>50a86*/is_c8_Toaster_ES1274A/*@>410e2*/ = /*@>4ff1b*/IN_ini_a;
+            *valid_out/*@>410f8*/ = /*@>4ff23*/true;
+            /*@>507bc*/localDW->/*@>50a8f*/counter/*@>410f9*/ = /*@>4ff26*/0U;
+        } else {
+            /*@>4ff52*/qY/*@>4ff54*/ = /*@>507a0*/localDW->/*@>50a83*/counter/*@>4ff51*/ + /*MW:OvSatOk*/ /*@>4ff22*/1U;
+            /*@>4ff63*/if (/*@>4ff59*/qY/*@>4ff5c*/ < /*@>507b5*/localDW->/*@>50a8c*/counter) {
+                /*@>4ff5f*/qY/*@>4ff61*/ = /*@>4ff5e*/MAX_uint32_T;
+            }
+            /*@>507c3*/localDW->/*@>50a92*/counter/*@>410f1*/ = /*@>4ff65*/qY;
+        }
+        break;
+      case /*@>4ff0c*/IN_ini_a:
+        /*@>41104*/if (/*@>504e5*/selected_in) {
+            /*@>50784*/localDW->/*@>50a77*/is_c8_Toaster_ES1274A/*@>41105*/ = /*@>4ff2a*/IN_increase;
+        }
+        break;
+      default:
+        /*@>410c4*/if ((!/*@<4fac2*//*@>504df*/selected_in)/*@>4fac1*/ && /*@>504e1*/sys_valid) {
+            /*@>5077d*/localDW->/*@>50a74*/is_c8_Toaster_ES1274A/*@>410c5*/ = /*@>4ff11*/IN_ini_a;
+            *valid_out/*@>410d7*/ = /*@>4ff12*/true;
+            /*@>50792*/localDW->/*@>50a7d*/counter/*@>410d8*/ = /*@>4ff15*/0U;
+        }
+        break;
+    }
+}
+/* End of Chart: '<S164>/trigger1' */
+%closefile cfgTxt
+%<cfgTxt>
+%assign rtmArgSys = ::CompiledModel.System[::CompiledModel.System[::CompiledModel.RTWCGModules.RTWCGModule[2].CGSystemIdx].NonInlinedParentSystemIdx]
+%if SysFcnArgNeeded("Output", rtmArgSys.Interface.RTMArgDef, rtmArgSys.CurrentTID, FcnSysModuleIsRateGrouping(rtmArgSys, "Output"))
+%<SLibCG_AccessArg(2, 2, 0)>
+%endif
+%if SLibCG_ArgAccessed(2, 2, 0)
+%<SLibAccessArg(rtmArgSys.Interface.RTMArgDef, "Output", rtmArgSys.CurrentTID, FcnSysModuleIsRateGrouping(rtmArgSys, "Output"))>
+%endif
+%if (IsModelReferenceBaseSys(rtmArgSys) && (IsModelRefScalableBuild() || GenerateClassInterface)) ||...
+(GenerateClassInterface && SLibIsMultiInstanceServer(rtmArgSys))
+%<SLibCG_UndoAccessArg(2, 2, 0)>
+%endif
+%<LibSetSystemField(system, "CachedOutputLocalVars", localVarDecl)>
+%endfunction
+%function OutputsFcnProtoType(block, system) Output
+%assign fcnProtoType = ""
+%openfile fcnProtoType
+static void trigger1(\
+%assign comma = ""
+%if SLibCG_ArgAccessed(2, 2, 0)
+%<comma>%<::tSimStructType> * const %<::tSimStruct>\
+%assign comma = ", "
+%endif
+%<comma>uint16_T delay\
+%assign comma = ", "
+%<comma>boolean_T selected_in\
+%assign comma = ", "
+%<comma>boolean_T sys_valid\
+%assign comma = ", "
+%<comma>boolean_T *valid_out\
+%assign comma = ", "
+%<comma>rtDW_trigger1 *localDW\
+%assign comma = ", "
+%closefile fcnProtoType
+%<SLibCG_SetFcnProtoType(2, 2, fcnProtoType)>
+%endfunction

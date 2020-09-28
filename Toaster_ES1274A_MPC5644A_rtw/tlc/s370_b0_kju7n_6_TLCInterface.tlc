@@ -1,0 +1,32 @@
+%implements s370_b0_kju7n_6_TLCInterface "C"
+
+%function getOutputAddr_37_5_6_0_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return SLibCGB_BOCSCAddr(block, 158, 1, "", lcv, ucv, sigIdx, reim)
+%endfunction
+
+%function getOutput_37_5_6_0_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return SLibCGB_BOCSC(block, 158, 1, "", lcv, ucv, sigIdx, reim)
+%endfunction
+
+%function getOutputAddr_37_5_6_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return SLibCGB_BOCSCAddr(block, 158, 1, "", lcv, ucv, sigIdx, reim)
+%endfunction
+
+%function getOutput_37_5_6_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return SLibCGB_BOCSC(block, 158, 1, "", lcv, ucv, sigIdx, reim)
+%endfunction
+
+%function getOutputAddr_37_6_6_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&/*@<56ccd*//*@>56cc7*/B./*@>56cd2*/CANReceiveCounter"
+%endfunction
+
+%function getOutput_37_6_6_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "/*@>56cdf*/B./*@>56ceb*/CANReceiveCounter"
+%endfunction
+

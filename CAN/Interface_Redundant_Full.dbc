@@ -1,0 +1,524 @@
+VERSION ""
+
+
+NS_ : 
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+	SG_MUL_VAL_
+
+BS_:
+
+BU_: RLLC RADC MLLC MADC
+VAL_TABLE_ BuzzerState 3 "FAST_PULSE" 2 "SLOW_PULSE" 1 "ON" 0 "OFF" ;
+VAL_TABLE_ DrivingLightsState 2 "HIGH_BEAMS" 1 "LOW_BEAMS" 0 "OFF" ;
+VAL_TABLE_ WiperState 3 "FAST" 2 "SLOW" 1 "INTERMITTENT" 0 "OFF" ;
+VAL_TABLE_ LEDState 3 "FAST_PULSE" 2 "SLOW_PULSE" 1 "ON" 0 "OFF" ;
+VAL_TABLE_ TurnSignalState 3 "HAZARD" 2 "RIGHT" 1 "LEFT" 0 "NONE" ;
+VAL_TABLE_ GearState 5 "B" 4 "DRIVE" 3 "NEUTRAL" 2 "REVERSE" 1 "PARK" 0 "NONE" ;
+VAL_TABLE_ PedalCommandType 1 "POSITION" 0 "NONE" ;
+VAL_TABLE_ EpbCommand 3 "SNA" 2 "APPLY" 1 "RELEASE" 0 "NONE" ;
+VAL_TABLE_ EpbStatus 3 "SNA" 2 "APPLIED" 1 "RELEASED" 0 "NONE" ;
+VAL_TABLE_ DoorCommand 3 "SNA" 2 "UNLOCK" 1 "LOCK" 0 "NONE" ;
+VAL_TABLE_ DoorStatus 4 "UNLOCKING" 3 "LOCKING" 2 "UNLOCKED" 1 "LOCKED" 0 "NONE" ;
+VAL_TABLE_ WindowCommand 3 "SNA" 2 "ROLL_DOWN" 1 "ROLL_UP" 0 "NONE" ;
+VAL_TABLE_ WindowStatus 4 "ROLLING_DOWN" 3 "ROLLING_UP" 2 "ROLLED_DOWN" 1 "ROLLED_UP" 0 "NONE" ;
+
+
+BO_ 96 MLLC_EPB_Command: 2 MLLC
+ SG_ CMD_EPB : 0|2@1+ (1,0) [0|0] ""  RLLC
+ SG_ CMD_EPB_Source : 4|4@1+ (1,0) [0|0] ""  RLLC
+
+BO_ 155 RLLC_FirmwareVersion: 7 RLLC
+ SG_ FBK_FirmwareBuildHour : 48|5@1+ (1,0) [0|31] ""  RADC
+ SG_ FBK_FirmwareBuildYear : 37|11@1+ (1,0) [0|2047] ""  RADC
+ SG_ FBK_FirmwareBuildMonth : 28|4@1+ (1,0) [0|15] ""  RADC
+ SG_ FBK_FirmwareBuildDay : 32|5@1+ (1,0) [0|31] ""  RADC
+ SG_ FBK_FirmwareMinor : 8|8@1+ (1,0) [0|255] ""  RADC
+ SG_ FBK_FirmwareMajor : 0|8@1+ (1,0) [0|255] ""  RADC
+ SG_ FBK_FirmwareBuild : 16|12@1+ (1,0) [0|4095] ""  RADC
+
+BO_ 154 RLLC_SystemFeedback: 8 RLLC
+ SG_ FBK_EmergencyBrakeCounter : 24|8@1+ (1,0) [0|255] ""  RADC
+ SG_ CNT : 8|8@1+ (1,0) [0|255] ""  RADC
+ SG_ CRC : 0|8@1+ (1,0) [0|255] ""  RADC
+ SG_ FBK_Remote_REV_Status : 34|1@1+ (1,0) [0|0] ""  RADC
+ SG_ FBK_Remote_FWD_Status : 35|1@1+ (1,0) [0|0] ""  RADC
+ SG_ FBK_Remote_E_Stop_Status : 32|1@1+ (1,0) [0|0] ""  RADC
+ SG_ FBK_Remote_2X_Status : 33|1@1+ (1,0) [0|0] ""  RADC
+ SG_ FBK_EPB_Status : 22|2@1+ (1,0) [0|0] ""  RADC
+ SG_ FBK_EPB_Engaged : 39|1@1+ (1,0) [0|0] ""  RADC
+ SG_ FBK_User_Pullover_Status : 17|1@1+ (1,0) [0|0] ""  RADC
+ SG_ FBK_User_Lock_Unlock_Status : 20|2@1+ (1,0) [0|0] ""  RADC
+ SG_ FBK_User_Help_Status : 18|1@1+ (1,0) [0|0] ""  RADC
+ SG_ FBK_User_E_Stop_Status : 16|1@1+ (1,0) [0|0] ""  RADC
+
+BO_ 112 MADC_Heartbeat: 7 MADC
+ SG_ Self_CNT : 0|8@1+ (1,0) [0|255] ""  MLLC,RADC
+ SG_ Received_CNT : 8|8@1+ (1,0) [0|255] ""  MLLC,RADC
+ SG_ Unit_Health : 16|8@1+ (1,0) [0|255] ""  MLLC,RADC
+ SG_ CAN_Bus_Health : 24|8@1+ (1,0) [0|255] ""  MLLC,RADC
+ SG_ Control_Byte : 32|8@1+ (1,0) [0|255] ""  MLLC,RADC
+ SG_ Operation_Mode : 40|8@1+ (1,0) [0|255] ""  MLLC,RADC
+ SG_ CRC : 48|8@1+ (1,0) [0|255] ""  MLLC,RADC
+
+BO_ 113 RADC_Heartbeat: 7 RADC
+ SG_ Self_CNT : 0|8@1+ (1,0) [0|255] ""  MLLC,MADC
+ SG_ Received_CNT : 8|8@1+ (1,0) [0|255] ""  MLLC,MADC
+ SG_ Unit_Health : 16|8@1+ (1,0) [0|255] ""  MLLC,MADC
+ SG_ CAN_Bus_Health : 24|8@1+ (1,0) [0|255] ""  MLLC,MADC
+ SG_ Control_Byte : 32|8@1+ (1,0) [0|255] ""  MLLC,MADC
+ SG_ Operation_Mode : 40|8@1+ (1,0) [0|255] ""  MLLC,MADC
+ SG_ CRC : 48|8@1+ (1,0) [0|255] ""  MLLC,MADC
+
+BO_ 114 MLLC_ACK: 5 MLLC
+ SG_ Latest_CNT_MADC : 0|8@1+ (1,0) [0|255] ""  MADC,RADC
+ SG_ Latest_CNT_RADC : 8|8@1+ (1,0) [0|255] ""  MADC,RADC
+ SG_ Control_Source : 16|8@1+ (1,0) [0|255] ""  MADC,RADC
+ SG_ CAN_Bus_Health : 24|8@1+ (1,0) [0|255] ""  MADC,RADC
+ SG_ CRC : 32|8@1+ (1,0) [0|255] ""  MADC,RADC
+
+BO_ 128 MLLC_SystemFeedback: 8 MLLC
+ SG_ FBK_MADCCommandDLCFault : 21|1@1+ (1,0) [0|1] ""  MADC,RADC
+ SG_ FBK_RADCCommandDLCFault : 29|1@1+ (1,0) [0|1] ""  MADC,RADC
+ SG_ FBK_Fault : 26|1@1+ (1,0) [0|1] ""  MADC,RADC
+ SG_ FBK_WaitingForDriverActivity : 24|1@1+ (1,0) [0|1] ""  MADC,RADC
+ SG_ FBK_SubsystemSelected_Throttle : 36|1@1+ (1,0) [0|1] ""  MADC,RADC
+ SG_ FBK_SubsystemSelected_Steer : 35|1@1+ (1,0) [0|1] ""  MADC,RADC
+ SG_ FBK_SubsystemSelected_Shift : 34|1@1+ (1,0) [0|1] ""  MADC,RADC
+ SG_ FBK_SubsystemSelected_Brake : 33|1@1+ (1,0) [0|1] ""  MADC,RADC
+ SG_ FBK_SubsystemSelected_Accessory : 32|1@1+ (1,0) [0|1] ""  MADC,RADC
+ SG_ FBK_Buzzer : 46|2@1+ (1,0) [0|3] ""  MADC,RADC
+ SG_ FBK_YellowLED : 42|2@1+ (1,0) [0|3] ""  MADC,RADC
+ SG_ FBK_RedLED : 44|2@1+ (1,0) [0|3] ""  MADC,RADC
+ SG_ FBK_GreenLED : 40|2@1+ (1,0) [0|3] ""  MADC,RADC
+ SG_ FBK_EPO : 38|1@1+ (1,0) [0|1] ""  MADC,RADC
+ SG_ FBK_Button : 39|1@1+ (1,0) [0|1] ""  MADC,RADC
+ SG_ FBK_CommandNotAlignedWarning : 37|1@1+ (1,0) [0|1] ""  MADC,RADC
+ SG_ FBK_DriverActivity : 17|1@1+ (1,0) [0|1] ""  MADC,RADC
+ SG_ FBK_WaitingForOverrideClear : 25|1@1+ (1,0) [0|1] ""  MADC,RADC
+ SG_ FBK_FaultOverrideCounter : 56|8@1+ (1,0) [0|255] ""  MADC,RADC
+ SG_ FBK_FaultOverride : 19|1@1+ (1,0) [0|1] ""  MADC,RADC
+ SG_ FBK_Engaged : 16|1@1+ (1,0) [0|1] ""  MADC,RADC
+ SG_ FBK_DriverOverrideCounter : 48|8@1+ (1,0) [0|255] ""  MADC,RADC
+ SG_ FBK_DriverOverride : 18|1@1+ (1,0) [0|1] ""  MADC,RADC
+ SG_ FBK_MADCCommandTimeout : 22|1@1+ (1,0) [0|1] ""  MADC,RADC
+ SG_ FBK_MADCCommandCRCFault : 20|1@1+ (1,0) [0|1] ""  MADC,RADC
+ SG_ FBK_MADCCommandCounterFault : 23|1@1+ (1,0) [0|1] ""  MADC,RADC
+ SG_ FBK_RADCCommandTimeout : 30|1@1+ (1,0) [0|1] ""  MADC,RADC
+ SG_ FBK_RADCCommandCRCFault : 28|1@1+ (1,0) [0|1] ""  MADC,RADC
+ SG_ FBK_RADCCommandCounterFault : 31|1@1+ (1,0) [0|1] ""  MADC,RADC
+ SG_ CRC : 0|8@1+ (1,0) [0|255] ""  MADC,RADC
+ SG_ CNT : 8|8@1+ (1,0) [0|255] ""  MADC,RADC
+
+BO_ 144 MLLC_FirmwareVersion: 7 MLLC
+ SG_ FBK_FirmwareBuildHour : 48|5@1+ (1,0) [0|31] ""  MADC,RADC
+ SG_ FBK_FirmwareBuildYear : 37|11@1+ (1,0) [0|2047] ""  MADC,RADC
+ SG_ FBK_FirmwareBuildMonth : 28|4@1+ (1,0) [0|15] ""  MADC,RADC
+ SG_ FBK_FirmwareBuildDay : 32|5@1+ (1,0) [0|31] ""  MADC,RADC
+ SG_ FBK_FirmwareMinor : 8|8@1+ (1,0) [0|255] ""  MADC,RADC
+ SG_ FBK_FirmwareMajor : 0|8@1+ (1,0) [0|255] ""  MADC,RADC
+ SG_ FBK_FirmwareBuild : 16|12@1+ (1,0) [0|4095] ""  MADC,RADC
+
+BO_ 136 MLLC_AccessoryFeedback: 5 MLLC
+ SG_ FBK_MADCCommandDLCFault : 21|1@1+ (1,0) [0|1] ""  MADC,RADC
+ SG_ FBK_RADCCommandDLCFault : 29|1@1+ (1,0) [0|1] ""  MADC,RADC
+ SG_ FBK_DrivingLights : 38|2@1+ (1,0) [0|3] ""  MADC,RADC
+ SG_ FBK_Wiper : 26|2@1+ (1,0) [0|3] ""  MADC,RADC
+ SG_ FBK_TurnSignal : 24|2@1+ (1,0) [0|3] ""  MADC,RADC
+ SG_ CRC : 0|8@1+ (1,0) [0|255] ""  MADC,RADC
+ SG_ CNT : 8|8@1+ (1,0) [0|255] ""  MADC,RADC
+ SG_ FBK_Engaged : 16|1@1+ (1,0) [0|1] ""  MADC,RADC
+ SG_ FBK_FaultOverride : 18|1@1+ (1,0) [0|1] ""  MADC,RADC
+ SG_ FBK_MADCCommandTimeout : 22|1@1+ (1,0) [0|1] ""  MADC,RADC
+ SG_ FBK_MADCCommandCRCFault : 20|1@1+ (1,0) [0|1] ""  MADC,RADC
+ SG_ FBK_MADCCommandCounterFault : 23|1@1+ (1,0) [0|1] ""  MADC,RADC
+ SG_ FBK_RADCCommandTimeout : 30|1@1+ (1,0) [0|1] ""  MADC,RADC
+ SG_ FBK_RADCCommandCRCFault : 28|1@1+ (1,0) [0|1] ""  MADC,RADC
+ SG_ FBK_RADCCommandCounterFault : 31|1@1+ (1,0) [0|1] ""  MADC,RADC
+ SG_ FBK_CommandNotAlignedWarning : 19|1@1+ (1,0) [0|1] ""  MADC,RADC
+
+BO_ 135 MLLC_ShiftFeedback: 5 MLLC
+ SG_ FBK_MADCCommandDLCFault : 21|1@1+ (1,0) [0|1] ""  MADC,RADC
+ SG_ FBK_RADCCommandDLCFault : 29|1@1+ (1,0) [0|1] ""  MADC,RADC
+ SG_ FBK_Gear : 32|3@1+ (1,0) [0|7] ""  MADC,RADC
+ SG_ CRC : 0|8@1+ (1,0) [0|255] ""  MADC,RADC
+ SG_ CNT : 8|8@1+ (1,0) [0|255] ""  MADC,RADC
+ SG_ FBK_Engaged : 16|1@1+ (1,0) [0|1] ""  MADC,RADC
+ SG_ FBK_FaultOverride : 19|1@1+ (1,0) [0|1] ""  MADC,RADC
+ SG_ FBK_MADCCommandTimeout : 22|1@1+ (1,0) [0|1] ""  MADC,RADC
+ SG_ FBK_MADCCommandCRCFault : 20|1@1+ (1,0) [0|1] ""  MADC,RADC
+ SG_ FBK_MADCCommandCounterFault : 23|1@1+ (1,0) [0|1] ""  MADC,RADC
+ SG_ FBK_RADCCommandTimeout : 30|1@1+ (1,0) [0|1] ""  MADC,RADC
+ SG_ FBK_RADCCommandCRCFault : 28|1@1+ (1,0) [0|1] ""  MADC,RADC
+ SG_ FBK_RADCCommandCounterFault : 31|1@1+ (1,0) [0|1] ""  MADC,RADC
+ SG_ FBK_CommandNotAlignedWarning : 39|1@1+ (1,0) [0|1] ""  MADC,RADC
+
+BO_ 133 MLLC_SteerFeedback1: 7 MLLC
+ SG_ FBK_EPSStatus : 48|4@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ FBK_MADCCommandDLCFault : 21|1@1+ (1,0) [0|1] ""  MADC,RADC
+ SG_ FBK_RADCCommandDLCFault : 29|1@1+ (1,0) [0|1] ""  MADC,RADC
+ SG_ FBK_WaitingForDriverActivity : 25|1@1+ (1,0) [0|1] ""  MADC,RADC
+ SG_ FBK_StockSignalFault : 26|1@1+ (1,0) [0|1] ""  MADC,RADC
+ SG_ FBK_SpoofedSignalFault : 27|1@1+ (1,0) [0|1] ""  MADC,RADC
+ SG_ FBK_SteerWheelAngleSetpoint_Deg : 32|16@1- (0.02,0) [-655.36|655.34] "Deg"  MADC,RADC
+ SG_ CRC : 0|8@1+ (1,0) [0|255] ""  MADC,RADC
+ SG_ CNT : 8|8@1+ (1,0) [0|255] ""  MADC,RADC
+ SG_ FBK_Engaged : 16|1@1+ (1,0) [0|1] ""  MADC,RADC
+ SG_ FBK_FaultOverride : 19|1@1+ (1,0) [0|1] ""  MADC,RADC
+ SG_ FBK_DriverOverride : 18|1@1+ (1,0) [0|1] ""  MADC,RADC
+ SG_ FBK_DriverActivity : 17|1@1+ (1,0) [0|1] ""  MADC,RADC
+ SG_ FBK_MADCCommandTimeout : 22|1@1+ (1,0) [0|1] ""  MADC,RADC
+ SG_ FBK_MADCCommandCRCFault : 20|1@1+ (1,0) [0|1] ""  MADC,RADC
+ SG_ FBK_MADCCommandCounterFault : 23|1@1+ (1,0) [0|1] ""  MADC,RADC
+ SG_ FBK_RADCCommandTimeout : 30|1@1+ (1,0) [0|1] ""  MADC,RADC
+ SG_ FBK_RADCCommandCRCFault : 28|1@1+ (1,0) [0|1] ""  MADC,RADC
+ SG_ FBK_RADCCommandCounterFault : 31|1@1+ (1,0) [0|1] ""  MADC,RADC
+ SG_ FBK_CommandNotAlignedWarning : 24|1@1+ (1,0) [0|1] ""  MADC,RADC
+
+BO_ 134 MLLC_SteerFeedback2: 6 MLLC
+ SG_ FBK_DriverSteeringWheelTorque_Nm : 32|16@1- (0.0006,0) [-19.6608|19.6602] "Nm"  MADC,RADC
+ SG_ FBK_SteerAssistCurrent_A : 16|16@1+ (0.005,-160) [-160|167.675] "A"  MADC,RADC
+ SG_ CRC : 0|8@1+ (1,0) [0|255] ""  MADC,RADC
+ SG_ CNT : 8|8@1+ (1,0) [0|255] ""  MADC,RADC
+
+BO_ 132 MLLC_ThrottleFeedback2: 6 MLLC
+ SG_ CRC : 0|8@1+ (1,0) [0|255] ""  MADC,RADC
+ SG_ CNT : 8|8@1+ (1,0) [0|255] ""  MADC,RADC
+ SG_ FBK_PedalPosition : 16|16@1+ (0.00152590218966964,0) [0|100] "%"  MADC,RADC
+ SG_ FBK_DriverPedalPosition : 32|16@1+ (0.00152590218966964,0) [0|100] "%"  MADC,RADC
+
+BO_ 131 MLLC_ThrottleFeedback1: 6 MLLC
+ SG_ FBK_MADCCommandDLCFault : 21|1@1+ (1,0) [0|1] ""  MADC,RADC
+ SG_ FBK_RADCCommandDLCFault : 29|1@1+ (1,0) [0|1] ""  MADC,RADC
+ SG_ FBK_WaitingForDriverActivity : 24|1@1+ (1,0) [0|1] ""  MADC,RADC
+ SG_ FBK_StockSignalFault : 25|1@1+ (1,0) [0|1] ""  MADC,RADC
+ SG_ FBK_SpoofedSignalFault : 26|1@1+ (1,0) [0|1] ""  MADC,RADC
+ SG_ CRC : 0|8@1+ (1,0) [0|255] ""  MADC,RADC
+ SG_ CNT : 8|8@1+ (1,0) [0|255] ""  MADC,RADC
+ SG_ FBK_Engaged : 16|1@1+ (1,0) [0|1] ""  MADC,RADC
+ SG_ FBK_PedalPositionSetpoint : 32|16@1+ (0.00152590218966964,0) [0|100] "%"  MADC,RADC
+ SG_ FBK_FaultOverride : 19|1@1+ (1,0) [0|1] ""  MADC,RADC
+ SG_ FBK_DriverOverride : 18|1@1+ (1,0) [0|1] ""  MADC,RADC
+ SG_ FBK_DriverActivity : 17|1@1+ (1,0) [0|1] ""  MADC,RADC
+ SG_ FBK_MADCCommandTimeout : 22|1@1+ (1,0) [0|1] ""  MADC,RADC
+ SG_ FBK_MADCCommandCRCFault : 20|1@1+ (1,0) [0|1] ""  MADC,RADC
+ SG_ FBK_MADCCommandCounterFault : 23|1@1+ (1,0) [0|1] ""  MADC,RADC
+ SG_ FBK_RADCCommandTimeout : 30|1@1+ (1,0) [0|1] ""  MADC,RADC
+ SG_ FBK_RADCCommandCRCFault : 28|1@1+ (1,0) [0|1] ""  MADC,RADC
+ SG_ FBK_RADCCommandCounterFault : 31|1@1+ (1,0) [0|1] ""  MADC,RADC
+ SG_ FBK_CommandNotAlignedWarning : 9|1@1+ (1,0) [0|1] ""  MADC,RADC
+
+BO_ 130 MLLC_BrakeFeedback2: 6 MLLC
+ SG_ CRC : 0|8@1+ (1,0) [0|255] ""  MADC,RADC
+ SG_ CNT : 8|8@1+ (1,0) [0|255] ""  MADC,RADC
+ SG_ FBK_PedalPosition : 16|16@1+ (0.00152590218966964,0) [0|100] "%"  MADC,RADC
+ SG_ FBK_DriverPedalPosition : 32|16@1+ (0.00152590218966964,0) [0|100] "%"  MADC,RADC
+
+BO_ 129 MLLC_BrakeFeedback1: 7 MLLC
+ SG_ CRC : 0|8@1+ (1,0) [0|255] ""  MADC,RADC
+ SG_ CNT : 8|8@1+ (1,0) [0|255] ""  MADC,RADC
+ SG_ FBK_Engaged : 16|1@1+ (1,0) [0|1] ""  MADC,RADC
+ SG_ FBK_PedalPositionSetpoint : 40|16@1+ (0.00152590218966964,0) [0|100] "%"  MADC,RADC
+ SG_ FBK_FaultOverride : 19|1@1+ (1,0) [0|1] ""  MADC,RADC
+ SG_ FBK_DriverOverride : 18|1@1+ (1,0) [0|1] ""  MADC,RADC
+ SG_ FBK_DriverActivity : 17|1@1+ (1,0) [0|1] ""  MADC,RADC
+ SG_ FBK_MADCCommandTimeout : 38|1@1+ (1,0) [0|1] ""  MADC,RADC
+ SG_ FBK_MADCCommandCounterFault : 39|1@1+ (1,0) [0|1] ""  MADC,RADC
+ SG_ FBK_MADCCommandCRCFault : 36|1@1+ (1,0) [0|1] ""  MADC,RADC
+ SG_ FBK_MADCCommandDLCFault : 37|1@1+ (1,0) [0|1] ""  MADC,RADC
+ SG_ FBK_RADCCommandTimeout : 34|1@1+ (1,0) [0|1] ""  MADC,RADC
+ SG_ FBK_RADCCommandCounterFault : 35|1@1+ (1,0) [0|1] ""  MADC,RADC
+ SG_ FBK_RADCCommandCRCFault : 32|1@1+ (1,0) [0|1] ""  MADC,RADC
+ SG_ FBK_RADCCommandDLCFault : 33|1@1+ (1,0) [0|1] ""  MADC,RADC
+ SG_ FBK_WaitingForDriverActivity : 20|1@1+ (1,0) [0|1] ""  MADC,RADC
+ SG_ FBK_StockSignalFault : 26|1@1+ (1,0) [0|1] ""  MADC,RADC
+ SG_ FBK_SpoofedSignalFault : 27|1@1+ (1,0) [0|1] ""  MADC,RADC
+ SG_ FBK_BrakeLights : 24|1@1+ (1,0) [0|1] ""  MADC,RADC
+ SG_ FBK_CommandNotAlignedWarning : 31|1@1+ (1,0) [0|1] ""  MADC,RADC
+
+BO_ 64 MADC_SystemCommand: 3 MADC
+ SG_ CMD_AdcCapable : 23|1@1+ (1,0) [0|1] ""  MLLC,RADC
+ SG_ CRC : 0|8@1+ (1,0) [0|255] ""  MLLC,RADC
+ SG_ CNT : 8|8@1+ (1,0) [0|255] ""  MLLC,RADC
+ SG_ CMD_SubsystemSelect_Throttle : 19|1@1+ (1,0) [0|1] ""  MLLC,RADC
+ SG_ CMD_SubsystemSelect_Steer : 20|1@1+ (1,0) [0|1] ""  MLLC,RADC
+ SG_ CMD_SubsystemSelect_Shift : 21|1@1+ (1,0) [0|1] ""  MLLC,RADC
+ SG_ CMD_SubsystemSelect_Brake : 18|1@1+ (1,0) [0|1] ""  MLLC,RADC
+ SG_ CMD_SubsystemSelect_Accessory : 22|1@1+ (1,0) [0|1] ""  MLLC,RADC
+ SG_ CMD_RequestADSEngaged : 16|1@1+ (1,0) [0|1] ""  MLLC,RADC
+ SG_ CMD_ClearOverride : 17|1@1+ (1,0) [0|1] ""  MLLC,RADC
+
+BO_ 65 RADC_SystemCommand: 3 RADC
+ SG_ CMD_AdcCapable : 23|1@1+ (1,0) [0|1] ""  MADC,MLLC
+ SG_ CRC : 0|8@1+ (1,0) [0|255] ""  MADC,MLLC
+ SG_ CNT : 8|8@1+ (1,0) [0|255] ""  MADC,MLLC
+ SG_ CMD_SubsystemSelect_Throttle : 19|1@1+ (1,0) [0|1] ""  MADC,MLLC
+ SG_ CMD_SubsystemSelect_Steer : 20|1@1+ (1,0) [0|1] ""  MADC,MLLC
+ SG_ CMD_SubsystemSelect_Shift : 21|1@1+ (1,0) [0|1] ""  MADC,MLLC
+ SG_ CMD_SubsystemSelect_Brake : 18|1@1+ (1,0) [0|1] ""  MADC,MLLC
+ SG_ CMD_SubsystemSelect_Accessory : 22|1@1+ (1,0) [0|1] ""  MADC,MLLC
+ SG_ CMD_RequestADSEngaged : 16|1@1+ (1,0) [0|1] ""  MADC,MLLC
+ SG_ CMD_ClearOverride : 17|1@1+ (1,0) [0|1] ""  MADC,MLLC
+
+BO_ 90 MADC_AccessoryCommand: 5 MADC
+ SG_ CMD_DrivingLights : 16|2@1+ (1,0) [0|3] ""  MLLC,RADC
+ SG_ CRC : 0|8@1+ (1,0) [0|255] ""  MLLC,RADC
+ SG_ CNT : 8|8@1+ (1,0) [0|255] ""  MLLC,RADC
+ SG_ CMD_Wiper : 20|2@1+ (1,0) [0|3] ""  MLLC,RADC
+ SG_ CMD_TurnSignal : 18|2@1+ (1,0) [0|3] ""  MLLC,RADC
+
+BO_ 91 RADC_AccessoryCommand: 5 RADC
+ SG_ CMD_DrivingLights : 16|2@1+ (1,0) [0|3] ""  MADC,MLLC
+ SG_ CRC : 0|8@1+ (1,0) [0|255] ""  MADC,MLLC
+ SG_ CNT : 8|8@1+ (1,0) [0|255] ""  MADC,MLLC
+ SG_ CMD_Wiper : 20|2@1+ (1,0) [0|3] ""  MADC,MLLC
+ SG_ CMD_TurnSignal : 18|2@1+ (1,0) [0|3] ""  MADC,MLLC
+
+BO_ 85 MADC_ShiftCommand: 3 MADC
+ SG_ CRC : 0|8@1+ (1,0) [0|255] ""  MLLC,RADC
+ SG_ CNT : 8|8@1+ (1,0) [0|255] ""  MLLC,RADC
+ SG_ CMD_Gear : 16|3@1+ (1,0) [0|7] ""  MLLC,RADC
+
+BO_ 86 RADC_ShiftCommand: 3 RADC
+ SG_ CRC : 0|8@1+ (1,0) [0|255] ""  MADC,MLLC
+ SG_ CNT : 8|8@1+ (1,0) [0|255] ""  MADC,MLLC
+ SG_ CMD_Gear : 16|3@1+ (1,0) [0|7] ""  MADC,MLLC
+
+BO_ 80 MADC_SteerCommand: 5 MADC
+ SG_ CMD_SteeringWheelAngleRate : 32|8@1+ (2,0) [0|510] "deg" Vector__XXX
+ SG_ CRC : 0|8@1+ (1,0) [0|255] ""  MLLC,RADC
+ SG_ CNT : 8|8@1+ (1,0) [0|255] ""  MLLC,RADC
+ SG_ CMD_SteeringWheelAngle_Deg : 16|16@1- (0.02,0) [-655.36|655.34] "deg"  MLLC,RADC
+
+BO_ 81 RADC_SteerCommand: 5 RADC
+ SG_ CMD_SteeringWheelAngleRate : 32|8@1+ (2,0) [0|510] "deg" Vector__XXX
+ SG_ CRC : 0|8@1+ (1,0) [0|255] ""  MADC,MLLC
+ SG_ CNT : 8|8@1+ (1,0) [0|255] ""  MADC,MLLC
+ SG_ CMD_SteeringWheelAngle_Deg : 16|16@1- (0.02,0) [-655.36|655.34] "deg"  MADC,MLLC
+
+BO_ 74 MADC_ThrottleCommand: 6 MADC
+ SG_ CRC : 0|8@1+ (1,0) [0|255] ""  MLLC,RADC
+ SG_ CNT : 8|8@1+ (1,0) [0|255] ""  MLLC,RADC
+ SG_ CMD_PedalPositionRate : 32|11@1+ (1,0) [0|2047] "%/s"  MLLC,RADC
+ SG_ CMD_PedalPosition : 16|16@1+ (0.00152590218966964,0) [0|100] "%"  MLLC,RADC
+
+BO_ 75 RADC_ThrottleCommand: 6 RADC
+ SG_ CRC : 0|8@1+ (1,0) [0|255] ""  MADC,MLLC
+ SG_ CNT : 8|8@1+ (1,0) [0|255] ""  MADC,MLLC
+ SG_ CMD_PedalPositionRate : 32|11@1+ (1,0) [0|2047] "%/s"  MADC,MLLC
+ SG_ CMD_PedalPosition : 16|16@1+ (0.00152590218966964,0) [0|100] "%"  MADC,MLLC
+
+BO_ 69 MADC_BrakeCommand: 6 MADC
+ SG_ CMD_EPB : 46|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ CMD_BrakeLights : 43|1@1+ (1,0) [0|1] ""  MLLC,RADC
+ SG_ CRC : 0|8@1+ (1,0) [0|255] ""  MLLC,RADC
+ SG_ CNT : 8|8@1+ (1,0) [0|255] ""  MLLC,RADC
+ SG_ CMD_PedalPositionRate : 32|11@1+ (1,0) [0|2047] "%/s"  MLLC,RADC
+ SG_ CMD_PedalPosition : 16|16@1+ (0.00152590218966964,0) [0|100] "%"  MLLC,RADC
+
+BO_ 70 RADC_BrakeCommand: 6 RADC
+ SG_ CMD_EPB : 46|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ CMD_BrakeLights : 43|1@1+ (1,0) [0|1] ""  MADC,MLLC
+ SG_ CRC : 0|8@1+ (1,0) [0|255] ""  MADC,MLLC
+ SG_ CNT : 8|8@1+ (1,0) [0|255] ""  MADC,MLLC
+ SG_ CMD_PedalPositionRate : 32|11@1+ (1,0) [0|2047] "%/s"  MADC,MLLC
+ SG_ CMD_PedalPosition : 16|16@1+ (0.00152590218966964,0) [0|100] "%"  MADC,MLLC
+
+BO_ 512 MADC_UTC_Time: 8 MADC
+ SG_ UTC_Time_sec : 0|64@1+ (1,0) [0|5000000000] ""  MLLC,RADC
+
+BO_ 513 RADC_UTC_Time: 8 RADC
+ SG_ UTC_Time_sec : 0|64@1+ (1,0) [0|5000000000] ""  MLLC,MADC
+
+
+
+CM_ SG_ 112 Self_CNT "Counter value from this unit";
+CM_ SG_ 112 Received_CNT "Counter value received from another unit";
+CM_ SG_ 112 Unit_Health "Health level of current unit";
+CM_ SG_ 112 CAN_Bus_Health "CAN health level of three CAN buses";
+CM_ SG_ 112 Control_Byte "Byte used for control transfer";
+CM_ SG_ 112 Operation_Mode "Current unit operation mode";
+CM_ SG_ 112 CRC "8-bit CRC, SAE J1850";
+CM_ SG_ 113 Self_CNT "Counter value from this unit";
+CM_ SG_ 113 Received_CNT "Counter value received from another unit";
+CM_ SG_ 113 Unit_Health "Health level of current unit";
+CM_ SG_ 113 CAN_Bus_Health "CAN health level of three CAN buses";
+CM_ SG_ 113 Control_Byte "Byte used for control transfer";
+CM_ SG_ 113 Operation_Mode "Current unit operation mode";
+CM_ SG_ 113 CRC "8-bit CRC, SAE J1850";
+CM_ SG_ 114 Latest_CNT_MADC "Latest counter value received from Main unit";
+CM_ SG_ 114 Latest_CNT_RADC "Latest counter value received from Redundant unit";
+CM_ SG_ 114 Control_Source "Who has control of dbw";
+CM_ SG_ 114 CAN_Bus_Health "CAN health level of three CAN buses";
+CM_ SG_ 114 CRC "8-bit CRC, SAE J1850";
+CM_ SG_ 128 FBK_MADCCommandDLCFault "system command";
+CM_ SG_ 128 FBK_RADCCommandDLCFault "system command";
+CM_ SG_ 128 FBK_Fault "system-wide";
+CM_ SG_ 128 FBK_WaitingForDriverActivity "system-wide";
+CM_ SG_ 128 FBK_CommandNotAlignedWarning "system-wide";
+CM_ SG_ 128 FBK_DriverActivity "system-wide";
+CM_ SG_ 128 FBK_FaultOverride "system-wide";
+CM_ SG_ 128 FBK_DriverOverride "system-wide";
+CM_ SG_ 128 FBK_MADCCommandTimeout "system command";
+CM_ SG_ 128 FBK_MADCCommandCRCFault "system command";
+CM_ SG_ 128 FBK_MADCCommandCounterFault "system command";
+CM_ SG_ 128 FBK_RADCCommandTimeout "system command";
+CM_ SG_ 128 FBK_RADCCommandCRCFault "system command";
+CM_ SG_ 128 FBK_RADCCommandCounterFault "system command";
+CM_ SG_ 128 CRC "optional; need to specify 8-bit CRC if desired";
+CM_ SG_ 128 CNT "4-bit counter; 8 bits reserved if more bits desired";
+CM_ SG_ 136 CRC "optional; need to specify 8-bit CRC if desired";
+CM_ SG_ 136 CNT "4-bit counter; 8 bits reserved if more bits desired";
+CM_ SG_ 136 FBK_FaultOverride "subsystem culprit";
+CM_ SG_ 135 CRC "optional; need to specify 8-bit CRC if desired";
+CM_ SG_ 135 CNT "4-bit counter; 8 bits reserved if more bits desired";
+CM_ SG_ 133 FBK_WaitingForDriverActivity "activity on subsystem will cause system statechart transition";
+CM_ SG_ 133 FBK_SteerWheelAngleSetpoint_Deg "Intend to only provide steering angle in Deg command option";
+CM_ SG_ 133 CRC "optional; need to specify 8-bit CRC if desired";
+CM_ SG_ 133 CNT "4-bit counter; 8 bits reserved if more bits desired";
+CM_ SG_ 133 FBK_FaultOverride "subsystem culprit";
+CM_ SG_ 133 FBK_DriverOverride "subsystem culprit";
+CM_ SG_ 134 FBK_DriverSteeringWheelTorque_Nm "Intend to only provide assist torque in Nm command option";
+CM_ SG_ 134 FBK_SteerAssistCurrent_A "Intend to only provide assist torque in Nm command option";
+CM_ SG_ 134 CRC "optional; need to specify 8-bit CRC if desired";
+CM_ SG_ 134 CNT "4-bit counter; 8 bits reserved if more bits desired";
+CM_ SG_ 132 CRC "optional; need to specify 8-bit CRC if desired";
+CM_ SG_ 132 CNT "4-bit counter; 8 bits reserved if more bits desired";
+CM_ SG_ 131 FBK_WaitingForDriverActivity "activity on subsystem will cause system statechart transition";
+CM_ SG_ 131 CRC "optional; need to specify 8-bit CRC if desired";
+CM_ SG_ 131 CNT "4-bit counter; 8 bits reserved if more bits desired";
+CM_ SG_ 131 FBK_PedalPositionSetpoint "Intend to only provide position in percent command";
+CM_ SG_ 131 FBK_FaultOverride "subsystem culprit";
+CM_ SG_ 131 FBK_DriverOverride "subsystem culprit";
+CM_ SG_ 130 CRC "optional; need to specify 8-bit CRC if desired";
+CM_ SG_ 130 CNT "4-bit counter; 8 bits reserved if more bits desired";
+CM_ SG_ 129 CRC "optional; need to specify 8-bit CRC if desired";
+CM_ SG_ 129 CNT "4-bit counter; 8 bits reserved if more bits desired";
+CM_ SG_ 129 FBK_PedalPositionSetpoint "Intend to only provide position in percent command";
+CM_ SG_ 129 FBK_FaultOverride "subsystem culprit";
+CM_ SG_ 129 FBK_DriverOverride "subsystem culprit";
+CM_ SG_ 129 FBK_WaitingForDriverActivity "activity on subsystem will cause system statechart transition";
+CM_ SG_ 64 CRC "optional; need to specify 8-bit CRC if desired";
+CM_ SG_ 64 CNT "4-bit counter; 8 bits reserved if more bits desired";
+CM_ SG_ 90 CRC "optional; need to specify 8-bit CRC if desired";
+CM_ SG_ 90 CNT "4-bit counter; 8 bits reserved if more bits desired";
+CM_ SG_ 85 CRC "optional; need to specify 8-bit CRC if desired";
+CM_ SG_ 85 CNT "4-bit counter; 8 bits reserved if more bits desired";
+CM_ SG_ 80 CRC "optional; need to specify 8-bit CRC if desired";
+CM_ SG_ 80 CNT "4-bit counter; 8 bits reserved if more bits desired";
+CM_ SG_ 80 CMD_SteeringWheelAngle_Deg "Intend to only provide steering wheel angle command in deg option";
+CM_ SG_ 74 CRC "optional; need to specify 8-bit CRC if desired";
+CM_ SG_ 74 CNT "4-bit counter; 8 bits reserved if more bits desired";
+CM_ SG_ 74 CMD_PedalPositionRate "Intend to only provide position in percent command";
+CM_ SG_ 74 CMD_PedalPosition "Intend to only provide position in percent command";
+CM_ SG_ 69 CMD_BrakeLights "Can be used independently to flash brake lights";
+CM_ SG_ 69 CRC "optional; need to specify 8-bit CRC if desired";
+CM_ SG_ 69 CNT "4-bit counter; 8 bits reserved if more bits desired";
+CM_ SG_ 69 CMD_PedalPositionRate "Intend to only provide position in percent command";
+CM_ SG_ 69 CMD_PedalPosition "Intend to only provide position in percent command";
+BA_DEF_ BO_  "GenMsgSendType" ENUM  "Cyclic","NotUsed","NotUsed","NotUsed","NotUsed","NotUsed","NotUsed","IfActive","NoMsgSendType","NotUsed","vector_leerstring";
+BA_DEF_ BO_  "GenMsgCycleTime" INT 0 50000;
+BA_DEF_DEF_  "GenMsgSendType" "NoMsgSendType";
+BA_DEF_DEF_  "GenMsgCycleTime" 0;
+BA_ "GenMsgSendType" BO_ 96 10;
+BA_ "GenMsgCycleTime" BO_ 96 0;
+BA_ "GenMsgCycleTime" BO_ 155 1000;
+BA_ "GenMsgSendType" BO_ 155 0;
+BA_ "GenMsgCycleTime" BO_ 154 10;
+BA_ "GenMsgSendType" BO_ 154 0;
+BA_ "GenMsgSendType" BO_ 112 0;
+BA_ "GenMsgCycleTime" BO_ 112 10;
+BA_ "GenMsgSendType" BO_ 113 0;
+BA_ "GenMsgCycleTime" BO_ 113 10;
+BA_ "GenMsgCycleTime" BO_ 128 10;
+BA_ "GenMsgSendType" BO_ 128 0;
+BA_ "GenMsgCycleTime" BO_ 144 1000;
+BA_ "GenMsgSendType" BO_ 144 0;
+BA_ "GenMsgCycleTime" BO_ 136 200;
+BA_ "GenMsgSendType" BO_ 136 0;
+BA_ "GenMsgCycleTime" BO_ 135 200;
+BA_ "GenMsgSendType" BO_ 135 0;
+BA_ "GenMsgCycleTime" BO_ 133 10;
+BA_ "GenMsgSendType" BO_ 133 0;
+BA_ "GenMsgCycleTime" BO_ 134 10;
+BA_ "GenMsgSendType" BO_ 134 0;
+BA_ "GenMsgCycleTime" BO_ 132 10;
+BA_ "GenMsgSendType" BO_ 132 0;
+BA_ "GenMsgCycleTime" BO_ 131 10;
+BA_ "GenMsgSendType" BO_ 131 0;
+BA_ "GenMsgCycleTime" BO_ 130 10;
+BA_ "GenMsgSendType" BO_ 130 0;
+BA_ "GenMsgCycleTime" BO_ 129 10;
+BA_ "GenMsgSendType" BO_ 129 0;
+BA_ "GenMsgCycleTime" BO_ 64 10;
+BA_ "GenMsgSendType" BO_ 64 0;
+BA_ "GenMsgCycleTime" BO_ 65 10;
+BA_ "GenMsgSendType" BO_ 65 0;
+BA_ "GenMsgCycleTime" BO_ 90 200;
+BA_ "GenMsgSendType" BO_ 90 0;
+BA_ "GenMsgCycleTime" BO_ 91 200;
+BA_ "GenMsgSendType" BO_ 91 0;
+BA_ "GenMsgCycleTime" BO_ 85 200;
+BA_ "GenMsgSendType" BO_ 85 0;
+BA_ "GenMsgCycleTime" BO_ 86 200;
+BA_ "GenMsgSendType" BO_ 86 0;
+BA_ "GenMsgCycleTime" BO_ 80 10;
+BA_ "GenMsgSendType" BO_ 80 0;
+BA_ "GenMsgCycleTime" BO_ 81 10;
+BA_ "GenMsgSendType" BO_ 81 0;
+BA_ "GenMsgCycleTime" BO_ 74 10;
+BA_ "GenMsgSendType" BO_ 74 0;
+BA_ "GenMsgCycleTime" BO_ 75 10;
+BA_ "GenMsgSendType" BO_ 75 0;
+BA_ "GenMsgCycleTime" BO_ 69 10;
+BA_ "GenMsgSendType" BO_ 69 0;
+BA_ "GenMsgCycleTime" BO_ 70 10;
+BA_ "GenMsgSendType" BO_ 70 0;
+BA_ "GenMsgCycleTime" BO_ 512 1000;
+BA_ "GenMsgSendType" BO_ 512 0;
+BA_ "GenMsgCycleTime" BO_ 513 1000;
+BA_ "GenMsgSendType" BO_ 513 0;
+VAL_ 96 CMD_EPB 3 "SNA" 2 "APPLY" 1 "RELEASE" 0 "NONE" ;
+VAL_ 96 CMD_EPB_Source 3 "MLLC" 2 "RADC" 1 "MADC" 0 "NA" ;
+VAL_ 154 FBK_EPB_Status 3 "SNA" 2 "APPLIED" 1 "RELEASED" 0 "NONE" ;
+VAL_ 114 Control_Source 4 "RADC_TELE" 3 "RADC" 2 "MADC_TELE" 1 "MADC" 0 "HUMAN" ;
+VAL_ 128 FBK_Buzzer 3 "FAST_PULSE" 2 "SLOW_PULSE" 1 "ON" 0 "OFF" ;
+VAL_ 128 FBK_YellowLED 3 "FAST_PULSE" 2 "SLOW_PULSE" 1 "ON" 0 "OFF" ;
+VAL_ 128 FBK_RedLED 3 "FAST_PULSE" 2 "SLOW_PULSE" 1 "ON" 0 "OFF" ;
+VAL_ 128 FBK_GreenLED 3 "FAST_PULSE" 2 "SLOW_PULSE" 1 "ON" 0 "OFF" ;
+VAL_ 136 FBK_DrivingLights 2 "HIGH_BEAMS" 1 "LOW_BEAMS" 0 "OFF" ;
+VAL_ 136 FBK_Wiper 3 "FAST" 2 "SLOW" 1 "INTERMITTENT" 0 "OFF" ;
+VAL_ 136 FBK_TurnSignal 3 "HAZARD" 2 "RIGHT" 1 "LEFT" 0 "NONE" ;
+VAL_ 135 FBK_Gear 5 "B" 4 "DRIVE" 3 "NEUTRAL" 2 "REVERSE" 1 "PARK" 0 "NONE" ;
+VAL_ 90 CMD_DrivingLights 2 "HIGH_BEAMS" 1 "LOW_BEAMS" 0 "OFF" ;
+VAL_ 90 CMD_Wiper 3 "FAST" 2 "SLOW" 1 "INTERMITTENT" 0 "OFF" ;
+VAL_ 90 CMD_TurnSignal 3 "HAZARD" 2 "RIGHT" 1 "LEFT" 0 "NONE" ;
+VAL_ 85 CMD_Gear 5 "B" 4 "DRIVE" 3 "NEUTRAL" 2 "REVERSE" 1 "PARK" 0 "NONE" ;
+VAL_ 69 CMD_EPB 3 "SNA" 2 "APPLY" 1 "RELEASE" 0 "NONE" ;
+VAL_ 70 CMD_EPB 3 "SNA" 2 "APPLY" 1 "RELEASE" 0 "NONE" ;
+

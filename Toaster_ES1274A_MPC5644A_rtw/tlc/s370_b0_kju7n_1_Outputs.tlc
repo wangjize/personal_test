@@ -1,0 +1,86 @@
+%implements s370_b0_kju7n_1_Outputs "C"
+
+%function Outputs(block, system) Output
+%assign cfgTxt = ""
+%openfile cfgTxt
+%assign localVarDecl = ""
+/* Chart: '<S179>/trigger' */
+/*@>41000*/if (/*@>4f6f7*/localDW->/*@>4fa10*/temporalCounter_i1/*@>40fff*/ < /*@>4efe0*/65535U) {
+    /*@>4f6fe*/localDW->/*@>4fa13*/temporalCounter_i1/*@>4f9a9*/++;
+}
+/*@>4100e*/if (/*@>4f70c*/localDW->/*@>4fa16*/is_active_c2_LeafEcoTronDBWLib/*@>4100d*/ == /*@>4efe8*/0U) {
+    /*@>4f71a*/localDW->/*@>4fa1c*/is_active_c2_LeafEcoTronDBWLib/*@>4105c*/ = /*@>4f99b*/1U;
+    /*@>4f721*/localDW->/*@>4fa1f*/is_c2_LeafEcoTronDBWLib/*@>4105f*/ = /*@>4f00c*/IN_ini;
+    *ageValid/*@>41063*/ = /*@>4f00d*/false;
+} else {
+/*@>4100f*/    switch (/*@>4f713*/localDW->/*@>4fa19*/is_c2_LeafEcoTronDBWLib) {
+      case /*@>4efe9*/IN_age_invalid:
+        *ageValid/*@>41035*/ = /*@>4effb*/false;
+        /*@>41030*/if (/*@>4f466*/update) {
+            /*@>4f73d*/localDW->/*@>4fa2b*/is_c2_LeafEcoTronDBWLib/*@>41031*/ = /*@>4effa*/IN_age_valid;
+            *ageValid/*@>4103b*/ = /*@>4effc*/true;
+        }
+        break;
+      case /*@>4efea*/IN_age_valid:
+        *ageValid/*@>41047*/ = /*@>4f002*/true;
+        /*@>4103f*/if (!/*@<41067*//*@>4f468*/update) {
+            /*@>4f744*/localDW->/*@>4fa2e*/is_c2_LeafEcoTronDBWLib/*@>41041*/ = /*@>4f001*/IN_wait;
+            /*@>4f752*/localDW->/*@>4fa34*/temporalCounter_i1/*@>41040*/ = /*@>4f99e*/0U;
+        }
+        break;
+      case /*@>4efeb*/IN_ini:
+        *ageValid/*@>41052*/ = /*@>4f006*/false;
+        /*@>4104d*/if (/*@>4f46a*/update) {
+            /*@>4f74b*/localDW->/*@>4fa31*/is_c2_LeafEcoTronDBWLib/*@>4104e*/ = /*@>4f005*/IN_age_valid;
+            *ageValid/*@>41058*/ = /*@>4f007*/true;
+        }
+        break;
+      default:
+        /*@>41017*/if (/*@>4f459*/update) {
+            /*@>4f72f*/localDW->/*@>4fa25*/is_c2_LeafEcoTronDBWLib/*@>41019*/ = /*@>4eff0*/IN_age_valid;
+            *ageValid/*@>4102c*/ = /*@>4eff7*/true;
+        } else {
+            /*@>41018*/if (/*@>4f728*/localDW->/*@>4fa22*/temporalCounter_i1/*@>41023*/ >= /*@>4f464*/threshold) {
+                /*@>4f736*/localDW->/*@>4fa28*/is_c2_LeafEcoTronDBWLib/*@>4101a*/ = /*@>4eff3*/IN_age_invalid;
+                *ageValid/*@>41028*/ = /*@>4eff6*/false;
+            }
+        }
+        break;
+    }
+}
+/* End of Chart: '<S179>/trigger' */
+%closefile cfgTxt
+%<cfgTxt>
+%assign rtmArgSys = ::CompiledModel.System[::CompiledModel.System[::CompiledModel.RTWCGModules.RTWCGModule[1].CGSystemIdx].NonInlinedParentSystemIdx]
+%if SysFcnArgNeeded("Output", rtmArgSys.Interface.RTMArgDef, rtmArgSys.CurrentTID, FcnSysModuleIsRateGrouping(rtmArgSys, "Output"))
+%<SLibCG_AccessArg(1, 2, 0)>
+%endif
+%if SLibCG_ArgAccessed(1, 2, 0)
+%<SLibAccessArg(rtmArgSys.Interface.RTMArgDef, "Output", rtmArgSys.CurrentTID, FcnSysModuleIsRateGrouping(rtmArgSys, "Output"))>
+%endif
+%if (IsModelReferenceBaseSys(rtmArgSys) && (IsModelRefScalableBuild() || GenerateClassInterface)) ||...
+(GenerateClassInterface && SLibIsMultiInstanceServer(rtmArgSys))
+%<SLibCG_UndoAccessArg(1, 2, 0)>
+%endif
+%<LibSetSystemField(system, "CachedOutputLocalVars", localVarDecl)>
+%endfunction
+%function OutputsFcnProtoType(block, system) Output
+%assign fcnProtoType = ""
+%openfile fcnProtoType
+static void trigger(\
+%assign comma = ""
+%if SLibCG_ArgAccessed(1, 2, 0)
+%<comma>%<::tSimStructType> * const %<::tSimStruct>\
+%assign comma = ", "
+%endif
+%<comma>uint16_T threshold\
+%assign comma = ", "
+%<comma>boolean_T update\
+%assign comma = ", "
+%<comma>boolean_T *ageValid\
+%assign comma = ", "
+%<comma>rtDW_trigger *localDW\
+%assign comma = ", "
+%closefile fcnProtoType
+%<SLibCG_SetFcnProtoType(1, 2, fcnProtoType)>
+%endfunction

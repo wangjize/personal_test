@@ -1,0 +1,113 @@
+%implements s370_b0_kju7n_7_Start "C"
+
+%function Start(block, system) Output
+%assign cfgTxt = ""
+%openfile cfgTxt
+%assign localVarDecl = ""
+%assign tlcStartFcnOfS346B41 = OpaqueTLCBlockFcn("Start", 346, 41, 7, 1)
+%assign tlcStartFcnOfS346B319 = OpaqueTLCBlockFcn("Start", 346, 319, 7, 1)
+%assign tlcStartFcnOfS346B370 = OpaqueTLCBlockFcn("Start", 346, 370, 7, 1)
+%assign tlcStartFcnOfS346B374 = OpaqueTLCBlockFcn("Start", 346, 374, 7, 1)
+%assign tlcStartFcnOfS346B378 = OpaqueTLCBlockFcn("Start", 346, 378, 7, 1)
+%assign tlcStartFcnOfS346B414 = OpaqueTLCBlockFcn("Start", 346, 414, 7, 1)
+%assign tlcStartFcnOfS346B420 = OpaqueTLCBlockFcn("Start", 346, 420, 7, 1)
+%assign tlcStartFcnOfS346B423 = OpaqueTLCBlockFcn("Start", 346, 423, 7, 1)
+%assign tlcStartFcnOfS346B426 = OpaqueTLCBlockFcn("Start", 346, 426, 7, 1)
+%assign tlcStartFcnOfS346B428 = OpaqueTLCBlockFcn("Start", 346, 428, 7, 1)
+%assign tlcStartFcnOfS346B626 = OpaqueTLCBlockFcn("Start", 346, 626, 7, 1)
+%assign tlcStartFcnOfS346B627 = OpaqueTLCBlockFcn("Start", 346, 627, 7, 1)
+%assign tlcStartFcnOfS346B628 = OpaqueTLCBlockFcn("Start", 346, 628, 7, 1)
+%assign tlcStartFcnOfS346B629 = OpaqueTLCBlockFcn("Start", 346, 629, 7, 1)
+%assign tlcStartFcnOfS346B770 = OpaqueTLCBlockFcn("Start", 346, 770, 7, 1)
+%assign tlcStartFcnOfS346B771 = OpaqueTLCBlockFcn("Start", 346, 771, 7, 1)
+%if !WHITE_SPACE(tlcStartFcnOfS346B41)
+/* Start for S-Function (DIO_In): '<S263>/Switch Input8' */
+%<SLibCG_DumpSSCode("/*@[87dc5*/",tlcStartFcnOfS346B41,"/*@]*/")>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS346B319)
+/* Start for S-Function (DIO_In): '<S263>/Switch Input10' */
+%<SLibCG_DumpSSCode("/*@[87dc7*/",tlcStartFcnOfS346B319,"/*@]*/")>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS346B370)
+/* Start for S-Function (DIO_In): '<S263>/Switch Input2' */
+%<SLibCG_DumpSSCode("/*@[87dc9*/",tlcStartFcnOfS346B370,"/*@]*/")>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS346B374)
+/* Start for S-Function (DIO_In): '<S263>/Switch Input3' */
+%<SLibCG_DumpSSCode("/*@[87dcb*/",tlcStartFcnOfS346B374,"/*@]*/")>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS346B378)
+/* Start for S-Function (DIO_In): '<S263>/Switch Input' */
+%<SLibCG_DumpSSCode("/*@[87dcd*/",tlcStartFcnOfS346B378,"/*@]*/")>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS346B414)
+/* Start for S-Function (DIO_In): '<S263>/Switch Input1' */
+%<SLibCG_DumpSSCode("/*@[87dcf*/",tlcStartFcnOfS346B414,"/*@]*/")>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS346B420)
+/* Start for S-Function (DIO_In): '<S263>/Switch Input4' */
+%<SLibCG_DumpSSCode("/*@[87dd1*/",tlcStartFcnOfS346B420,"/*@]*/")>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS346B423)
+/* Start for S-Function (DIO_In): '<S263>/Switch Input6' */
+%<SLibCG_DumpSSCode("/*@[87dd3*/",tlcStartFcnOfS346B423,"/*@]*/")>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS346B426)
+/* Start for S-Function (DIO_In): '<S263>/Switch Input5' */
+%<SLibCG_DumpSSCode("/*@[87dd5*/",tlcStartFcnOfS346B426,"/*@]*/")>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS346B428)
+/* Start for S-Function (DIO_In): '<S263>/Switch Input7' */
+%<SLibCG_DumpSSCode("/*@[87dd7*/",tlcStartFcnOfS346B428,"/*@]*/")>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS346B626)
+/* Start for S-Function (DIO_Out): '<S356>/Switch Output24' */
+%<SLibCG_DumpSSCode("/*@[87dd9*/",tlcStartFcnOfS346B626,"/*@]*/")>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS346B627)
+/* Start for S-Function (DIO_Out): '<S356>/Switch Output25' */
+%<SLibCG_DumpSSCode("/*@[87ddb*/",tlcStartFcnOfS346B627,"/*@]*/")>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS346B628)
+/* Start for S-Function (DIO_Out): '<S356>/Switch Output26' */
+%<SLibCG_DumpSSCode("/*@[87ddd*/",tlcStartFcnOfS346B628,"/*@]*/")>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS346B629)
+/* Start for S-Function (DIO_Out): '<S356>/Switch Output8' */
+%<SLibCG_DumpSSCode("/*@[87ddf*/",tlcStartFcnOfS346B629,"/*@]*/")>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS346B770)
+/* Start for S-Function (ADC): '<S262>/Read ADC Value' */
+%<SLibCG_DumpSSCode("/*@[87de1*/",tlcStartFcnOfS346B770,"/*@]*/")>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS346B771)
+/* Start for S-Function (ADC): '<S262>/Read ADC Value1' */
+%<SLibCG_DumpSSCode("/*@[87de3*/",tlcStartFcnOfS346B771,"/*@]*/")>\
+%endif
+/* Start for InitialCondition: '<S158>/IC1' */
+/*@>8056a*/DWork./*@>97cef*/IC1_FirstOutputTime/*@>41b1d*/ = /*@>6d4a8*/true;
+/* Start for InitialCondition: '<S156>/IC1' */
+/*@>80570*/DWork./*@>97cf2*/IC1_FirstOutputTime_m/*@>41b1f*/ = /*@>6d4ab*/true;
+/* Start for InitialCondition: '<S141>/IC1' */
+/*@>80576*/DWork./*@>97cf5*/IC1_FirstOutputTime_p/*@>41b21*/ = /*@>6d4ae*/true;
+/* Start for InitialCondition: '<S121>/IC1' */
+/*@>8057c*/DWork./*@>97cf8*/IC1_FirstOutputTime_px/*@>41b23*/ = /*@>6d4b1*/true;
+/* Start for InitialCondition: '<S122>/IC1' */
+/*@>80582*/DWork./*@>97cfb*/IC1_FirstOutputTime_c/*@>41b25*/ = /*@>6d4b4*/true;
+/* Start for InitialCondition: '<S157>/IC1' */
+/*@>80588*/DWork./*@>97cfe*/IC1_FirstOutputTime_j/*@>41b27*/ = /*@>6d4b7*/true;
+/* Start for InitialCondition: '<S120>/IC1' */
+/*@>8058e*/DWork./*@>97d01*/IC1_FirstOutputTime_h/*@>41b29*/ = /*@>6d4ba*/true;
+/* Start for InitialCondition: '<S140>/IC1' */
+/*@>80594*/DWork./*@>97d04*/IC1_FirstOutputTime_g/*@>41b2b*/ = /*@>6d4bd*/true;
+%closefile cfgTxt
+%<cfgTxt>
+%endfunction
+%function StartFcnProtoType(block, system) Output
+%assign fcnProtoType = ""
+%openfile fcnProtoType
+static void Start(\
+%assign comma = ""
+%closefile fcnProtoType
+%<SLibCG_SetFcnProtoType(7, 1, fcnProtoType)>
+%endfunction

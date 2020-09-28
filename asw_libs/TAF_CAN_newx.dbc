@@ -1,0 +1,643 @@
+VERSION ""
+
+
+NS_ : 
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+	SG_MUL_VAL_
+
+BS_:
+
+BU_: HCU BMS MCU
+
+
+BO_ 3221225472 VECTOR__INDEPENDENT_SIG_MSG: 0 Vector__XXX
+ SG_ SI_30Bit : 0|30@1- (1,0) [0|0] "" Vector__XXX
+ SG_ SI_29Bit : 0|29@1- (1,0) [0|0] "" Vector__XXX
+ SG_ SI_28Bit : 0|28@1- (1,0) [0|0] "" Vector__XXX
+ SG_ SI_27Bit : 0|27@1- (1,0) [0|0] "" Vector__XXX
+ SG_ SI_26Bit : 0|26@1- (1,0) [0|0] "" Vector__XXX
+ SG_ SI_25Bit : 0|25@1- (1,0) [0|0] "" Vector__XXX
+ SG_ SI_23Bit : 0|23@1- (1,0) [0|0] "" Vector__XXX
+ SG_ SI_22Bit : 0|22@1- (1,0) [0|0] "" Vector__XXX
+ SG_ SI_21Bit : 0|21@1- (1,0) [0|0] "" Vector__XXX
+ SG_ SI_20Bit : 0|20@1- (1,0) [0|0] "" Vector__XXX
+ SG_ SI_19Bit : 0|19@1- (1,0) [0|0] "" Vector__XXX
+ SG_ SI_18Bit : 0|18@1- (1,0) [0|0] "" Vector__XXX
+ SG_ SI_17Bit : 0|17@1- (1,0) [0|0] "" Vector__XXX
+ SG_ SI_15Bit : 0|15@1- (1,0) [0|0] "" Vector__XXX
+ SG_ SI_14Bit : 0|14@1- (1,0) [0|0] "" Vector__XXX
+ SG_ SI_13Bit : 0|13@1- (1,0) [0|0] "" Vector__XXX
+ SG_ SI_11Bit : 0|11@1- (1,0) [0|0] "" Vector__XXX
+ SG_ SI_10Bit : 0|10@1- (1,0) [0|0] "" Vector__XXX
+ SG_ SI_09Bit : 0|9@1- (1,0) [0|0] "" Vector__XXX
+ SG_ SI_07Bit : 0|7@1- (1,0) [0|0] "" Vector__XXX
+ SG_ SI_06Bit : 0|6@1- (1,0) [0|0] "" Vector__XXX
+ SG_ SI_05Bit : 0|5@1- (1,0) [0|0] "" Vector__XXX
+ SG_ SI_03Bit : 0|3@1- (1,0) [0|0] "" Vector__XXX
+ SG_ SI_02Bit : 0|2@1- (1,0) [0|0] "" Vector__XXX
+ SG_ UI_30Bit : 0|30@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ UI_29Bit : 0|29@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ UI_28Bit : 0|28@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ UI_27Bit : 0|27@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ UI_26Bit : 0|26@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ UI_25Bit : 0|25@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ UI_23Bit : 0|23@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ UI_22Bit : 0|22@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ UI_21Bit : 0|21@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ UI_20Bit : 0|20@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ UI_19Bit : 0|19@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ UI_18Bit : 0|18@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ UI_17Bit : 0|17@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ UI_15Bit : 0|15@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ UI_14Bit : 0|14@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ UI_13Bit : 0|13@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ UI_11Bit : 0|11@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ UI_10Bit : 0|10@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ UI_09Bit : 0|9@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ UI_07Bit : 0|7@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ UI_06Bit : 0|6@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ UI_05Bit : 0|5@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ UI_03Bit : 0|3@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ UI_02Bit : 0|2@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ UI_12Bit : 0|12@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ UI_24Bit : 0|24@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ UI_01Bit : 0|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ SI_04Bit : 0|4@1- (1,0) [0|0] "" Vector__XXX
+ SG_ SI_16Bit : 0|16@1- (1,0) [0|0] "" Vector__XXX
+ SG_ SI_32Bit : 0|32@1- (1,0) [0|0] "" Vector__XXX
+ SG_ SI_08Bit : 0|8@1- (1,0) [0|0] "" Vector__XXX
+ SG_ SI_24Bit : 0|24@1- (1,0) [0|0] "" Vector__XXX
+ SG_ UI_04Bit : 0|4@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ UI_32Bit : 0|32@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ UI_16Bit : 0|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ UI_08Bit : 0|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ UI_31Bit : 0|31@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ SI_12Bit : 0|12@1- (1,0) [0|0] "" Vector__XXX
+ SG_ SI_31Bit : 0|31@1- (1,0) [0|0] "" Vector__XXX
+
+BO_ 1285 CAN_Single0_motorola_Across: 8 Vector__XXX
+ SG_ Sigl_single0_motorola_Across : 3|32@0- (1,0) [0|0] "" Vector__XXX
+
+BO_ 279 CAN_Single0_Across: 8 Vector__XXX
+ SG_ Sigl_single0_Across : 4|32@1- (1,0) [0|0] "" Vector__XXX
+
+BO_ 1284 CAN_Single0_motorola: 8 Vector__XXX
+ SG_ Sigl_single0_motorola : 7|32@0- (1,0) [0|0] "" Vector__XXX
+
+BO_ 1283 CAN_Single_motorola: 8 Vector__XXX
+ SG_ Sigl_single2_motorola : 39|32@0- (1,0) [0|0] "" Vector__XXX
+ SG_ Sigl_single1_motorola : 7|32@0- (1,0) [0|0] "" Vector__XXX
+
+BO_ 1282 CAN_Double0_motorola: 8 Vector__XXX
+ SG_ Sigl_double0_motorola : 7|64@0- (1,0) [0|0] "" Vector__XXX
+
+BO_ 1281 CAN_Double_motorola: 8 Vector__XXX
+ SG_ Sigl_double_motorola : 7|64@0- (1,0) [0|0] "" Vector__XXX
+
+BO_ 277 CAN_Double0: 8 Vector__XXX
+ SG_ Sigl_double0 : 0|64@1- (1,0) [0|0] "" Vector__XXX
+
+BO_ 278 CAN_Single0: 8 Vector__XXX
+ SG_ Sigl_single0 : 0|32@1- (1,0) [0|0] "" Vector__XXX
+
+BO_ 276 CAN_48Bit: 8 Vector__XXX
+ SG_ Sigl_48Bits : 0|48@1- (0.5,-1) [0|0] "" Vector__XXX
+
+BO_ 275 CAN_64Bits: 8 Vector__XXX
+ SG_ Sigl_64Bits : 0|64@1- (0.5,-1) [0|0] "" Vector__XXX
+
+BO_ 274 CAN_Double: 8 Vector__XXX
+ SG_ Sigl_double : 0|64@1- (1,0) [0|0] "" Vector__XXX
+
+BO_ 273 CAN_Single: 8 Vector__XXX
+ SG_ Sigl_single2 : 32|32@1- (1,0) [0|0] "" Vector__XXX
+ SG_ Sigl_single1 : 0|32@1- (1,0) [0|0] "" Vector__XXX
+
+BO_ 1 CAN0x0: 2 Vector__XXX
+ SG_ cntRx : 7|16@0+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 2147483648 CAN0x0x: 2 Vector__XXX
+ SG_ cntRx : 7|16@0+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 2684354555 CAN0x1ffffffb: 2 Vector__XXX
+ SG_ cntRx : 7|16@0+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 2043 CAN0x7fb: 2 Vector__XXX
+ SG_ cntRx : 7|16@0+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 2684354556 CAN0x1ffffffc: 2 Vector__XXX
+ SG_ cntRx : 7|16@0+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 2044 CAN0x7fc: 2 Vector__XXX
+ SG_ cntRx : 7|16@0+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 2045 CAN0x7fd: 2 Vector__XXX
+ SG_ cntRx : 7|16@0+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 2684354557 CAN0x1ffffffd: 2 Vector__XXX
+ SG_ cntRx : 7|16@0+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 2046 CAN0x7fe: 2 Vector__XXX
+ SG_ cntRx : 7|16@0+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 2684354558 CAN0x1ffffffe: 2 Vector__XXX
+ SG_ cntRx : 7|16@0+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 2684354559 CAN0x1fffffff: 2 Vector__XXX
+ SG_ cntRx : 7|16@0+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 2047 CAN0x7ff: 2 Vector__XXX
+ SG_ cntRx : 7|16@0+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 2147484704 CAN0x410x: 8 Vector__XXX
+ SG_ Byte7 : 56|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Byte6 : 48|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Byte5 : 40|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Byte4 : 32|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Byte3 : 24|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Byte2 : 16|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Byte1 : 8|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Byte0 : 0|8@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 2147484697 CAN0x409x: 8 Vector__XXX
+ SG_ Byte7 : 56|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Byte6 : 48|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Byte5 : 40|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Byte4 : 32|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Byte3 : 24|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Byte2 : 16|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Byte1 : 8|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Byte0 : 0|8@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 2147484696 CAN0x408x: 8 Vector__XXX
+ SG_ Byte7 : 56|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Byte6 : 48|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Byte5 : 40|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Byte4 : 32|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Byte3 : 24|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Byte2 : 16|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Byte1 : 8|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Byte0 : 0|8@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 2147484695 CAN0x407x: 8 Vector__XXX
+ SG_ Byte7 : 56|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Byte6 : 48|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Byte5 : 40|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Byte4 : 32|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Byte3 : 24|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Byte2 : 16|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Byte1 : 8|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Byte0 : 0|8@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 2147484694 CAN0x406x: 8 Vector__XXX
+ SG_ Byte7 : 56|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Byte6 : 48|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Byte5 : 40|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Byte4 : 32|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Byte3 : 24|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Byte2 : 16|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Byte1 : 8|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Byte0 : 0|8@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 2147484693 CAN0x405x: 8 Vector__XXX
+ SG_ Byte7 : 56|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Byte6 : 48|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Byte5 : 40|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Byte4 : 32|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Byte3 : 24|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Byte2 : 16|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Byte1 : 8|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Byte0 : 0|8@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 2147484692 CAN0x404x: 8 Vector__XXX
+ SG_ Byte7 : 56|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Byte6 : 48|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Byte5 : 40|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Byte4 : 32|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Byte3 : 24|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Byte2 : 16|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Byte1 : 8|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Byte0 : 0|8@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 2147484691 CAN0x403x: 8 Vector__XXX
+ SG_ Byte7 : 56|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Byte6 : 48|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Byte5 : 40|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Byte4 : 32|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Byte3 : 24|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Byte2 : 16|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Byte1 : 8|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Byte0 : 0|8@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 2147484690 CAN0x402x: 8 Vector__XXX
+ SG_ Byte7 : 56|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Byte6 : 48|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Byte5 : 40|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Byte4 : 32|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Byte3 : 24|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Byte2 : 16|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Byte1 : 8|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Byte0 : 0|8@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 2147484689 CAN0x401x: 8 Vector__XXX
+ SG_ Byte7 : 56|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Byte6 : 48|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Byte5 : 40|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Byte4 : 32|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Byte3 : 24|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Byte2 : 16|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Byte1 : 8|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Byte0 : 0|8@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 1040 CAN0x410: 8 Vector__XXX
+ SG_ Byte7 : 56|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Byte6 : 48|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Byte5 : 40|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Byte4 : 32|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Byte3 : 24|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Byte2 : 16|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Byte1 : 8|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Byte0 : 0|8@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 1033 CAN0x409: 8 Vector__XXX
+ SG_ Byte7 : 56|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Byte6 : 48|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Byte5 : 40|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Byte4 : 32|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Byte3 : 24|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Byte2 : 16|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Byte1 : 8|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Byte0 : 0|8@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 1032 CAN0x408: 8 Vector__XXX
+ SG_ Byte7 : 56|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Byte6 : 48|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Byte5 : 40|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Byte4 : 32|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Byte3 : 24|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Byte2 : 16|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Byte1 : 8|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Byte0 : 0|8@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 1031 CAN0x407: 8 Vector__XXX
+ SG_ Byte7 : 56|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Byte6 : 48|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Byte5 : 40|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Byte4 : 32|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Byte3 : 24|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Byte2 : 16|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Byte1 : 8|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Byte0 : 0|8@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 1030 CAN0x406: 8 Vector__XXX
+ SG_ Byte7 : 56|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Byte6 : 48|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Byte5 : 40|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Byte4 : 32|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Byte3 : 24|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Byte2 : 16|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Byte1 : 8|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Byte0 : 0|8@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 1029 CAN0x405: 8 Vector__XXX
+ SG_ Byte7 : 56|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Byte6 : 48|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Byte5 : 40|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Byte4 : 32|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Byte3 : 24|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Byte2 : 16|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Byte1 : 8|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Byte0 : 0|8@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 1028 CAN0x404: 8 Vector__XXX
+ SG_ Byte7 : 56|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Byte6 : 48|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Byte5 : 40|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Byte4 : 32|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Byte3 : 24|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Byte2 : 16|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Byte1 : 8|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Byte0 : 0|8@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 1027 CAN0x403: 8 Vector__XXX
+ SG_ Byte7 : 56|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Byte6 : 48|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Byte5 : 40|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Byte4 : 32|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Byte3 : 24|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Byte2 : 16|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Byte1 : 8|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Byte0 : 0|8@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 1026 CAN0x402: 8 Vector__XXX
+ SG_ Byte7 : 56|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Byte6 : 48|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Byte5 : 40|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Byte4 : 32|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Byte3 : 24|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Byte2 : 16|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Byte1 : 8|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Byte0 : 0|8@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 1025 CAN0x401: 8 Vector__XXX
+ SG_ Byte7 : 56|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Byte6 : 48|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Byte5 : 40|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Byte4 : 32|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Byte3 : 24|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Byte2 : 16|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Byte1 : 8|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Byte0 : 0|8@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 520 M_UI09: 8 Vector__XXX
+ SG_ UI_16Bit : 0|16@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 519 M_UI08: 8 Vector__XXX
+ SG_ UI_18Bit : 46|18@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ UI_17Bit : 29|17@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ UI_15Bit : 14|15@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ UI_14Bit : 0|14@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 518 M_UI07: 8 Vector__XXX
+ SG_ UI_20Bit : 44|20@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ UI_19Bit : 25|19@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ UI_13Bit : 12|13@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ UI_12Bit : 0|12@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 517 M_UI06: 8 Vector__XXX
+ SG_ UI_22Bit : 42|22@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ UI_21Bit : 21|21@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ UI_11Bit : 10|11@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ UI_10Bit : 0|10@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 516 M_UI05: 8 Vector__XXX
+ SG_ UI_24Bit : 40|24@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ UI_23Bit : 17|23@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ UI_09Bit : 8|9@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ UI_08Bit : 0|8@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 515 M_UI04: 8 Vector__XXX
+ SG_ UI_26Bit : 38|26@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ UI_25Bit : 13|25@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ UI_07Bit : 6|7@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ UI_06Bit : 0|6@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 769 M_SI02: 8 Vector__XXX
+ SG_ SI_30Bit : 34|30@1- (1,0) [0|0] "" Vector__XXX
+ SG_ SI_29Bit : 5|29@1- (1,0) [0|0] "" Vector__XXX
+ SG_ SI_03Bit : 2|3@1- (1,0) [0|0] "" Vector__XXX
+ SG_ SI_02Bit : 0|2@1- (1,0) [0|0] "" Vector__XXX
+
+BO_ 770 M_SI03: 8 Vector__XXX
+ SG_ SI_28Bit : 36|28@1- (1,0) [0|0] "" Vector__XXX
+ SG_ SI_27Bit : 9|27@1- (1,0) [0|0] "" Vector__XXX
+ SG_ SI_05Bit : 4|5@1- (1,0) [0|0] "" Vector__XXX
+ SG_ SI_04Bit : 0|4@1- (1,0) [0|0] "" Vector__XXX
+
+BO_ 771 M_SI04: 8 Vector__XXX
+ SG_ SI_07Bit : 6|7@1- (1,0) [0|0] "" Vector__XXX
+ SG_ SI_06Bit : 0|6@1- (1,0) [0|0] "" Vector__XXX
+ SG_ SI_26Bit : 38|26@1- (1,0) [0|0] "" Vector__XXX
+ SG_ SI_25Bit : 13|25@1- (1,0) [0|0] "" Vector__XXX
+
+BO_ 776 M_SI09: 8 Vector__XXX
+ SG_ SI_16Bit : 0|16@1- (1,0) [0|0] "" Vector__XXX
+
+BO_ 775 M_SI08: 8 Vector__XXX
+ SG_ SI_18Bit : 46|18@1- (1,0) [0|0] "" Vector__XXX
+ SG_ SI_17Bit : 29|17@1- (1,0) [0|0] "" Vector__XXX
+ SG_ SI_15Bit : 14|15@1- (1,0) [0|0] "" Vector__XXX
+ SG_ SI_14Bit : 0|14@1- (1,0) [0|0] "" Vector__XXX
+
+BO_ 774 M_SI07: 8 Vector__XXX
+ SG_ SI_20Bit : 44|20@1- (1,0) [0|0] "" Vector__XXX
+ SG_ SI_19Bit : 25|19@1- (1,0) [0|0] "" Vector__XXX
+ SG_ SI_13Bit : 12|13@1- (1,0) [0|0] "" Vector__XXX
+ SG_ SI_12Bit : 0|12@1- (1,0) [0|0] "" Vector__XXX
+
+BO_ 773 M_SI06: 8 Vector__XXX
+ SG_ SI_22Bit : 42|22@1- (1,0) [0|0] "" Vector__XXX
+ SG_ SI_21Bit : 21|21@1- (1,0) [0|0] "" Vector__XXX
+ SG_ SI_11Bit : 10|11@1- (1,0) [0|0] "" Vector__XXX
+ SG_ SI_10Bit : 0|10@1- (1,0) [0|0] "" Vector__XXX
+
+BO_ 772 M_SI05: 8 Vector__XXX
+ SG_ SI_09Bit : 8|9@1- (1,0) [0|0] "" Vector__XXX
+ SG_ SI_08Bit : 0|8@1- (1,0) [0|0] "" Vector__XXX
+ SG_ SI_24Bit : 40|24@1- (1,0) [0|0] "" Vector__XXX
+ SG_ SI_23Bit : 17|23@1- (1,0) [0|0] "" Vector__XXX
+
+BO_ 768 M_SI01: 8 Vector__XXX
+ SG_ SI_32Bit : 31|32@1- (1,0) [0|0] "" Vector__XXX
+ SG_ SI_31Bit : 0|31@1- (1,0) [0|0] "" Vector__XXX
+
+BO_ 514 M_UI03: 8 Vector__XXX
+ SG_ UI_05Bit : 4|5@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ UI_04Bit : 0|4@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ UI_28Bit : 36|28@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ UI_27Bit : 9|27@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 513 M_UI02: 8 Vector__XXX
+ SG_ UI_30Bit : 34|30@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ UI_29Bit : 5|29@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ UI_03Bit : 2|3@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ UI_02Bit : 0|2@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 512 M_UI01: 8 Vector__XXX
+ SG_ UI_32Bit : 32|32@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ UI_31Bit : 1|31@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ UI_01Bit : 0|1@1+ (1,0) [0|0] "" Vector__XXX
+
+
+
+CM_ BO_ 3221225472 "This is a message for not used signals, created by Vector CANdb++ DBC OLE DB Provider.";
+BA_DEF_ EV_  "GenEnvAutoGenCtrl" ENUM  "No","Yes";
+BA_DEF_ EV_  "GenEnvControlType" ENUM  "NoControl","SliderHoriz","SliderVert","PushButton","Edit","BitmapSwitch";
+BA_DEF_ EV_  "GenEnvIsGeneratedSnd" ENUM  "No","Yes";
+BA_DEF_ EV_  "GenEnvMsgName" STRING ;
+BA_DEF_ EV_  "GenEnvMsgOffset" INT 0 2147483647;
+BA_DEF_ EV_  "GenEnvIsGeneratedDsp" ENUM  "No","Yes";
+BA_DEF_ SG_  "GenSigEnvVarType" ENUM  "int","float","undef";
+BA_DEF_ SG_  "NWM-WakeupAllowed" ENUM  "No","Yes";
+BA_DEF_ SG_  "GenSigPostIfSetting" STRING ;
+BA_DEF_ SG_  "GenSigPreIfSetting" STRING ;
+BA_DEF_ SG_  "GenSigConditionalSend" STRING ;
+BA_DEF_ SG_  "GenSigAssignSetting" STRING ;
+BA_DEF_ SG_  "GenSigPostSetting" STRING ;
+BA_DEF_ SG_  "GenSigPreSetting" STRING ;
+BA_DEF_ SG_  "GenSigEVName" STRING ;
+BA_DEF_ SG_  "GenSigReceiveSetting" STRING ;
+BA_DEF_ SG_  "GenSigAutoGenDsp" ENUM  "No","Yes";
+BA_DEF_ SG_  "GenSigStartValue" FLOAT 0 100000000000;
+BA_DEF_ SG_  "GenSigInactiveValue" INT 0 100000;
+BA_DEF_ SG_  "GenSigAutoGenSnd" ENUM  "No","Yes";
+BA_DEF_ SG_  "GenSigSendType" ENUM  "Cyclic","OnWrite","OnWriteWithRepetition","OnChange","OnChangeWithRepetition","IfActive","IfActiveWithRepetition";
+BA_DEF_ SG_  "GenSigAltSetting" STRING ;
+BA_DEF_ BO_  "GenMsgNrOfRepetition" INT 0 999999;
+BA_DEF_ BO_  "GenMsgAltSetting" STRING ;
+BA_DEF_ BO_  "GenMsgPostIfSetting" STRING ;
+BA_DEF_ BO_  "GenMsgPreIfSetting" STRING ;
+BA_DEF_ BO_  "GenMsgConditionalSend" STRING ;
+BA_DEF_ BO_  "GenMsgPostSetting" STRING ;
+BA_DEF_ BO_  "GenMsgPreSetting" STRING ;
+BA_DEF_ BO_  "GenMsgEVName" STRING ;
+BA_DEF_ BO_  "GenMsgAutoGenDsp" ENUM  "No","Yes";
+BA_DEF_ BO_  "GenMsgAutoGenSnd" ENUM  "No","Yes";
+BA_DEF_ BO_  "GenMsgDelayTime" INT 1 1000;
+BA_DEF_ BO_  "GenMsgCycleTime" INT 2 50000;
+BA_DEF_ BO_  "GenMsgSendType" ENUM  "Cyclic","not_used","not_used","not_used","not_used","Cyclic","not_used","IfActive";
+BA_DEF_ BO_  "DiagRequest" ENUM  "no","yes";
+BA_DEF_ BO_  "DiagResponse" ENUM  "no","yes";
+BA_DEF_ BO_  "NmMessage" ENUM  "no","yes";
+BA_DEF_ BO_  "GenMsgCycleTimeFast" INT 2 100000;
+BA_DEF_ BO_  "GenMsgILSupport" ENUM  "No","Yes";
+BA_DEF_ BO_  "GenMsgStartDelayTime" INT 0 100000;
+BA_DEF_ BO_  "GenMsgFastOnStart" INT 0 100000;
+BA_DEF_ BU_  "GenNodAutoGenDsp" ENUM  "No","Yes";
+BA_DEF_ BU_  "GenNodAutoGenSnd" ENUM  "No","Yes";
+BA_DEF_ BU_  "GenNodSleepTime" INT 0 1000000;
+BA_DEF_ BU_  "TpNodeBaseAddress" HEX 0 33554431;
+BA_DEF_ BU_  "TpUseFC" INT 0 1;
+BA_DEF_ BU_  "TpCanBus" INT 1 2;
+BA_DEF_ BU_  "TpRxMask" HEX 0 65535;
+BA_DEF_ BU_  "Diagnose-Stationsadresse" HEX 0 255;
+BA_DEF_ BU_  "TpRxIdentifier" HEX 0 536870911;
+BA_DEF_ BU_  "TpTxIdentifier" HEX 0 536870911;
+BA_DEF_ BU_  "NmNode" ENUM  "no","yes";
+BA_DEF_ BU_  "NmStationAddress" INT 0 63;
+BA_DEF_ BU_  "ILUsed" ENUM  "Yes","No";
+BA_DEF_ BU_  "TpAddressingMode" INT 0 3;
+BA_DEF_  "GenNWMTalkNM" STRING ;
+BA_DEF_  "GenNWMGotoMode_BusSleep" STRING ;
+BA_DEF_  "GenNWMGotoMode_Awake" STRING ;
+BA_DEF_  "GenNWMApCanSleep" STRING ;
+BA_DEF_  "GenNWMApCanOn" STRING ;
+BA_DEF_  "GenNWMApCanOff" STRING ;
+BA_DEF_  "NmBaseAddress" HEX 1024 1055;
+BA_DEF_  "GenEnvVarPrefix" STRING ;
+BA_DEF_  "GenEnvVarEndingSnd" STRING ;
+BA_DEF_  "GenEnvVarEndingDsp" STRING ;
+BA_DEF_  "GenNWMSleepTime" INT 0 1000000;
+BA_DEF_  "DBName" STRING ;
+BA_DEF_  "BusType" STRING ;
+BA_DEF_ BU_  "NodeLayerModules" STRING ;
+BA_DEF_ BU_  "ECU" STRING ;
+BA_DEF_ BU_  "CANoeJitterMax" INT 0 0;
+BA_DEF_ BU_  "CANoeJitterMin" INT 0 0;
+BA_DEF_ BU_  "CANoeDrift" INT 0 0;
+BA_DEF_ BU_  "CANoeStartDelay" INT 0 0;
+BA_DEF_DEF_  "GenEnvAutoGenCtrl" "No";
+BA_DEF_DEF_  "GenEnvControlType" "";
+BA_DEF_DEF_  "GenEnvIsGeneratedSnd" "No";
+BA_DEF_DEF_  "GenEnvMsgName" "";
+BA_DEF_DEF_  "GenEnvMsgOffset" 0;
+BA_DEF_DEF_  "GenEnvIsGeneratedDsp" "No";
+BA_DEF_DEF_  "GenSigEnvVarType" "undef";
+BA_DEF_DEF_  "NWM-WakeupAllowed" "";
+BA_DEF_DEF_  "GenSigPostIfSetting" "";
+BA_DEF_DEF_  "GenSigPreIfSetting" "";
+BA_DEF_DEF_  "GenSigConditionalSend" "";
+BA_DEF_DEF_  "GenSigAssignSetting" "";
+BA_DEF_DEF_  "GenSigPostSetting" "";
+BA_DEF_DEF_  "GenSigPreSetting" "";
+BA_DEF_DEF_  "GenSigEVName" "";
+BA_DEF_DEF_  "GenSigReceiveSetting" "";
+BA_DEF_DEF_  "GenSigAutoGenDsp" "";
+BA_DEF_DEF_  "GenSigStartValue" 0;
+BA_DEF_DEF_  "GenSigInactiveValue" 0;
+BA_DEF_DEF_  "GenSigAutoGenSnd" "";
+BA_DEF_DEF_  "GenSigSendType" "Cyclic";
+BA_DEF_DEF_  "GenSigAltSetting" "";
+BA_DEF_DEF_  "GenMsgNrOfRepetition" 0;
+BA_DEF_DEF_  "GenMsgAltSetting" "";
+BA_DEF_DEF_  "GenMsgPostIfSetting" "";
+BA_DEF_DEF_  "GenMsgPreIfSetting" "";
+BA_DEF_DEF_  "GenMsgConditionalSend" "";
+BA_DEF_DEF_  "GenMsgPostSetting" "";
+BA_DEF_DEF_  "GenMsgPreSetting" "";
+BA_DEF_DEF_  "GenMsgEVName" "";
+BA_DEF_DEF_  "GenMsgAutoGenDsp" "";
+BA_DEF_DEF_  "GenMsgAutoGenSnd" "";
+BA_DEF_DEF_  "GenMsgDelayTime" 1;
+BA_DEF_DEF_  "GenMsgCycleTime" 2;
+BA_DEF_DEF_  "GenMsgSendType" "not_used";
+BA_DEF_DEF_  "DiagRequest" "no";
+BA_DEF_DEF_  "DiagResponse" "no";
+BA_DEF_DEF_  "NmMessage" "no";
+BA_DEF_DEF_  "GenMsgCycleTimeFast" 100;
+BA_DEF_DEF_  "GenMsgILSupport" "Yes";
+BA_DEF_DEF_  "GenMsgStartDelayTime" 0;
+BA_DEF_DEF_  "GenMsgFastOnStart" 0;
+BA_DEF_DEF_  "GenNodAutoGenDsp" "";
+BA_DEF_DEF_  "GenNodAutoGenSnd" "";
+BA_DEF_DEF_  "GenNodSleepTime" 0;
+BA_DEF_DEF_  "TpNodeBaseAddress" 1536;
+BA_DEF_DEF_  "TpUseFC" 1;
+BA_DEF_DEF_  "TpCanBus" 1;
+BA_DEF_DEF_  "TpRxMask" 255;
+BA_DEF_DEF_  "Diagnose-Stationsadresse" 0;
+BA_DEF_DEF_  "TpRxIdentifier" 1;
+BA_DEF_DEF_  "TpTxIdentifier" 1;
+BA_DEF_DEF_  "NmNode" "no";
+BA_DEF_DEF_  "NmStationAddress" 0;
+BA_DEF_DEF_  "ILUsed" "Yes";
+BA_DEF_DEF_  "TpAddressingMode" 1;
+BA_DEF_DEF_  "GenNWMTalkNM" "TalkNM()";
+BA_DEF_DEF_  "GenNWMGotoMode_BusSleep" "GotoMode_BusSleep()";
+BA_DEF_DEF_  "GenNWMGotoMode_Awake" "GotoMode_Awake()";
+BA_DEF_DEF_  "GenNWMApCanSleep" "apCanSleep()";
+BA_DEF_DEF_  "GenNWMApCanOn" "apCanOn()";
+BA_DEF_DEF_  "GenNWMApCanOff" "apCanOff()";
+BA_DEF_DEF_  "NmBaseAddress" 1024;
+BA_DEF_DEF_  "GenEnvVarPrefix" "Env";
+BA_DEF_DEF_  "GenEnvVarEndingSnd" "_";
+BA_DEF_DEF_  "GenEnvVarEndingDsp" "Dsp_";
+BA_DEF_DEF_  "GenNWMSleepTime" 0;
+BA_DEF_DEF_  "DBName" "";
+BA_DEF_DEF_  "BusType" "";
+BA_DEF_DEF_  "NodeLayerModules" "";
+BA_DEF_DEF_  "ECU" "";
+BA_DEF_DEF_  "CANoeJitterMax" 0;
+BA_DEF_DEF_  "CANoeJitterMin" 0;
+BA_DEF_DEF_  "CANoeDrift" 0;
+BA_DEF_DEF_  "CANoeStartDelay" 0;
+BA_ "DBName" "TAF_CAN_newx";
+SIG_VALTYPE_ 1285 Sigl_single0_motorola_Across : 1;
+SIG_VALTYPE_ 279 Sigl_single0_Across : 1;
+SIG_VALTYPE_ 1284 Sigl_single0_motorola : 1;
+SIG_VALTYPE_ 1283 Sigl_single2_motorola : 1;
+SIG_VALTYPE_ 1283 Sigl_single1_motorola : 1;
+SIG_VALTYPE_ 1282 Sigl_double0_motorola : 2;
+SIG_VALTYPE_ 1281 Sigl_double_motorola : 2;
+SIG_VALTYPE_ 277 Sigl_double0 : 2;
+SIG_VALTYPE_ 278 Sigl_single0 : 1;
+SIG_VALTYPE_ 274 Sigl_double : 2;
+SIG_VALTYPE_ 273 Sigl_single2 : 1;
+SIG_VALTYPE_ 273 Sigl_single1 : 1;
+

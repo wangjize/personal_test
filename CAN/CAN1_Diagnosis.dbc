@@ -1,0 +1,111 @@
+VERSION ""
+
+
+NS_ : 
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+	SG_MUL_VAL_
+
+BS_:
+
+BU_: DIAG LLC
+VAL_TABLE_ CommandType 2 "Voltage" 1 "Analog Count" 0 "PWM Duty Cycle" ;
+
+
+BO_ 19 Diag_DirectCommandThrottlePWM: 8 DIAG
+ SG_ Diag_SpoofThrottlePwmDuty_Sig2 : 16|16@1+ (0.01526,0) [0|1000.0641] "%" Vector__XXX
+ SG_ Diag_SpoofThrottlePwmDuty_Sig1 : 0|16@1+ (0.01526,0) [0|1000.0641] "%" Vector__XXX
+
+BO_ 21 Diag_DirectCommandBrakePWM: 8 DIAG
+ SG_ Diag_SpoofBrakePwmDuty_Sig2 : 16|16@1+ (0.01526,0) [0|1000.0641] "%" Vector__XXX
+ SG_ Diag_SpoofBrakePwmDuty_Sig1 : 0|16@1+ (0.01526,0) [0|1000.0641] "%" Vector__XXX
+
+BO_ 17 Diag_DirectCommandSteerPWM: 8 DIAG
+ SG_ Diag_SpoofSteerPwmDuty_Sig2 : 16|16@1+ (0.01526,0) [0|1000.0641] "%" Vector__XXX
+ SG_ Diag_SpoofSteerPwmDuty_Sig1 : 0|16@1+ (0.01526,0) [0|1000.0641] "%" Vector__XXX
+
+BO_ 1814 LLC_CalibrateBrakeSensor_Fr02: 8 LLC
+ SG_ LLC_BrakeCaliCmd_Sig2 : 36|12@1+ (0.025,0) [0|102.375] "%" Vector__XXX
+ SG_ LLC_BrakeCaliCmd_Sig1 : 24|12@1+ (0.025,0) [0|102.375] "%" Vector__XXX
+ SG_ LLC_BrakeAnalogPWM_Sig2 : 48|16@1+ (0.001526,0) [0|100.00641] "%" Vector__XXX
+ SG_ LLC_BrakeAnalogCmd_Sig2 : 12|12@1+ (1,0) [0|4095] "count" Vector__XXX
+ SG_ LLC_BrakeAnalogCmd_Sig1 : 0|12@1+ (1,0) [0|4095] "count" Vector__XXX
+
+BO_ 1813 LLC_CalibrateBrakeSensor_Fr01: 8 LLC
+ SG_ LLC_BrakeAnalogPWM_Sig1 : 48|16@1+ (0.001526,0) [0|100.00641] "%" Vector__XXX
+ SG_ LLC_BrakeCaliStock_Sig2 : 36|12@1+ (0.025,0) [0|102.375] "%" Vector__XXX
+ SG_ LLC_BrakeCaliStock_Sig1 : 24|12@1+ (0.025,0) [0|102.375] "%" Vector__XXX
+ SG_ LLC_BrakeAnalogStock_Sig2 : 12|12@1+ (1,0) [0|4095] "count" Vector__XXX
+ SG_ LLC_BrakeAnalogStock_Sig1 : 0|12@1+ (1,0) [0|4095] "count" Vector__XXX
+
+BO_ 1812 LLC_CalibrateAccPedal_Fr02: 8 LLC
+ SG_ LLC_AccPedalAnalogPWM_Sig2 : 48|16@1+ (0.001526,0) [0|100.00641] "%" Vector__XXX
+ SG_ LLC_AccPedalCaliCmd_Sig2 : 36|12@1+ (0.025,0) [0|102.375] "%" Vector__XXX
+ SG_ LLC_AccPedalCaliCmd_Sig1 : 24|12@1+ (0.025,0) [0|102.375] "%" Vector__XXX
+ SG_ LLC_AccPedalAnalogCmd_Sig2 : 12|12@1+ (1,0) [0|4095] "count" Vector__XXX
+ SG_ LLC_AccPedalAnalogCmd_Sig1 : 0|12@1+ (1,0) [0|4095] "count" Vector__XXX
+
+BO_ 1811 LLC_CalibrateAccPedal_Fr01: 8 LLC
+ SG_ LLC_AccPedalAnalogPWM_Sig1 : 48|16@1+ (0.001526,0) [0|100.00641] "%" Vector__XXX
+ SG_ LLC_AccPedalCaliStock_Sig2 : 36|12@1+ (0.025,0) [0|102.375] "%" Vector__XXX
+ SG_ LLC_AccPedalCaliStock_Sig1 : 24|12@1+ (0.025,0) [0|102.375] "%" Vector__XXX
+ SG_ LLC_AccPedalAnalogStock_Sig2 : 12|12@1+ (1,0) [0|4095] "count" Vector__XXX
+ SG_ LLC_AccPedalAnalogStock_Sig1 : 0|12@1+ (1,0) [0|4095] "count" Vector__XXX
+
+BO_ 1810 LLC_CalibrateTorqueSensor_Fr02: 8 LLC
+ SG_ LLC_SteerTorqueCaliCmd_Nm : 36|12@1+ (0.01,-20) [-20|20.95] "Nm" Vector__XXX
+ SG_ LLC_SteerTorqueAnalogCmd_Delta : 24|12@1- (2,0) [-4096|4094] "count" Vector__XXX
+ SG_ LLC_SteerTorqueAnalogCmd_Sig2 : 12|12@1+ (1,0) [0|4095] "count" Vector__XXX
+ SG_ LLC_SteerTorqueAnalogCmd_Sig1 : 0|12@1+ (1,0) [0|4095] "count" Vector__XXX
+ SG_ LLC_SteerTorqueAnalogPWM_Sig2 : 48|16@1+ (0.001526,0) [0|100.00641] "%" Vector__XXX
+
+BO_ 1809 LLC_CalibrateTorqueSensor_Fr01: 8 LLC
+ SG_ LLC_SteerTorqueAnalogPWM_Sig1 : 48|16@1+ (0.001526,0) [0|100.00641] "%" Vector__XXX
+ SG_ LLC_SteerTorqueCaliStock_Nm : 36|12@1+ (0.01,-20) [-20|20.95] "Nm" Vector__XXX
+ SG_ LLC_SteerTorqueAnalogStock_Delta : 24|12@1- (2,0) [-4096|4094] "count" Vector__XXX
+ SG_ LLC_SteerTorqueAnalogStock_Sig2 : 12|12@1+ (1,0) [0|4095] "count" Vector__XXX
+ SG_ LLC_SteerTorqueAnalogStock_Sig1 : 0|12@1+ (1,0) [0|4095] "count" Vector__XXX
+
+
+
+BA_DEF_ BU_  "NmStationAddress" HEX 0 0;
+BA_DEF_ BO_  "GenMsgCycleTime" INT 0 0;
+BA_DEF_ BO_  "GenMsgSendType" ENUM  "Cyclic","not_used","not_used","not_used","not_used","Cyclic","not_used","IfActive";
+BA_DEF_DEF_  "NmStationAddress" 0;
+BA_DEF_DEF_  "GenMsgCycleTime" 0;
+BA_DEF_DEF_  "GenMsgSendType" "not_used";
+BA_ "GenMsgSendType" BO_ 19 7;
+BA_ "GenMsgSendType" BO_ 21 7;
+BA_ "GenMsgSendType" BO_ 17 7;
+BA_ "GenMsgSendType" BO_ 1814 7;
+BA_ "GenMsgSendType" BO_ 1813 7;
+BA_ "GenMsgSendType" BO_ 1812 7;
+BA_ "GenMsgSendType" BO_ 1811 7;
+BA_ "GenMsgSendType" BO_ 1810 7;
+BA_ "GenMsgSendType" BO_ 1809 7;
+

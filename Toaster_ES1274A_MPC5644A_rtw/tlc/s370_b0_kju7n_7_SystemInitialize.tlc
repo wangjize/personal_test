@@ -1,0 +1,339 @@
+%implements s370_b0_kju7n_7_SystemInitialize "C"
+
+%function SystemInitialize(block, system) Output
+%assign cfgTxt = ""
+%openfile cfgTxt
+%assign localVarDecl = ""
+%assign _modelSS = ""
+
+DWork.Main1_PREV_T = %<(SLibCG_SE(LibGetClockTick(1)))>;
+/* InitializeConditions for DiscretePulseGenerator: '<S60>/SlowPulseGen' */
+/*@>805a0*/DWork./*@>98065*/clockTickCounter/*@>41c24*/ = /*@>97edd*/0;
+/* InitializeConditions for DiscretePulseGenerator: '<S60>/FastPulseGen' */
+/*@>805a6*/DWork./*@>98068*/clockTickCounter_p/*@>41c35*/ = /*@>97ee0*/0;
+%if !SLibCGSysFcnIsEmptyForTid(CompiledModel.System[165], "SystemInitialize",1)
+/* SystemInitialize for Chart: '<S285>/trigger' */
+%if SLibCG_SystemFcnArgAccessed("trigger_j",165,0)
+%assign _modelSS = RTMGetModelSSFromIR()
+%endif
+
+%<SLibCG_DumpSSCode("/*@[881dd*/",SLibCGIRGenReusableSysCall("trigger_j", ["%<_modelSS>", "&/*@>9817a*/DWork./*@>98179*/sf_trigger_co"], 165, 10, 4, 1, 4, 347),"/*@]*/")>\
+
+%endif
+%if !SLibCGSysFcnIsEmptyForTid(CompiledModel.System[165], "SystemInitialize",1)
+
+/* SystemInitialize for Chart: '<S281>/trigger' */
+%if SLibCG_SystemFcnArgAccessed("trigger_j",165,0)
+%assign _modelSS = RTMGetModelSSFromIR()
+%endif
+
+%<SLibCG_DumpSSCode("/*@[881de*/",SLibCGIRGenReusableSysCall("trigger_j", ["%<_modelSS>", "&/*@>981ac*/DWork./*@>981ab*/sf_trigger_nx"], 165, 6, 4, 1, 4, 347),"/*@]*/")>\
+
+%endif
+%if !SLibCGSysFcnIsEmptyForTid(CompiledModel.System[165], "SystemInitialize",1)
+
+/* SystemInitialize for Chart: '<S243>/trigger' */
+%if SLibCG_SystemFcnArgAccessed("trigger_j",165,0)
+%assign _modelSS = RTMGetModelSSFromIR()
+%endif
+
+%<SLibCG_DumpSSCode("/*@[881df*/",SLibCGIRGenReusableSysCall("trigger_j", ["%<_modelSS>", "&/*@>981de*/DWork./*@>981dd*/sf_trigger_g"], 165, 4, 4, 1, 4, 347),"/*@]*/")>\
+
+
+%endif
+/* SystemInitialize for Chart: '<S242>/check_can_counter' */
+/*@>805be*/DWork./*@>98074*/is_counter_is_invalid_b/*@>41d5c*/ = /*@>6d5e4*/IN_NO_ACTIVE_CHILD_f;
+/*@>805c4*/DWork./*@>98077*/is_counter_is_valid_i/*@>41d5d*/ = /*@>6d5e1*/IN_NO_ACTIVE_CHILD_f;
+/*@>805ca*/DWork./*@>9807a*/temporalCounter_i1_a/*@>41d60*/ = /*@>97ee3*/0U;
+/*@>805d0*/DWork./*@>9807d*/is_active_c7_LeafEcoTronDBWLi_c/*@>41d5e*/ = /*@>97ee6*/0U;
+/*@>805d6*/DWork./*@>98080*/is_c7_LeafEcoTronDBWLib_b/*@>41d5f*/ = /*@>6d5dc*/IN_NO_ACTIVE_CHILD_f;
+%if !SLibCGSysFcnIsEmptyForTid(CompiledModel.System[165], "SystemInitialize",1)
+/* SystemInitialize for Chart: '<S179>/trigger' */
+%if SLibCG_SystemFcnArgAccessed("trigger_j",165,0)
+%assign _modelSS = RTMGetModelSSFromIR()
+%endif
+
+%<SLibCG_DumpSSCode("/*@[881e0*/",SLibCGIRGenReusableSysCall("trigger_j", ["%<_modelSS>", "&/*@>98210*/DWork./*@>9820f*/sf_trigger"], 165, 0, 4, 1, 4, 347),"/*@]*/")>\
+
+%endif
+%if !SLibCGSysFcnIsEmptyForTid(CompiledModel.System[166], "SystemInitialize",1)
+
+/* SystemInitialize for Chart: '<S164>/trigger1' */
+%if SLibCG_SystemFcnArgAccessed("trigger1_e",166,0)
+%assign _modelSS = RTMGetModelSSFromIR()
+%endif
+
+%<SLibCG_DumpSSCode("/*@[881e1*/",SLibCGIRGenReusableSysCall("trigger1_e", ["%<_modelSS>", "&/*@>98242*/DWork./*@>98241*/sf_trigger1"], 166, 0, 4, 1, 4, 347),"/*@]*/")>\
+
+
+%endif
+/* SystemInitialize for Chart: '<S178>/check_can_counter' */
+/*@>805e8*/DWork./*@>98089*/is_counter_is_invalid_n/*@>41d77*/ = /*@>6d5d5*/IN_NO_ACTIVE_CHILD_f;
+/*@>805ee*/DWork./*@>9808c*/is_counter_is_valid_o/*@>41d78*/ = /*@>6d5d2*/IN_NO_ACTIVE_CHILD_f;
+/*@>805f4*/DWork./*@>9808f*/temporalCounter_i1_f/*@>41d7b*/ = /*@>97ee9*/0U;
+/*@>805fa*/DWork./*@>98092*/is_active_c7_LeafEcoTronDBWL_ct/*@>41d79*/ = /*@>97eec*/0U;
+/*@>80600*/DWork./*@>98095*/is_c7_LeafEcoTronDBWLib_a/*@>41d7a*/ = /*@>6d5cd*/IN_NO_ACTIVE_CHILD_f;
+%if !SLibCGSysFcnIsEmptyForTid(CompiledModel.System[166], "SystemInitialize",1)
+/* SystemInitialize for Chart: '<S165>/trigger1' */
+%if SLibCG_SystemFcnArgAccessed("trigger1_e",166,0)
+%assign _modelSS = RTMGetModelSSFromIR()
+%endif
+
+%<SLibCG_DumpSSCode("/*@[881e2*/",SLibCGIRGenReusableSysCall("trigger1_e", ["%<_modelSS>", "&/*@>98274*/DWork./*@>98273*/sf_trigger1_b"], 166, 1, 4, 1, 4, 347),"/*@]*/")>\
+
+%endif
+%if !SLibCGSysFcnIsEmptyForTid(CompiledModel.System[165], "SystemInitialize",1)
+
+/* SystemInitialize for Chart: '<S194>/trigger' */
+%if SLibCG_SystemFcnArgAccessed("trigger_j",165,0)
+%assign _modelSS = RTMGetModelSSFromIR()
+%endif
+
+%<SLibCG_DumpSSCode("/*@[881e3*/",SLibCGIRGenReusableSysCall("trigger_j", ["%<_modelSS>", "&/*@>982a6*/DWork./*@>982a5*/sf_trigger_d"], 165, 1, 4, 1, 4, 347),"/*@]*/")>\
+
+
+%endif
+/* SystemInitialize for Chart: '<S193>/check_can_counter' */
+/*@>80612*/DWork./*@>9809e*/is_counter_is_invalid_f/*@>41d92*/ = /*@>6d5c6*/IN_NO_ACTIVE_CHILD_f;
+/*@>80618*/DWork./*@>980a1*/is_counter_is_valid_k/*@>41d93*/ = /*@>6d5c3*/IN_NO_ACTIVE_CHILD_f;
+/*@>8061e*/DWork./*@>980a4*/temporalCounter_i1_ga/*@>41d96*/ = /*@>97eef*/0U;
+/*@>80624*/DWork./*@>980a7*/is_active_c7_LeafEcoTronDBWL_mh/*@>41d94*/ = /*@>97ef2*/0U;
+/*@>8062a*/DWork./*@>980aa*/is_c7_LeafEcoTronDBWLib_l/*@>41d95*/ = /*@>6d5be*/IN_NO_ACTIVE_CHILD_f;
+%if !SLibCGSysFcnIsEmptyForTid(CompiledModel.System[166], "SystemInitialize",1)
+/* SystemInitialize for Chart: '<S166>/trigger1' */
+%if SLibCG_SystemFcnArgAccessed("trigger1_e",166,0)
+%assign _modelSS = RTMGetModelSSFromIR()
+%endif
+
+%<SLibCG_DumpSSCode("/*@[881e4*/",SLibCGIRGenReusableSysCall("trigger1_e", ["%<_modelSS>", "&/*@>982d8*/DWork./*@>982d7*/sf_trigger1_l"], 166, 2, 4, 1, 4, 347),"/*@]*/")>\
+
+%endif
+%if !SLibCGSysFcnIsEmptyForTid(CompiledModel.System[165], "SystemInitialize",1)
+
+/* SystemInitialize for Chart: '<S206>/trigger' */
+%if SLibCG_SystemFcnArgAccessed("trigger_j",165,0)
+%assign _modelSS = RTMGetModelSSFromIR()
+%endif
+
+%<SLibCG_DumpSSCode("/*@[881e5*/",SLibCGIRGenReusableSysCall("trigger_j", ["%<_modelSS>", "&/*@>9830a*/DWork./*@>98309*/sf_trigger_a"], 165, 2, 4, 1, 4, 347),"/*@]*/")>\
+
+
+%endif
+/* SystemInitialize for Chart: '<S205>/check_can_counter' */
+/*@>8063c*/DWork./*@>980b3*/is_counter_is_invalid_d/*@>41dad*/ = /*@>6d5b7*/IN_NO_ACTIVE_CHILD_f;
+/*@>80642*/DWork./*@>980b6*/is_counter_is_valid_d/*@>41dae*/ = /*@>6d5b4*/IN_NO_ACTIVE_CHILD_f;
+/*@>80648*/DWork./*@>980b9*/temporalCounter_i1_o/*@>41db1*/ = /*@>97ef5*/0U;
+/*@>8064e*/DWork./*@>980bc*/is_active_c7_LeafEcoTronDBWLi_o/*@>41daf*/ = /*@>97ef8*/0U;
+/*@>80654*/DWork./*@>980bf*/is_c7_LeafEcoTronDBWLib_o/*@>41db0*/ = /*@>6d5af*/IN_NO_ACTIVE_CHILD_f;
+%if !SLibCGSysFcnIsEmptyForTid(CompiledModel.System[166], "SystemInitialize",1)
+/* SystemInitialize for Chart: '<S167>/trigger1' */
+%if SLibCG_SystemFcnArgAccessed("trigger1_e",166,0)
+%assign _modelSS = RTMGetModelSSFromIR()
+%endif
+
+%<SLibCG_DumpSSCode("/*@[881e6*/",SLibCGIRGenReusableSysCall("trigger1_e", ["%<_modelSS>", "&/*@>9833c*/DWork./*@>9833b*/sf_trigger1_b1"], 166, 3, 4, 1, 4, 347),"/*@]*/")>\
+
+%endif
+%if !SLibCGSysFcnIsEmptyForTid(CompiledModel.System[165], "SystemInitialize",1)
+
+/* SystemInitialize for Chart: '<S223>/trigger' */
+%if SLibCG_SystemFcnArgAccessed("trigger_j",165,0)
+%assign _modelSS = RTMGetModelSSFromIR()
+%endif
+
+%<SLibCG_DumpSSCode("/*@[881e7*/",SLibCGIRGenReusableSysCall("trigger_j", ["%<_modelSS>", "&/*@>9836e*/DWork./*@>9836d*/sf_trigger_b"], 165, 3, 4, 1, 4, 347),"/*@]*/")>\
+
+
+%endif
+/* SystemInitialize for Chart: '<S219>/check_can_counter' */
+/*@>80666*/DWork./*@>980c8*/is_counter_is_invalid_c/*@>41dc8*/ = /*@>6d5a8*/IN_NO_ACTIVE_CHILD_f;
+/*@>8066c*/DWork./*@>980cb*/is_counter_is_valid_b/*@>41dc9*/ = /*@>6d5a5*/IN_NO_ACTIVE_CHILD_f;
+/*@>80672*/DWork./*@>980ce*/temporalCounter_i1_nk/*@>41dcc*/ = /*@>97efb*/0U;
+/*@>80678*/DWork./*@>980d1*/is_active_c7_LeafEcoTronDBWLi_m/*@>41dca*/ = /*@>97efe*/0U;
+/*@>8067e*/DWork./*@>980d4*/is_c7_LeafEcoTronDBWLib_k/*@>41dcb*/ = /*@>6d5a0*/IN_NO_ACTIVE_CHILD_f;
+%if !SLibCGSysFcnIsEmptyForTid(CompiledModel.System[166], "SystemInitialize",1)
+/* SystemInitialize for Chart: '<S169>/trigger1' */
+%if SLibCG_SystemFcnArgAccessed("trigger1_e",166,0)
+%assign _modelSS = RTMGetModelSSFromIR()
+%endif
+
+%<SLibCG_DumpSSCode("/*@[881e8*/",SLibCGIRGenReusableSysCall("trigger1_e", ["%<_modelSS>", "&/*@>983a0*/DWork./*@>9839f*/sf_trigger1_lj"], 166, 4, 4, 1, 4, 347),"/*@]*/")>\
+
+%endif
+%if !SLibCGSysFcnIsEmptyForTid(CompiledModel.System[165], "SystemInitialize",1)
+
+/* SystemInitialize for Chart: '<S255>/trigger' */
+%if SLibCG_SystemFcnArgAccessed("trigger_j",165,0)
+%assign _modelSS = RTMGetModelSSFromIR()
+%endif
+
+%<SLibCG_DumpSSCode("/*@[881e9*/",SLibCGIRGenReusableSysCall("trigger_j", ["%<_modelSS>", "&/*@>983d2*/DWork./*@>983d1*/sf_trigger_n"], 165, 5, 4, 1, 4, 347),"/*@]*/")>\
+
+
+%endif
+/* SystemInitialize for Chart: '<S254>/check_can_counter' */
+/*@>80690*/DWork./*@>980dd*/is_counter_is_invalid/*@>41de3*/ = /*@>6d599*/IN_NO_ACTIVE_CHILD_f;
+/*@>80696*/DWork./*@>980e0*/is_counter_is_valid/*@>41de4*/ = /*@>6d596*/IN_NO_ACTIVE_CHILD_f;
+/*@>8069c*/DWork./*@>980e3*/temporalCounter_i1_b/*@>41de7*/ = /*@>97f01*/0U;
+/*@>806a2*/DWork./*@>980e6*/is_active_c7_LeafEcoTronDBWLib/*@>41de5*/ = /*@>97f04*/0U;
+/*@>806a8*/DWork./*@>980e9*/is_c7_LeafEcoTronDBWLib/*@>41de6*/ = /*@>6d591*/IN_NO_ACTIVE_CHILD_f;
+/* SystemInitialize for Chart: '<S40>/SystemStatechart_v3' */
+/*@>806ae*/DWork./*@>980ec*/is_ADSDisengaged/*@>41dfe*/ = /*@>6d58a*/IN_NO_ACTIVE_CHILD_f;
+/*@>806b4*/DWork./*@>980ef*/is_DriverOverridden/*@>41dff*/ = /*@>6d587*/IN_NO_ACTIVE_CHILD_f;
+/*@>806ba*/DWork./*@>980f2*/is_FaultOverridden/*@>41e00*/ = /*@>6d584*/IN_NO_ACTIVE_CHILD_f;
+/*@>806c0*/DWork./*@>980f5*/is_ADC/*@>41e01*/ = /*@>6d581*/IN_NO_ACTIVE_CHILD_f;
+/*@>806c6*/DWork./*@>980f8*/is_LLC/*@>41e02*/ = /*@>6d57e*/IN_NO_ACTIVE_CHILD_f;
+/*@>806cc*/DWork./*@>980fb*/is_ADSEngaged/*@>41e03*/ = /*@>6d57b*/IN_NO_ACTIVE_CHILD_f;
+/*@>806d2*/DWork./*@>980fe*/is_Initializing/*@>41e04*/ = /*@>6d578*/IN_NO_ACTIVE_CHILD_f;
+/*@>806d8*/DWork./*@>98101*/temporalCounter_i1_n/*@>41e07*/ = /*@>6d570*/0U;
+/*@>806de*/DWork./*@>98104*/is_active_c6_LeafEcoTronDBWLib/*@>41e05*/ = /*@>97f07*/0U;
+/*@>806e4*/DWork./*@>98107*/is_c6_LeafEcoTronDBWLib/*@>41e06*/ = /*@>6d573*/IN_NO_ACTIVE_CHILD_f;
+/* SystemInitialize for Chart: '<S353>/trigger_buzzer_after_epo' */
+/*@>806ea*/DWork./*@>9810a*/temporalCounter_i1_g/*@>41e2f*/ = /*@>97f0a*/0U;
+/*@>806f0*/DWork./*@>9810d*/is_active_c8_LeafEcoTronDBWLib/*@>41e2d*/ = /*@>97f0d*/0U;
+/*@>806f6*/DWork./*@>98110*/is_c8_LeafEcoTronDBWLib/*@>41e2e*/ = /*@>6d56a*/IN_NO_ACTIVE_CHILD_f;
+%if !SLibCGSysFcnIsEmptyForTid(CompiledModel.System[60], "SystemInitialize",1)
+/* SystemInitialize for Chart: '<S68>/alterOutputByHiLoTicks' */
+%if SLibCG_SystemFcnArgAccessed("alterOutputByHiLoTicks_kz",60,0)
+%assign _modelSS = RTMGetModelSSFromIR()
+%endif
+
+%<SLibCG_DumpSSCode("/*@[881ea*/",SLibCGIRGenReusableSysCall("alterOutputByHiLoTicks_kz", ["%<_modelSS>", "&/*@>98404*/DWork./*@>98403*/sf_alterOutputByHiLoTicks"], 60, 0, 4, 1, 4, 347),"/*@]*/")>\
+
+%endif
+%if !SLibCGSysFcnIsEmptyForTid(CompiledModel.System[60], "SystemInitialize",1)
+
+/* SystemInitialize for Chart: '<S68>/alterOutputByHiLoTicks1' */
+%if SLibCG_SystemFcnArgAccessed("alterOutputByHiLoTicks_kz",60,0)
+%assign _modelSS = RTMGetModelSSFromIR()
+%endif
+
+%<SLibCG_DumpSSCode("/*@[881eb*/",SLibCGIRGenReusableSysCall("alterOutputByHiLoTicks_kz", ["%<_modelSS>", "&/*@>98436*/DWork./*@>98435*/sf_alterOutputByHiLoTicks1"], 60, 1, 4, 1, 4, 347),"/*@]*/")>\
+
+
+%endif
+/* SystemInitialize for Chart: '<S109>/DebounceStatechart' */
+/*@>80708*/DWork./*@>98119*/is_Pressed/*@>41e40*/ = /*@>6d563*/IN_NO_ACTIVE_CHILD_f;
+/*@>8070e*/DWork./*@>9811c*/temporalCounter_i1/*@>41e43*/ = /*@>6d55b*/0U;
+/*@>80714*/DWork./*@>9811f*/is_active_c3_Toaster_ES1274A/*@>41e41*/ = /*@>97f10*/0U;
+/*@>8071a*/DWork./*@>98122*/is_c3_Toaster_ES1274A/*@>41e42*/ = /*@>6d55e*/IN_NO_ACTIVE_CHILD_f;
+%if !SLibCGSysFcnIsEmptyForTid(CompiledModel.System[165], "SystemInitialize",1)
+/* SystemInitialize for Chart: '<S282>/trigger' */
+%if SLibCG_SystemFcnArgAccessed("trigger_j",165,0)
+%assign _modelSS = RTMGetModelSSFromIR()
+%endif
+
+%<SLibCG_DumpSSCode("/*@[881ec*/",SLibCGIRGenReusableSysCall("trigger_j", ["%<_modelSS>", "&/*@>98468*/DWork./*@>98467*/sf_trigger_c"], 165, 7, 4, 1, 4, 347),"/*@]*/")>\
+
+%endif
+%if !SLibCGSysFcnIsEmptyForTid(CompiledModel.System[165], "SystemInitialize",1)
+
+/* SystemInitialize for Chart: '<S293>/trigger' */
+%if SLibCG_SystemFcnArgAccessed("trigger_j",165,0)
+%assign _modelSS = RTMGetModelSSFromIR()
+%endif
+
+%<SLibCG_DumpSSCode("/*@[881ed*/",SLibCGIRGenReusableSysCall("trigger_j", ["%<_modelSS>", "&/*@>9849a*/DWork./*@>98499*/sf_trigger_ne"], 165, 18, 4, 1, 4, 347),"/*@]*/")>\
+
+%endif
+%if !SLibCGSysFcnIsEmptyForTid(CompiledModel.System[165], "SystemInitialize",1)
+
+/* SystemInitialize for Chart: '<S283>/trigger' */
+%if SLibCG_SystemFcnArgAccessed("trigger_j",165,0)
+%assign _modelSS = RTMGetModelSSFromIR()
+%endif
+
+%<SLibCG_DumpSSCode("/*@[881ee*/",SLibCGIRGenReusableSysCall("trigger_j", ["%<_modelSS>", "&/*@>984cc*/DWork./*@>984cb*/sf_trigger_p"], 165, 8, 4, 1, 4, 347),"/*@]*/")>\
+
+%endif
+%if !SLibCGSysFcnIsEmptyForTid(CompiledModel.System[165], "SystemInitialize",1)
+
+/* SystemInitialize for Chart: '<S284>/trigger' */
+%if SLibCG_SystemFcnArgAccessed("trigger_j",165,0)
+%assign _modelSS = RTMGetModelSSFromIR()
+%endif
+
+%<SLibCG_DumpSSCode("/*@[881ef*/",SLibCGIRGenReusableSysCall("trigger_j", ["%<_modelSS>", "&/*@>984fe*/DWork./*@>984fd*/sf_trigger_cw"], 165, 9, 4, 1, 4, 347),"/*@]*/")>\
+
+%endif
+%if !SLibCGSysFcnIsEmptyForTid(CompiledModel.System[165], "SystemInitialize",1)
+
+/* SystemInitialize for Chart: '<S287>/trigger' */
+%if SLibCG_SystemFcnArgAccessed("trigger_j",165,0)
+%assign _modelSS = RTMGetModelSSFromIR()
+%endif
+
+%<SLibCG_DumpSSCode("/*@[881f0*/",SLibCGIRGenReusableSysCall("trigger_j", ["%<_modelSS>", "&/*@>98530*/DWork./*@>9852f*/sf_trigger_a3"], 165, 12, 4, 1, 4, 347),"/*@]*/")>\
+
+%endif
+%if !SLibCGSysFcnIsEmptyForTid(CompiledModel.System[165], "SystemInitialize",1)
+
+/* SystemInitialize for Chart: '<S288>/trigger' */
+%if SLibCG_SystemFcnArgAccessed("trigger_j",165,0)
+%assign _modelSS = RTMGetModelSSFromIR()
+%endif
+
+%<SLibCG_DumpSSCode("/*@[881f1*/",SLibCGIRGenReusableSysCall("trigger_j", ["%<_modelSS>", "&/*@>98562*/DWork./*@>98561*/sf_trigger_ng"], 165, 13, 4, 1, 4, 347),"/*@]*/")>\
+
+%endif
+%if !SLibCGSysFcnIsEmptyForTid(CompiledModel.System[165], "SystemInitialize",1)
+
+/* SystemInitialize for Chart: '<S289>/trigger' */
+%if SLibCG_SystemFcnArgAccessed("trigger_j",165,0)
+%assign _modelSS = RTMGetModelSSFromIR()
+%endif
+
+%<SLibCG_DumpSSCode("/*@[881f2*/",SLibCGIRGenReusableSysCall("trigger_j", ["%<_modelSS>", "&/*@>98594*/DWork./*@>98593*/sf_trigger_i"], 165, 14, 4, 1, 4, 347),"/*@]*/")>\
+
+%endif
+%if !SLibCGSysFcnIsEmptyForTid(CompiledModel.System[165], "SystemInitialize",1)
+
+/* SystemInitialize for Chart: '<S286>/trigger' */
+%if SLibCG_SystemFcnArgAccessed("trigger_j",165,0)
+%assign _modelSS = RTMGetModelSSFromIR()
+%endif
+
+%<SLibCG_DumpSSCode("/*@[881f3*/",SLibCGIRGenReusableSysCall("trigger_j", ["%<_modelSS>", "&/*@>985c6*/DWork./*@>985c5*/sf_trigger_pp"], 165, 11, 4, 1, 4, 347),"/*@]*/")>\
+
+%endif
+%if !SLibCGSysFcnIsEmptyForTid(CompiledModel.System[165], "SystemInitialize",1)
+
+/* SystemInitialize for Chart: '<S290>/trigger' */
+%if SLibCG_SystemFcnArgAccessed("trigger_j",165,0)
+%assign _modelSS = RTMGetModelSSFromIR()
+%endif
+
+%<SLibCG_DumpSSCode("/*@[881f4*/",SLibCGIRGenReusableSysCall("trigger_j", ["%<_modelSS>", "&/*@>985f8*/DWork./*@>985f7*/sf_trigger_k"], 165, 15, 4, 1, 4, 347),"/*@]*/")>\
+
+%endif
+%if !SLibCGSysFcnIsEmptyForTid(CompiledModel.System[165], "SystemInitialize",1)
+
+/* SystemInitialize for Chart: '<S291>/trigger' */
+%if SLibCG_SystemFcnArgAccessed("trigger_j",165,0)
+%assign _modelSS = RTMGetModelSSFromIR()
+%endif
+
+%<SLibCG_DumpSSCode("/*@[881f5*/",SLibCGIRGenReusableSysCall("trigger_j", ["%<_modelSS>", "&/*@>9862a*/DWork./*@>98629*/sf_trigger_o"], 165, 16, 4, 1, 4, 347),"/*@]*/")>\
+
+%endif
+%if !SLibCGSysFcnIsEmptyForTid(CompiledModel.System[165], "SystemInitialize",1)
+
+/* SystemInitialize for Chart: '<S292>/trigger' */
+%if SLibCG_SystemFcnArgAccessed("trigger_j",165,0)
+%assign _modelSS = RTMGetModelSSFromIR()
+%endif
+
+%<SLibCG_DumpSSCode("/*@[881f6*/",SLibCGIRGenReusableSysCall("trigger_j", ["%<_modelSS>", "&/*@>9865c*/DWork./*@>9865b*/sf_trigger_gs"], 165, 17, 4, 1, 4, 347),"/*@]*/")>\
+
+%endif
+%closefile cfgTxt
+%<cfgTxt>
+%endfunction
+%function SystemInitializeFcnProtoType(block, system) Output
+%assign fcnProtoType = ""
+%openfile fcnProtoType
+static void SystemInitialize(\
+%assign comma = ""
+%closefile fcnProtoType
+%<SLibCG_SetFcnProtoType(7, 2, fcnProtoType)>
+%endfunction

@@ -1,0 +1,58 @@
+ %% File : ecocoder_sf_while.tlc
+
+
+%implements  ecocoder_sf_while "C"
+
+%% ============================================================================
+%% Function: BlockTypeSetup
+%% Abstract:
+%%
+%% ============================================================================
+%function BlockTypeSetup(block, system) void
+   
+%endfunction
+
+
+
+%function BlockInstanceSetup(block,system) void
+   
+%endfunction %% BlockInstanceSetup
+%% Function: Outputs ======================================================
+%%
+%% Purpose:
+%%      Code generation rules for mdlOutputs function.
+%%
+%function Outputs(block, system) Output
+    %assign inval = LibBlockInputSignal(0, "", "", 0)
+    while(1==%<inval>)
+    {
+        %<MakeFcnCall(block,system,0)>
+    }
+%endfunction
+
+%% ---------------------------------------------
+%% Call the function call subsystem at index
+%% fcnIdx
+%% ---------------------------------------------
+%function MakeFcnCall(block,system,fcnIdx) Output
+   /* -- Call CAN RX Fcn-Call_%<fcnIdx> -- */
+   %with SFcnSystemOutputCall[%<fcnIdx>]
+      %% skip unconnected function call outputs
+      %if LibIsEqual(BlockToCall, "unconnected")
+        %return
+      %endif
+      %assign sysIdx = BlockToCall[0]
+      %assign blkIdx = BlockToCall[1]
+      %assign ssBlock = System[sysIdx].Block[blkIdx]
+      %with ssBlock
+	%assign bType  = (Type == "SubSystem") ? "Subsystem" : ""
+	%assign locSysIdx = LibBlockParamSetting(bType, "SystemIdx")
+      %endwith
+      %assign sysToCall = System[locSysIdx]
+      %<LibCallFCSS(sysToCall, tSimStruct, FcnPortElement, ...
+        ParamSettings.SampleTimesToSet[0][1])>\
+   %endwith
+%endfunction
+
+
+%% [EOF] ecocoder_sf_while.tlc

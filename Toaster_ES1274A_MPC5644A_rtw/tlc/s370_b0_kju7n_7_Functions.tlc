@@ -1,0 +1,171 @@
+%implements s370_b0_kju7n_7_Functions "C"
+
+%function ADSDisengaged_Fcn0(block) void
+%assign fcnBuff = ""
+%openfile fcnBuff
+%assign cfgTxt = ""
+%openfile cfgTxt
+switch (DWork.is_ADSDisengaged) {
+  case IN_ADSRelinquishWarning:
+    /*@>800c4*/B./*@>97b3e*/state/*@>9936*/ = /*@>6fa3d*/ADS_RELINQUISH_WARNING;
+    /*@>800e2*/B./*@>97b4d*/engaged_h/*@>9932*/ = /*@>6fa3c*/false;
+    /*@>80100*/B./*@>97b5c*/yellowLED/*@>992e*/ = /*@>6fa39*/LED_FAST_PULSE;
+    /*@>80106*/B./*@>97b5f*/greenLED/*@>992a*/ = /*@>6fa38*/LED_FAST_PULSE;
+    /*@>9923*/if (/*@>81542*/DWork./*@>97c40*/temporalCounter_i1_n/*@>993c*/ >= /*@>6fae6*/100U) {
+        /*@>8154e*/DWork./*@>97c46*/is_ADSDisengaged/*@>9926*/ = /*@>6fa37*/IN_WaitingForDriverActivity;
+        /*@>80184*/B./*@>97b9e*/waitingForDriverActivity/*@>996b*/ = /*@>6fa40*/true;
+    }
+    break;
+  case IN_DriverOverridden:
+    /*@>800ca*/B./*@>97b41*/state/*@>9988*/ = /*@>6fa44*/DRIVER_OVERRIDDEN;
+    /*@>800e8*/B./*@>97b50*/engaged_h/*@>9984*/ = /*@>6fa43*/false;
+    /*@>68da0*/if (/*@>8151e*/DWork./*@>97c2e*/is_DriverOverridden/*@>68d9f*/ == /*@>81622*/IN_AlertingDriver) {
+        /*@>80112*/B./*@>97b65*/yellowLED/*@>99f3*/ = /*@>6fa65*/LED_FAST_PULSE;
+        /*@>8014e*/B./*@>97b83*/greenLED/*@>99ef*/ = /*@>6fa64*/LED_FAST_PULSE;
+        /*@>99e9*/if (/*@>81554*/DWork./*@>97c49*/temporalCounter_i1_n/*@>99f9*/ >= /*@>6fae7*/100U) {
+            /*@>80190*/B./*@>97ba4*/buzzer/*@>9a28*/ = /*@>6fa68*/false;
+            /*@>81584*/DWork./*@>97c61*/is_DriverOverridden/*@>99eb*/ = /*@>6fa63*/IN_WaitingForADC;
+            /*@>801d2*/B./*@>97bc5*/waitingForOverrideClear/*@>9a2c*/ = /*@>6fa6b*/true;
+            /*@>801fc*/B./*@>97bda*/redLED/*@>9a2d*/ = /*@>6fa6c*/LED_ON;
+            /*@>8022c*/B./*@>97bf2*/yellowLED/*@>9a2e*/ = /*@>6fa6d*/LED_OFF;
+            /*@>8024a*/B./*@>97c01*/greenLED/*@>9a2f*/ = /*@>6fa6e*/LED_OFF;
+        }
+    } else {
+        /*@>8010c*/B./*@>97b62*/yellowLED/*@>999b*/ = /*@>6fa4c*/LED_OFF;
+        /*@>80148*/B./*@>97b80*/greenLED/*@>9997*/ = /*@>6fa4b*/LED_OFF;
+        /*@>998d*/if (%<SLibCG_DumpSSCode("/*@[886d6*/",(SLibCG_SE(SLibCG_BOCSC(85, 1, "", -1, "", 0))),"/*@]*/")>/*@>5b3cc*/ && (!/*@<77ff4*/%<SLibCG_DumpSSCode("/*@[886ba*/",(SLibCG_SE(SLibCG_BOCSC(78, 1, "", -1, "", 0))),"/*@]*/")>)) {
+            /*@>8018a*/B./*@>97ba1*/waitingForOverrideClear/*@>99b7*/ = /*@>6fa4f*/false;
+            /*@>8157e*/DWork./*@>97c5e*/is_DriverOverridden/*@>998f*/ = /*@>6fa47*/IN_NO_ACTIVE_CHILD_f;
+            /*@>801cc*/B./*@>97bc2*/driverOverridden/*@>99bb*/ = /*@>6fa52*/false;
+            /*@>81596*/DWork./*@>97c6a*/is_ADSDisengaged/*@>9990*/ = /*@>6fa4a*/IN_PreOperational;
+            /*@>80226*/B./*@>97bef*/driverOverrideCulprit/*@>99bf*/ = /*@>9792b*/0U;
+            /*@>80244*/B./*@>97bfe*/faultOverrideCulprit/*@>99c0*/ = /*@>97931*/0U;
+            /*@>815ba*/DWork./*@>97c7c*/is_LLC/*@>99d1*/ = /*@>6fa59*/IN_LLCNotReady;
+            /*@>80268*/B./*@>97c10*/state/*@>99d5*/ = /*@>6fa5a*/NOT_READY;
+            /*@>80274*/B./*@>97c16*/redLED/*@>99d6*/ = /*@>6fa5b*/LED_ON;
+            /*@>80280*/B./*@>97c1c*/yellowLED/*@>99d7*/ = /*@>6fa5c*/LED_OFF;
+            /*@>815c6*/DWork./*@>97c82*/is_ADC/*@>99e1*/ = /*@>6fa5f*/IN_ADCNotReady;
+            /*@>8028c*/B./*@>97c22*/greenLED/*@>99e5*/ = /*@>6fa60*/LED_OFF;
+        }
+    }
+    break;
+  case IN_FaultOverridden:
+    /*@>800d0*/B./*@>97b44*/state/*@>9a58*/ = /*@>6fa76*/FAULT_OVERRIDDEN;
+    /*@>800ee*/B./*@>97b53*/engaged_h/*@>9a54*/ = /*@>6fa75*/false;
+/*@>9a4f*/    switch (/*@>81524*/DWork./*@>97c31*/is_FaultOverridden) {
+      case /*@>6fa6f*/IN_AlertingDriver:
+        /*@>8012a*/B./*@>97b71*/yellowLED/*@>9aad*/ = /*@>6fa8a*/LED_FAST_PULSE;
+        /*@>8015a*/B./*@>97b89*/greenLED/*@>9aa9*/ = /*@>6fa89*/LED_FAST_PULSE;
+        /*@>9aa3*/if (/*@>8155a*/DWork./*@>97c4c*/temporalCounter_i1_n/*@>9ab3*/ >= /*@>6fae8*/100U) {
+            /*@>8156c*/DWork./*@>97c55*/is_FaultOverridden/*@>9aa5*/ = /*@>6fa88*/IN_WaitingForDriverActivity_f;
+            /*@>801ae*/B./*@>97bb3*/waitingForDriverActivity/*@>9ae2*/ = /*@>6fa8d*/true;
+        }
+        break;
+      case /*@>6fa70*/IN_WaitingForADC:
+        /*@>80130*/B./*@>97b74*/yellowLED/*@>9af4*/ = /*@>6fa95*/LED_OFF;
+        /*@>80160*/B./*@>97b8c*/greenLED/*@>9af0*/ = /*@>6fa94*/LED_OFF;
+        /*@>9ae6*/if (%<SLibCG_DumpSSCode("/*@[8872a*/",(SLibCG_SE(SLibCG_BOCSC(85, 1, "", -1, "", 0))),"/*@]*/")>/*@>5b3e8*/ && (!/*@<77ff8*/%<SLibCG_DumpSSCode("/*@[8870e*/",(SLibCG_SE(SLibCG_BOCSC(78, 1, "", -1, "", 0))),"/*@]*/")>)) {
+            /*@>80196*/B./*@>97ba7*/waitingForOverrideClear/*@>9b10*/ = /*@>6fa98*/false;
+            /*@>8158a*/DWork./*@>97c64*/is_FaultOverridden/*@>9ae8*/ = /*@>6fa90*/IN_NO_ACTIVE_CHILD_f;
+            /*@>801de*/B./*@>97bcb*/faultOverridden/*@>9b14*/ = /*@>6fa9b*/false;
+            /*@>8159c*/DWork./*@>97c6d*/is_ADSDisengaged/*@>9ae9*/ = /*@>6fa93*/IN_PreOperational;
+            /*@>80238*/B./*@>97bf8*/driverOverrideCulprit/*@>9b18*/ = /*@>9792e*/0U;
+            /*@>80250*/B./*@>97c04*/faultOverrideCulprit/*@>9b19*/ = /*@>97934*/0U;
+            /*@>815c0*/DWork./*@>97c7f*/is_LLC/*@>9b2a*/ = /*@>6faa2*/IN_LLCNotReady;
+            /*@>8026e*/B./*@>97c13*/state/*@>9b2e*/ = /*@>6faa3*/NOT_READY;
+            /*@>8027a*/B./*@>97c19*/redLED/*@>9b2f*/ = /*@>6faa4*/LED_ON;
+            /*@>80286*/B./*@>97c1f*/yellowLED/*@>9b30*/ = /*@>6faa5*/LED_OFF;
+            /*@>815cc*/DWork./*@>97c85*/is_ADC/*@>9b3a*/ = /*@>6faa8*/IN_ADCNotReady;
+            /*@>80292*/B./*@>97c25*/greenLED/*@>9b3e*/ = /*@>6faa9*/LED_OFF;
+        }
+        break;
+      default:
+        /*@>9a5d*/if (%<SLibCG_DumpSSCode("/*@[886f2*/",(SLibCG_SE(SLibCG_BOCSC(74, 1, "", -1, "", 0))),"/*@]*/")>/*@>5b3d5*/ || (/*@>80118*/B./*@>97b68*/selectedSubsystems/*@>5b3d8*/ == /*@>6fb6a*/1)/*@>5b3d4*/ || (/*@>8011e*/B./*@>97b6b*/selectedSubsystems/*@>5b3dd*/ == /*@>6fb6d*/4)/*@>5b3d3*/ || (/*@>80124*/B./*@>97b6e*/selectedSubsystems/*@>5b3e2*/ == /*@>6fb70*/5)) {
+            /*@>80154*/B./*@>97b86*/buzzer/*@>9a8b*/ = /*@>6fa7c*/false;
+            /*@>80178*/B./*@>97b98*/waitingForDriverActivity/*@>9a8c*/ = /*@>6fa7f*/false;
+            /*@>81566*/DWork./*@>97c52*/is_FaultOverridden/*@>9a5f*/ = /*@>6fa79*/IN_WaitingForADC;
+            /*@>801a8*/B./*@>97bb0*/waitingForOverrideClear/*@>9a93*/ = /*@>6fa82*/true;
+            /*@>801d8*/B./*@>97bc8*/redLED/*@>9a94*/ = /*@>6fa83*/LED_ON;
+            /*@>80202*/B./*@>97bdd*/yellowLED/*@>9a95*/ = /*@>6fa84*/LED_OFF;
+            /*@>80232*/B./*@>97bf5*/greenLED/*@>9a96*/ = /*@>6fa85*/LED_OFF;
+        }
+        break;
+    }
+    break;
+  case IN_PreOperational:
+    /*@>9b4f*/if ((!/*@<5b3f8*/(%<SLibCG_DumpSSCode("/*@[8879a*/",(SLibCG_SE(SLibCG_BOCSC(71, 1, "", -1, "", 0))),"/*@]*/")>/*@>5b483*/ || %<SLibCG_DumpSSCode("/*@[8877e*/",(SLibCG_SE(SLibCG_BOCSC(113, 1, "", -1, "", 0))),"/*@]*/")>))/*@>5b3f7*/ && %<SLibCG_DumpSSCode("/*@[88762*/",(SLibCG_SE(SLibCG_BOCSC(115, 1, "", -1, "", 0))),"/*@]*/")>/*@>5b3f6*/ && %<SLibCG_DumpSSCode("/*@[88746*/",(SLibCG_SE(SLibCG_BOCSC(78, 1, "", -1, "", 0))),"/*@]*/")>/*@>5b3f5*/ && (/*@>800d6*/B./*@>97b47*/selectedSubsystems/*@>5b3ff*/ != /*@>6fb7b*/0)) {
+        /*@>81518*/DWork./*@>97c2b*/is_ADC/*@>9c29*/ = /*@>6fad4*/IN_NO_ACTIVE_CHILD_f;
+        /*@>81530*/DWork./*@>97c37*/is_LLC/*@>9c2d*/ = /*@>6fad7*/IN_NO_ACTIVE_CHILD_f;
+        /*@>8153c*/DWork./*@>97c3d*/is_ADSDisengaged/*@>9b52*/ = /*@>6faac*/IN_NO_ACTIVE_CHILD_f;
+        /*@>81548*/DWork./*@>97c43*/is_c6_LeafEcoTronDBWLib/*@>9b53*/ = /*@>6faaf*/IN_ADSEngaged;
+        /*@>8017e*/B./*@>97b9b*/state/*@>9c31*/ = /*@>6fad8*/ADS_ENGAGED;
+        /*@>8019c*/B./*@>97baa*/engaged_h/*@>9c32*/ = /*@>6fadb*/true;
+        /*@>801c0*/B./*@>97bbc*/selectedSubsystems/*@>9c33*/ = %<SLibCG_DumpSSCode("/*@[88879*/",(SLibCG_SE(SLibCG_BOCSC(32, 1, "", -1, "", 0))),"/*@]*/")>;
+        /*@>801f0*/B./*@>97bd4*/yellowLED/*@>9c36*/ = /*@>6fae0*/LED_OFF;
+        /*@>80220*/B./*@>97bec*/greenLED/*@>9c37*/ = /*@>6fae1*/LED_ON;
+        /*@>815a8*/DWork./*@>97c73*/is_ADSEngaged/*@>9c4a*/ = /*@>6fae4*/IN_RedLightOff;
+        /*@>80256*/B./*@>97c07*/redLED/*@>9c4e*/ = /*@>6fae5*/LED_OFF;
+    } else {
+        /*@>800f4*/B./*@>97b56*/selectedSubsystems/*@>9b8d*/ = %<SLibCG_DumpSSCode("/*@[8885d*/",(SLibCG_SE(SLibCG_BOCSC(32, 1, "", -1, "", 0))),"/*@]*/")>;
+        /*@>68da5*/if (/*@>8152a*/DWork./*@>97c34*/is_LLC/*@>68da4*/ == /*@>81625*/IN_LLCNotReady) {
+            /*@>8013c*/B./*@>97b7a*/state/*@>9bd3*/ = /*@>6fac0*/NOT_READY;
+            /*@>8016c*/B./*@>97b92*/yellowLED/*@>9bcf*/ = /*@>6fabf*/LED_OFF;
+            /*@>9bc9*/if ((!/*@<5b40d*/%<SLibCG_DumpSSCode("/*@[8880a*/",(SLibCG_SE(SLibCG_BOCSC(71, 1, "", -1, "", 0))),"/*@]*/")>)/*@>5b40c*/ && %<SLibCG_DumpSSCode("/*@[887ee*/",(SLibCG_SE(SLibCG_BOCSC(115, 1, "", -1, "", 0))),"/*@]*/")>) {
+                /*@>81578*/DWork./*@>97c5b*/is_LLC/*@>9bcb*/ = /*@>6fabe*/IN_LLCReady;
+                /*@>801ba*/B./*@>97bb9*/state/*@>9bef*/ = /*@>6fac1*/READY;
+                /*@>801ea*/B./*@>97bd1*/redLED/*@>9bf0*/ = /*@>6fac2*/LED_OFF;
+                /*@>8021a*/B./*@>97be9*/yellowLED/*@>9bf1*/ = /*@>6fac3*/LED_ON;
+            }
+        } else {
+            /*@>80136*/B./*@>97b77*/state/*@>9ba1*/ = /*@>6fab8*/READY;
+            /*@>80166*/B./*@>97b8f*/yellowLED/*@>9b9d*/ = /*@>6fab7*/LED_ON;
+            /*@>9b97*/if (%<SLibCG_DumpSSCode("/*@[887d2*/",(SLibCG_SE(SLibCG_BOCSC(71, 1, "", -1, "", 0))),"/*@]*/")>/*@>5b405*/ || (!/*@<5b408*/%<SLibCG_DumpSSCode("/*@[887b6*/",(SLibCG_SE(SLibCG_BOCSC(115, 1, "", -1, "", 0))),"/*@]*/")>)) {
+                /*@>81572*/DWork./*@>97c58*/is_LLC/*@>9b99*/ = /*@>6fab6*/IN_LLCNotReady;
+                /*@>801b4*/B./*@>97bb6*/state/*@>9bbd*/ = /*@>6fab9*/NOT_READY;
+                /*@>801e4*/B./*@>97bce*/redLED/*@>9bbe*/ = /*@>6faba*/LED_ON;
+                /*@>80214*/B./*@>97be6*/yellowLED/*@>9bbf*/ = /*@>6fabb*/LED_OFF;
+            }
+        }
+        /*@>68daa*/if (/*@>81590*/DWork./*@>97c67*/is_ADC/*@>68da9*/ == /*@>81628*/IN_ADCNotReady) {
+            /*@>8020e*/B./*@>97be3*/greenLED/*@>9c17*/ = /*@>6face*/LED_OFF;
+            /*@>9c11*/if (%<SLibCG_DumpSSCode("/*@[88842*/",(SLibCG_BOCSC(115, 1, "", -1, "", 0)),"/*@]*/")>) {
+                /*@>815b4*/DWork./*@>97c79*/is_ADC/*@>9c13*/ = /*@>6facd*/IN_ADCReady;
+                /*@>80262*/B./*@>97c0d*/greenLED/*@>9c1d*/ = /*@>6fad1*/LED_SLOW_PULSE;
+            }
+        } else {
+            /*@>80208*/B./*@>97be0*/greenLED/*@>9c06*/ = /*@>6fac7*/LED_SLOW_PULSE;
+            /*@>9c00*/if (!/*@<9c0a*/%<SLibCG_DumpSSCode("/*@[88826*/",(SLibCG_SE(SLibCG_BOCSC(115, 1, "", -1, "", 0))),"/*@]*/")>) {
+                /*@>815ae*/DWork./*@>97c76*/is_ADC/*@>9c02*/ = /*@>6fac6*/IN_ADCNotReady;
+                /*@>8025c*/B./*@>97c0a*/greenLED/*@>9c0d*/ = /*@>6faca*/LED_OFF;
+            }
+        }
+    }
+    break;
+  default:
+    /*@>98b4*/if (%<SLibCG_DumpSSCode("/*@[8869e*/",(SLibCG_SE(SLibCG_BOCSC(74, 1, "", -1, "", 0))),"/*@]*/")>/*@>5b3b9*/ || (/*@>800b2*/B./*@>97b35*/selectedSubsystems/*@>5b3bc*/ == /*@>6fb5b*/1)/*@>5b3b8*/ || (/*@>800b8*/B./*@>97b38*/selectedSubsystems/*@>5b3c1*/ == /*@>6fb5e*/4)/*@>5b3b7*/ || (/*@>800be*/B./*@>97b3b*/selectedSubsystems/*@>5b3c6*/ == /*@>6fb61*/5)) {
+        /*@>800dc*/B./*@>97b4a*/buzzer/*@>98e3*/ = /*@>6fa23*/false;
+        /*@>800fa*/B./*@>97b59*/waitingForDriverActivity/*@>98e4*/ = /*@>6fa26*/false;
+        /*@>81536*/DWork./*@>97c3a*/is_ADSDisengaged/*@>98b7*/ = /*@>6fa20*/IN_PreOperational;
+        /*@>80142*/B./*@>97b7d*/driverOverrideCulprit/*@>98eb*/ = /*@>97925*/0U;
+        /*@>80172*/B./*@>97b95*/faultOverrideCulprit/*@>98ec*/ = /*@>97928*/0U;
+        /*@>81560*/DWork./*@>97c4f*/is_LLC/*@>98fd*/ = /*@>6fa2d*/IN_LLCNotReady;
+        /*@>801a2*/B./*@>97bad*/state/*@>9901*/ = /*@>6fa2e*/NOT_READY;
+        /*@>801c6*/B./*@>97bbf*/redLED/*@>9902*/ = /*@>6fa2f*/LED_ON;
+        /*@>801f6*/B./*@>97bd7*/yellowLED/*@>9903*/ = /*@>6fa30*/LED_OFF;
+        /*@>815a2*/DWork./*@>97c70*/is_ADC/*@>990d*/ = /*@>6fa33*/IN_ADCNotReady;
+        /*@>8023e*/B./*@>97bfb*/greenLED/*@>9911*/ = /*@>6fa34*/LED_OFF;
+    }
+    break;
+}
+%closefile cfgTxt
+%<cfgTxt>
+%closefile fcnBuff
+%assign fcnProtoType = ""
+%openfile fcnProtoType
+static void ADSDisengaged(\
+%assign comma = ""
+%closefile fcnProtoType
+%<SLibCG_SetFcnProtoType(7, 0, fcnProtoType)>
+%return fcnBuff
+%endfunction
+

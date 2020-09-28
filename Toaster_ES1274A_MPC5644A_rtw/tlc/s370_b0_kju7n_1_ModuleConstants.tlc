@@ -1,0 +1,12 @@
+%implements s370_b0_kju7n_1_ModuleConstants "C"
+
+%function ModuleConstants(block) Output
+
+
+/* Named constants for Chart: '<S179>/trigger' */
+#define IN_NO_ACTIVE_CHILD_p ((uint8_T)0U)
+#define IN_age_invalid ((uint8_T)1U)
+#define IN_age_valid ((uint8_T)2U)
+#define IN_ini ((uint8_T)3U)
+#define IN_wait ((uint8_T)4U)
+%endfunction

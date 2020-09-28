@@ -1,0 +1,88 @@
+%implements "chartSource" "C"
+%function ChartConfig(block, system) void
+  %createrecord chartConfiguration { ...
+          executeAtInitialization  0 ...
+  }
+  %return chartConfiguration
+%endfunction
+%function ChartDataMap(block, system) void
+  %createrecord ChartDataElements {\
+    NumChartData   10 \
+    ChartDataDefaults {\
+      RecordType   "ChartData"\
+      Dimensions   []\
+      IsTestPoint  0\
+    }\
+    ChartData {\
+      Name         "is_active_c6_LeafEcoTronDBWLib"\
+      Description  "StateIsActive"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_c6_LeafEcoTronDBWLib"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_Initializing"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "Initializing"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_ADSDisengaged"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "ADSDisengaged"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_LLC"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "ADSDisengaged.PreOperational.LLC"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_ADC"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "ADSDisengaged.PreOperational.ADC"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_FaultOverridden"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "ADSDisengaged.FaultOverridden"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_DriverOverridden"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "ADSDisengaged.DriverOverridden"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_ADSEngaged"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "ADSEngaged"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "temporalCounter_i1"\
+      Description  "TemporalCounter"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  ""\
+    }\
+  }
+  %return ChartDataElements
+%endfunction

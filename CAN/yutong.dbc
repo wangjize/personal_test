@@ -1,0 +1,220 @@
+VERSION ""
+
+
+NS_ : 
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+	SG_MUL_VAL_
+
+BS_:
+
+BU_: WR_ADC YT_ADAS
+VAL_TABLE_ Steering_Status 7 "Second System Fault" 6 "First System Fault" 4 "Driver Mode" 1 "Auto Control Mode" 0 "Standby Mode" ;
+VAL_TABLE_ EPB_Status_Feedback 1 "Release" 0 "Park" ;
+VAL_TABLE_ Hom_Status 3 "INVALID" 2 "Fault" 1 "ON" 0 "OFF" ;
+VAL_TABLE_ Brake_Fault 2 "Second Fault" 1 "First Fault" 0 "No Fault" ;
+VAL_TABLE_ Drive_Fault 2 "Second Fault" 1 "First Fault" 0 "No Fault" ;
+VAL_TABLE_ EPB_Fault 2 "Second Fault" 1 "First Fault" 0 "No Fault" ;
+VAL_TABLE_ Hazard_Status 1 "On" 0 "Off" ;
+VAL_TABLE_ EPB_Status 1 "Release" 0 "Open" ;
+VAL_TABLE_ HighBeam_Status 2 "Open & Fault" 1 "Open" 0 "Close" ;
+VAL_TABLE_ LowBeam_Status 2 "Description for the value '0x2'" 1 "Open" 0 "Close" ;
+VAL_TABLE_ Door_R1_Status 4 "INVALID" 3 "Closing" 2 "Opening" 1 "Open" 0 "Close" ;
+VAL_TABLE_ LeftLight_Status 2 "Fault & Open" 1 "Open" 0 "Close" ;
+VAL_TABLE_ RightLight_Status 2 "Fault & Open" 1 "Open" 0 "Close" ;
+VAL_TABLE_ TurnLight_OnOff 1 "On" 0 "Off" ;
+VAL_TABLE_ Horn_onoff 1 "On" 0 "Off" ;
+VAL_TABLE_ Door_button 1 "disable" 0 "enable" ;
+VAL_TABLE_ Driver_Mode 4 "local control" 3 "help driver mode" 2 "Human Mode" 1 "Auto Mode" 0 "Standby" ;
+VAL_TABLE_ Takeover_Status 7 "in human driver mode" 6 "offline" 5 "Driver steering activity" 4 "Driver throttle activity" 3 "Driver brake activity" 2 "system fault" 1 "Emergency takeover" 0 "not takeover" ;
+VAL_TABLE_ Gear_INVALID 3 "L" 2 "R" 1 "D" 0 "N" 7 "invalid" 6 "invalid" 5 "invalid" 4 "invalid" ;
+VAL_TABLE_ Door_R1 1 "open" 0 "close" ;
+VAL_TABLE_ System_Enable 5 "remote control" 3 "Please Take over" 1 "Auto" 0 "Standby" ;
+VAL_TABLE_ Steering_val 0 "Steering val" ;
+VAL_TABLE_ Steering_rate 0 "steering rate" ;
+VAL_TABLE_ Steering_Enable 5 "clean flag" 4 "Steering Disable" 1 "Steering Enable" 0 "standby " ;
+VAL_TABLE_ Brake_Val 0 "Brake Val" ;
+VAL_TABLE_ Acc_Enable 1 "Enable Acc" 0 "Disable Acc" ;
+VAL_TABLE_ Brake_Enable 1 "enable brake" 0 "Disable brake" ;
+VAL_TABLE_ Acc_Val 0 "0%" ;
+VAL_TABLE_ Gear 96 "Gear L" 64 "Gear R" 32 "Gear D" 0 "Gear N" ;
+
+
+BO_ 1973 Battery_Info: 8 YT_ADAS
+ SG_ Battery : 0|8@1+ (0.4,0) [0|102] "%"  WR_ADC
+
+BO_ 1981 Driver_Rotating_Speed: 8 YT_ADAS
+ SG_ Rotating_Speed : 24|16@1+ (0.25,0) [0|16000] "rpm"  WR_ADC
+
+BO_ 1972 Mileage_Info: 8 YT_ADAS
+ SG_ Mileage_Info : 0|32@1+ (0.005,0) [0|21474836.475] "Km"  WR_ADC
+
+BO_ 1975 EPB_Status: 8 YT_ADAS
+ SG_ EPB_Status_Feedback : 32|2@1+ (1,0) [0|1] ""  WR_ADC
+
+BO_ 1970 Hom_Status: 8 YT_ADAS
+ SG_ Hom_Status : 24|2@1+ (1,0) [0|3] ""  WR_ADC
+
+BO_ 1979 System_Fault: 8 YT_ADAS
+ SG_ EPB_System_Fault : 40|4@1+ (1,0) [0|15] ""  WR_ADC
+ SG_ Drive_System_Fault : 56|4@1+ (1,0) [0|15] ""  WR_ADC
+ SG_ Brake_System_Fault : 60|4@1+ (1,0) [0|15] ""  WR_ADC
+
+BO_ 1955 Light_Control_enable: 8 WR_ADC
+ SG_ Low_beam : 6|2@1+ (1,0) [0|3] ""  YT_ADAS
+ SG_ High_beam : 4|2@1+ (1,0) [0|3] ""  YT_ADAS
+
+BO_ 1957 Misc_Control: 8 WR_ADC
+ SG_ Hazard_Control : 46|2@1+ (1,0) [0|3] ""  YT_ADAS
+ SG_ RightTurn_Control : 6|2@1+ (1,0) [0|3] ""  YT_ADAS
+ SG_ LeftTurn_Control : 4|2@1+ (1,0) [0|3] ""  YT_ADAS
+ SG_ Horn_Control : 62|2@1+ (1,0) [0|3] ""  YT_ADAS
+ SG_ Door_R1_Button : 60|2@1+ (1,0) [0|3] ""  YT_ADAS
+ SG_ Door_R1_Control : 0|2@1+ (1,0) [0|3] ""  YT_ADAS
+
+BO_ 1969 Misc_Status: 8 YT_ADAS
+ SG_ RightTurnLight_Status : 0|2@1+ (1,0) [0|3] ""  WR_ADC
+ SG_ LowBeam_Status : 4|2@1+ (1,0) [0|3] ""  WR_ADC
+ SG_ LeftTurnLight_Status : 2|2@1+ (1,0) [0|3] ""  WR_ADC
+ SG_ HighBeam_Status : 6|2@1+ (1,0) [0|3] ""  WR_ADC
+ SG_ Hazard_Status : 16|2@1+ (1,0) [0|3] ""  WR_ADC
+
+BO_ 1982 Door_Status: 8 YT_ADAS
+ SG_ Door_Status_R1 : 8|4@1- (1,0) [0|2] ""  WR_ADC
+
+BO_ 1980 Wheel_Speed: 8 YT_ADAS
+ SG_ Wheel_Speed_RR : 48|16@1+ (0.00390625,0) [0|255.99609375] "km/h"  WR_ADC
+ SG_ Wheel_Speed_RL : 32|16@1+ (0.00390625,0) [0|255.99609375] "km/h"  WR_ADC
+ SG_ Wheel_Speed_FR : 16|16@1+ (0.00390625,0) [0|255.99609375] "km/h"  WR_ADC
+ SG_ Wheel_Speed_FL : 0|16@1+ (0.00390625,0) [0|255.99609375] "km/h"  WR_ADC
+
+BO_ 1971 Longitudinal_Acc: 8 YT_ADAS
+ SG_ Longitudinal_Acc : 56|8@1+ (0.1,-12.5) [-12.5|12.5] "m/s2"  WR_ADC
+
+BO_ 1977 Drive_Feedback: 8 YT_ADAS
+ SG_ Drive_Mode : 56|3@1+ (1,0) [0|7] ""  WR_ADC
+ SG_ Takeover_Status : 59|3@1+ (1,0) [0|7] ""  WR_ADC
+ SG_ Emergency_Brake : 62|2@1+ (1,0) [0|3] ""  WR_ADC
+ SG_ Acc_PedalPosition : 40|8@1+ (0.4,0) [0|100] "%"  WR_ADC
+ SG_ Acc_DriverPedalPosition : 32|8@1+ (0.4,0) [0|100] "%"  WR_ADC
+ SG_ Brake_DriverPedalPosition : 0|8@1+ (0.4,0) [0|100] "%"  WR_ADC
+ SG_ Gear_feedback : 28|4@1+ (1,0) [0|3] ""  WR_ADC
+ SG_ Vehicle_Speed : 8|16@1+ (0.00390625,0) [0|255.996] "km/h"  WR_ADC
+
+BO_ 1968 Steering_Feedback: 8 YT_ADAS
+ SG_ Steering_Torque_feedback : 40|8@1+ (0.07,-8.96) [-8.96|8.96] "Nm"  WR_ADC
+ SG_ Steering_Status_feedback : 48|4@1+ (1,0) [0|7] ""  WR_ADC
+ SG_ Steering_Anglerate_feedback : 32|8@1+ (10,0) [50|540] "deg/s"  WR_ADC
+ SG_ Steering_Angle_feedback : 0|16@1- (0.1,-1575) [-1080|1080] "deg"  WR_ADC
+
+BO_ 1953 Drive_Cmd: 8 WR_ADC
+ SG_ Cnt_7A1 : 56|4@1+ (1,0) [0|15] ""  YT_ADAS
+ SG_ Acc_Cmd : 0|8@1+ (0.4,0) [0|100] "%"  YT_ADAS
+ SG_ Gear_Cmd : 8|8@1+ (1,0) [0|64] ""  YT_ADAS
+ SG_ Brake_Decel_Cmd : 24|16@1- (0.00048828125,-15.687) [-10|10] "m/s2"  YT_ADAS
+ SG_ Brake_engaged : 16|4@1+ (1,0) [0|1] ""  YT_ADAS
+ SG_ Acc_engaged : 20|4@1+ (1,0) [0|1] ""  YT_ADAS
+
+BO_ 1952 Steering_Command: 8 WR_ADC
+ SG_ Cnt_7A0 : 56|4@1+ (1,0) [0|15] ""  YT_ADAS
+ SG_ steering_anglerate : 32|8@1- (10,0) [50|540] "deg/s"  YT_ADAS
+ SG_ steering_engaged : 16|4@1+ (1,0) [0|6] ""  YT_ADAS
+ SG_ steering_cmd : 0|16@1- (0.1,-1575) [-1080|1080] "deg"  YT_ADAS
+
+BO_ 1958 engaged: 8 WR_ADC
+ SG_ engaged : 0|3@1- (1,0) [0|6] ""  YT_ADAS
+
+
+
+BA_DEF_ BO_  "GenMsgSendType" ENUM  "Cyclic","NotUsed","NotUsed","NotUsed","NotUsed","NotUsed","NotUsed","IfActive","NoMsgSendType","NotUsed","vector_leerstring";
+BA_DEF_ BO_  "GenMsgCycleTime" INT 0 50000;
+BA_DEF_DEF_  "GenMsgSendType" "NoMsgSendType";
+BA_DEF_DEF_  "GenMsgCycleTime" 0;
+BA_ "GenMsgSendType" BO_ 1973 0;
+BA_ "GenMsgCycleTime" BO_ 1973 500;
+BA_ "GenMsgSendType" BO_ 1981 0;
+BA_ "GenMsgCycleTime" BO_ 1981 10;
+BA_ "GenMsgSendType" BO_ 1972 0;
+BA_ "GenMsgCycleTime" BO_ 1972 1000;
+BA_ "GenMsgSendType" BO_ 1975 0;
+BA_ "GenMsgCycleTime" BO_ 1975 20;
+BA_ "GenMsgSendType" BO_ 1970 0;
+BA_ "GenMsgCycleTime" BO_ 1970 200;
+BA_ "GenMsgSendType" BO_ 1979 0;
+BA_ "GenMsgCycleTime" BO_ 1979 20;
+BA_ "GenMsgSendType" BO_ 1955 0;
+BA_ "GenMsgCycleTime" BO_ 1955 100;
+BA_ "GenMsgSendType" BO_ 1957 0;
+BA_ "GenMsgCycleTime" BO_ 1957 100;
+BA_ "GenMsgSendType" BO_ 1969 0;
+BA_ "GenMsgCycleTime" BO_ 1969 100;
+BA_ "GenMsgSendType" BO_ 1982 0;
+BA_ "GenMsgCycleTime" BO_ 1982 100;
+BA_ "GenMsgSendType" BO_ 1980 0;
+BA_ "GenMsgCycleTime" BO_ 1980 10;
+BA_ "GenMsgSendType" BO_ 1971 0;
+BA_ "GenMsgCycleTime" BO_ 1971 20;
+BA_ "GenMsgSendType" BO_ 1977 0;
+BA_ "GenMsgCycleTime" BO_ 1977 50;
+BA_ "GenMsgSendType" BO_ 1968 0;
+BA_ "GenMsgCycleTime" BO_ 1968 10;
+BA_ "GenMsgSendType" BO_ 1953 0;
+BA_ "GenMsgCycleTime" BO_ 1953 10;
+BA_ "GenMsgSendType" BO_ 1952 0;
+BA_ "GenMsgCycleTime" BO_ 1952 10;
+BA_ "GenMsgSendType" BO_ 1958 0;
+BA_ "GenMsgCycleTime" BO_ 1958 100;
+VAL_ 1975 EPB_Status_Feedback 1 "Release" 0 "Park" ;
+VAL_ 1970 Hom_Status 3 "INVALID" 2 "Fault" 1 "ON" 0 "OFF" ;
+VAL_ 1979 EPB_System_Fault 2 "Second Fault" 1 "First Fault" 0 "No Fault" ;
+VAL_ 1979 Drive_System_Fault 2 "Second Fault" 1 "First Fault" 0 "No Fault" ;
+VAL_ 1979 Brake_System_Fault 2 "Second Fault" 1 "First Fault" 0 "No Fault" ;
+VAL_ 1955 Low_beam 1 "On" 0 "Off" ;
+VAL_ 1955 High_beam 1 "On" 0 "Off" ;
+VAL_ 1957 Hazard_Control 1 "On" 0 "Off" ;
+VAL_ 1957 RightTurn_Control 1 "On" 0 "Off" ;
+VAL_ 1957 LeftTurn_Control 1 "On" 0 "Off" ;
+VAL_ 1957 Horn_Control 1 "On" 0 "Off" ;
+VAL_ 1957 Door_R1_Button 1 "disable" 0 "enable" ;
+VAL_ 1957 Door_R1_Control 1 "open" 0 "close" ;
+VAL_ 1969 RightTurnLight_Status 2 "Fault & Open" 1 "Open" 0 "Close" ;
+VAL_ 1969 LowBeam_Status 2 "Description for the value '0x2'" 1 "Open" 0 "Close" ;
+VAL_ 1969 LeftTurnLight_Status 2 "Fault & Open" 1 "Open" 0 "Close" ;
+VAL_ 1969 HighBeam_Status 2 "Open & Fault" 1 "Open" 0 "Close" ;
+VAL_ 1969 Hazard_Status 1 "On" 0 "Off" ;
+VAL_ 1982 Door_Status_R1 4 "INVALID" 3 "Closing" 2 "Opening" 1 "Open" 0 "Close" ;
+VAL_ 1977 Drive_Mode 4 "local control" 3 "help driver mode" 2 "Human Mode" 1 "Auto Mode" 0 "Standby" ;
+VAL_ 1977 Takeover_Status 7 "in human driver mode" 6 "offline" 5 "Driver steering activity" 4 "Driver throttle activity" 3 "Driver brake activity" 2 "system fault" 1 "Emergency takeover" 0 "not takeover" ;
+VAL_ 1977 Gear_feedback 3 "L" 2 "R" 1 "D" 0 "N" 7 "invalid" 6 "invalid" 5 "invalid" 4 "invalid" ;
+VAL_ 1968 Steering_Status_feedback 5 "Driver Intervene Mode" 7 "Second System Fault" 6 "First System Fault" 4 "Driver Mode" 1 "Auto Control Mode" 0 "Standby Mode" ;
+VAL_ 1953 Gear_Cmd 96 "Gear L" 64 "Gear R" 32 "Gear D" 0 "Gear N" ;
+VAL_ 1953 Brake_engaged 1 "enable brake" 0 "Disable brake" ;
+VAL_ 1953 Acc_engaged 1 "Enable Acc" 0 "Disable Acc" ;
+VAL_ 1952 steering_engaged 4 "Steering Disable" 1 "Steering Enable" 0 "standby " ;
+VAL_ 1958 engaged 5 "remote control" 3 "Please Take over" 1 "Auto" 0 "Standby" ;
+

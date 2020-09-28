@@ -1,0 +1,48 @@
+%implements s370_b0_kju7n_7_ModuleConstants "C"
+
+%function ModuleConstants(block) Output
+
+
+/* Named constants for Chart: '<S40>/SystemStatechart_v3' */
+#define IN_ADCNotReady ((uint8_T)1U)
+#define IN_ADCReady ((uint8_T)2U)
+#define IN_ADSDisengaged ((uint8_T)1U)
+#define IN_ADSEngaged ((uint8_T)2U)
+#define IN_ADSRelinquishWarning ((uint8_T)1U)
+#define IN_AlertingDriver ((uint8_T)1U)
+#define IN_AllLedsOn ((uint8_T)1U)
+#define IN_DriverOverridden ((uint8_T)2U)
+#define IN_FaultOverridden ((uint8_T)3U)
+#define IN_GreenLedOn ((uint8_T)2U)
+#define IN_Initializing ((uint8_T)3U)
+#define IN_LLCNotReady ((uint8_T)1U)
+#define IN_LLCReady ((uint8_T)2U)
+#define IN_LedsOff ((uint8_T)3U)
+#define IN_NO_ACTIVE_CHILD_f ((uint8_T)0U)
+#define IN_PreOperational ((uint8_T)4U)
+#define IN_RedLedOn ((uint8_T)4U)
+#define IN_RedLightOff ((uint8_T)1U)
+#define IN_RedLightOn ((uint8_T)2U)
+#define IN_WaitingForADC ((uint8_T)2U)
+#define IN_WaitingForDriverActivity ((uint8_T)5U)
+#define IN_WaitingForDriverActivity_f ((uint8_T)3U)
+#define IN_YellowLedOn ((uint8_T)5U)
+
+/* Named constants for Chart: '<S109>/DebounceStatechart' */
+#define IN_Debounced ((uint8_T)1U)
+#define IN_Delaying ((uint8_T)2U)
+#define IN_NotPressed ((uint8_T)1U)
+#define IN_Pressed ((uint8_T)2U)
+
+/* Named constants for Chart: '<S178>/check_can_counter' */
+#define IN_counter_is_invalid ((uint8_T)1U)
+#define IN_counter_is_valid ((uint8_T)2U)
+#define IN_done ((uint8_T)1U)
+#define IN_ini_c ((uint8_T)3U)
+#define IN_refresh_counter ((uint8_T)4U)
+#define IN_wait_p ((uint8_T)2U)
+
+/* Named constants for Chart: '<S353>/trigger_buzzer_after_epo' */
+#define IN_buzzer_off ((uint8_T)1U)
+#define IN_buzzer_on ((uint8_T)2U)
+%endfunction

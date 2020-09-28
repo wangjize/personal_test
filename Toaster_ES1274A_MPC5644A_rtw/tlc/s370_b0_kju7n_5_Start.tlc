@@ -1,0 +1,22 @@
+%implements s370_b0_kju7n_5_Start "C"
+
+%function Start(block, system) Output
+%assign cfgTxt = ""
+%openfile cfgTxt
+%assign localVarDecl = ""
+%assign tlcStartFcnOfS34B17 = OpaqueTLCBlockFcn("Start", 34, 17, 5, 0)
+%if !WHITE_SPACE(tlcStartFcnOfS34B17)
+/* Start for S-Function (DI_Key_In): '<S388>/SwitchInput_ReadKeyOn' */
+%<SLibCG_DumpSSCode("/*@[54bc1*/",tlcStartFcnOfS34B17,"/*@]*/")>\
+%endif
+%closefile cfgTxt
+%<cfgTxt>
+%endfunction
+%function StartFcnProtoType(block, system) Output
+%assign fcnProtoType = ""
+%openfile fcnProtoType
+static void Start(\
+%assign comma = ""
+%closefile fcnProtoType
+%<SLibCG_SetFcnProtoType(5, 0, fcnProtoType)>
+%endfunction

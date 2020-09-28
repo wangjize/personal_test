@@ -1,0 +1,20 @@
+%implements s370_b0_kju7n_6_SystemInitialize "C"
+
+%function SystemInitialize(block, system) Output
+%assign cfgTxt = ""
+%openfile cfgTxt
+%assign localVarDecl = ""
+DWork.PwrOnCtrl_PREV_T = %<(SLibCG_SE(LibGetClockTick(1)))>;
+/* InitializeConditions for UnitDelay: '<S412>/Unit Delay1' */
+/*@>56863*/DWork./*@>56d29*/UnitDelay1_DSTATE/*@>41960*/ = /*@>55cfe*/true;
+%closefile cfgTxt
+%<cfgTxt>
+%endfunction
+%function SystemInitializeFcnProtoType(block, system) Output
+%assign fcnProtoType = ""
+%openfile fcnProtoType
+static void PwrOnCtrl_c(\
+%assign comma = ""
+%closefile fcnProtoType
+%<SLibCG_SetFcnProtoType(6, 1, fcnProtoType)>
+%endfunction

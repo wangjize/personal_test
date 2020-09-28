@@ -1,0 +1,27 @@
+%selectfile NULL_FILE
+
+%%  Uncomment this TLC line to execute the example
+%%   ||   ||
+%%   ||   ||
+%%   \/   \/
+
+%if !IsModelReferenceTarget()
+  %assign ERTCustomFileTest = TLC_TRUE
+
+  %assign CompiledModel.GenerateSampleERTMain = TLC_FALSE
+
+  %if EXISTS("ERTCustomFileTest") && ERTCustomFileTest == TLC_TRUE
+  
+    %% Need to set the template compliance flag before you can use the API
+    %<LibSetCodeTemplateComplianceLevel(1)>
+
+    %if LibIsSingleRateModel() || LibIsSingleTasking()
+       %include "MPC5644A_mrmain.tlc"
+       %<MPC5644AFcnMultiTaskingMain()>  
+    %else
+       %include "MPC5644A_mrmain.tlc"
+       %<MPC5644AFcnMultiTaskingMain()>
+    %endif
+  %endif
+%endif
+

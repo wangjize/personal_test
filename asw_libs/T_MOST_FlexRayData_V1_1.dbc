@@ -1,0 +1,203 @@
+VERSION ""
+
+
+NS_ : 
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+	SG_MUL_VAL_
+
+BS_:
+
+BU_: Node_2 Node_1
+
+
+BO_ 3221225472 VECTOR__INDEPENDENT_SIG_MSG: 0 Vector__XXX
+ SG_ M_U32 : 0|32@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ M_U16 : 0|16@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ M_U08 : 0|8@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ M_S32 : 0|32@0- (1,0) [0|0] "" Vector__XXX
+ SG_ M_S16 : 0|16@0- (1,0) [0|0] "" Vector__XXX
+ SG_ M_S08 : 0|8@0- (1,0) [0|0] "" Vector__XXX
+ SG_ M_float : 0|32@0- (1,0) [0|0] "" Vector__XXX
+ SG_ I_Boolean : 0|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ I_Boolean : 0|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ I_U32 : 0|32@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ I_U16 : 0|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ I_U08 : 0|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ I_S32 : 0|32@1- (1,0) [0|0] "" Vector__XXX
+ SG_ I_S16 : 0|16@1- (1,0) [0|0] "" Vector__XXX
+ SG_ I_S08 : 0|8@1- (1,0) [0|0] "" Vector__XXX
+ SG_ I_float : 0|32@1- (1,0) [0|0] "" Vector__XXX
+ SG_ M_U32 : 0|32@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ M_U16 : 0|16@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ M_U08 : 0|8@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ M_S32 : 0|32@0- (1,0) [0|0] "" Vector__XXX
+ SG_ M_S16 : 0|16@0- (1,0) [0|0] "" Vector__XXX
+ SG_ M_S08 : 0|8@0- (1,0) [0|0] "" Vector__XXX
+ SG_ M_float : 0|32@0- (1,0) [0|0] "" Vector__XXX
+ SG_ M_Boolean : 0|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ M_U32 : 0|32@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ M_U16 : 0|16@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ M_U08 : 0|8@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ M_S32 : 0|32@0- (1,0) [0|0] "" Vector__XXX
+ SG_ M_S16 : 0|16@0- (1,0) [0|0] "" Vector__XXX
+ SG_ M_S08 : 0|8@0- (1,0) [0|0] "" Vector__XXX
+ SG_ M_float : 0|32@0- (1,0) [0|0] "" Vector__XXX
+ SG_ M_Boolean : 0|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ I_Boolean : 0|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ I_U32 : 0|32@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ I_U16 : 0|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ I_U08 : 0|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ I_S32 : 0|32@1- (1,0) [0|0] "" Vector__XXX
+ SG_ I_S16 : 0|16@1- (1,0) [0|0] "" Vector__XXX
+ SG_ I_S08 : 0|8@1- (1,0) [0|0] "" Vector__XXX
+ SG_ I_float : 0|32@1- (1,0) [0|0] "" Vector__XXX
+ SG_ M_U32 : 0|32@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ M_U16 : 0|16@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ M_S32 : 0|32@0- (1,0) [0|0] "" Vector__XXX
+ SG_ M_S16 : 0|16@0- (1,0) [0|0] "" Vector__XXX
+ SG_ M_S08 : 0|8@0- (1,0) [0|0] "" Vector__XXX
+ SG_ M_float : 0|32@0- (1,0) [0|0] "" Vector__XXX
+ SG_ I_Boolean : 0|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ I_U16 : 0|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ I_U08 : 0|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ I_S32 : 0|32@1- (1,0) [0|0] "" Vector__XXX
+ SG_ I_S16 : 0|16@1- (1,0) [0|0] "" Vector__XXX
+ SG_ I_S08 : 0|8@1- (1,0) [0|0] "" Vector__XXX
+ SG_ I_float : 0|32@1- (1,0) [0|0] "" Vector__XXX
+
+BO_ 2147483654 S_M_0x6: 32 Node_2
+ SG_ M_U08 : 191|8@0+ (1,0) [0|0] ""  Node_1
+ SG_ M_U16 : 247|16@0+ (1,0) [0|0] ""  Node_1
+ SG_ M_S32 : 215|32@0- (1,0) [0|0] ""  Node_1
+ SG_ M_S16 : 199|16@0- (1,0) [0|0] ""  Node_1
+ SG_ M_S08 : 183|8@0- (1,0) [0|0] ""  Node_1
+ SG_ M_float : 151|32@0- (1,0) [0|0] ""  Node_1
+ SG_ I_U32 : 112|32@1+ (1,0) [0|0] ""  Node_1
+ SG_ I_U16 : 96|16@1+ (1,0) [0|0] ""  Node_1
+ SG_ I_U08 : 40|8@1+ (1,0) [0|0] ""  Node_1
+ SG_ I_S32 : 64|32@1- (1,0) [0|0] ""  Node_1
+ SG_ I_S16 : 48|16@1- (1,0) [0|0] ""  Node_1
+ SG_ I_S08 : 32|8@1- (1,0) [0|0] ""  Node_1
+ SG_ I_float : 0|32@1- (1,0) [0|0] ""  Node_1
+
+BO_ 2147483714 D_M_0x42: 38 Node_2
+ SG_ M_U32 : 279|32@0+ (1,0) [0|0] ""  Node_1
+ SG_ M_U16 : 263|16@0+ (1,0) [0|0] ""  Node_1
+ SG_ M_U08 : 247|8@0+ (1,0) [0|0] ""  Node_1
+ SG_ M_S32 : 215|32@0- (1,0) [0|0] ""  Node_1
+ SG_ M_S16 : 199|16@0- (1,0) [0|0] ""  Node_1
+ SG_ M_S08 : 159|8@0- (1,0) [0|0] ""  Node_1
+ SG_ M_float : 167|32@0- (1,0) [0|0] ""  Node_1
+ SG_ I_Boolean : 144|1@1+ (1,0) [0|0] ""  Node_1
+ SG_ I_U32 : 112|32@1+ (1,0) [0|0] ""  Node_1
+ SG_ I_U16 : 96|16@1+ (1,0) [0|0] ""  Node_1
+ SG_ I_U08 : 40|8@1+ (1,0) [0|0] ""  Node_1
+ SG_ I_S32 : 64|32@1- (1,0) [0|0] ""  Node_1
+ SG_ I_S16 : 48|16@1- (1,0) [0|0] ""  Node_1
+ SG_ I_S08 : 32|8@1- (1,0) [0|0] ""  Node_1
+ SG_ I_float : 0|32@1- (1,0) [0|0] ""  Node_1
+
+BO_ 2147483713 D_M_0x41: 38 Node_1
+ SG_ M_U32 : 279|32@0+ (1,0) [0|0] ""  Node_2
+ SG_ M_U16 : 263|16@0+ (1,0) [0|0] ""  Node_2
+ SG_ M_U08 : 247|8@0+ (1,0) [0|0] ""  Node_2
+ SG_ M_S32 : 215|32@0- (1,0) [0|0] ""  Node_2
+ SG_ M_S16 : 199|16@0- (1,0) [0|0] ""  Node_2
+ SG_ M_S08 : 159|8@0- (1,0) [0|0] ""  Node_2
+ SG_ M_float : 167|32@0- (1,0) [0|0] ""  Node_2
+ SG_ I_Boolean : 144|1@1+ (1,0) [0|0] ""  Node_2
+ SG_ I_U32 : 112|32@1+ (1,0) [0|0] ""  Node_2
+ SG_ I_U16 : 96|16@1+ (1,0) [0|0] ""  Node_2
+ SG_ I_U08 : 40|8@1+ (1,0) [0|0] ""  Node_2
+ SG_ I_S32 : 64|32@1- (1,0) [0|0] ""  Node_2
+ SG_ I_S16 : 48|16@1- (1,0) [0|0] ""  Node_2
+ SG_ I_S08 : 32|8@1- (1,0) [0|0] ""  Node_2
+ SG_ I_float : 0|32@1- (1,0) [0|0] ""  Node_2
+
+BO_ 2147483653 S_M_0x5: 32 Node_1
+ SG_ M_U08 : 191|8@0+ (1,0) [0|0] ""  Node_2
+ SG_ M_U16 : 247|16@0+ (1,0) [0|0] ""  Node_2
+ SG_ M_S32 : 215|32@0- (1,0) [0|0] ""  Node_2
+ SG_ M_S16 : 199|16@0- (1,0) [0|0] ""  Node_2
+ SG_ M_S08 : 183|8@0- (1,0) [0|0] ""  Node_2
+ SG_ M_float : 151|32@0- (1,0) [0|0] ""  Node_2
+ SG_ I_U32 : 112|32@1+ (1,0) [0|0] ""  Node_2
+ SG_ I_U16 : 96|16@1+ (1,0) [0|0] ""  Node_2
+ SG_ I_U08 : 40|8@1+ (1,0) [0|0] ""  Node_2
+ SG_ I_S32 : 64|32@1- (1,0) [0|0] ""  Node_2
+ SG_ I_S16 : 48|16@1- (1,0) [0|0] ""  Node_2
+ SG_ I_S08 : 32|8@1- (1,0) [0|0] ""  Node_2
+ SG_ I_float : 0|32@1- (1,0) [0|0] ""  Node_2
+
+
+
+CM_ BO_ 3221225472 "This is a message for not used signals, created by Vector CANdb++ DBC OLE DB Provider.";
+BA_DEF_  "DBName" STRING ;
+BA_DEF_  "SM Parameters" STRING ;
+BA_DEF_  "Baud Rate" INT 0 100000;
+BA_DEF_  "Cycle Length" INT 0 100000;
+BA_DEF_  "Max Static Id" INT 0 100000;
+BA_DEF_  "Max Id" INT 0 100000;
+BA_DEF_  "Macrotick Length" FLOAT 0 100000;
+BA_DEF_  "Channel Number" INT 0 1;
+BA_DEF_  "BusType" STRING ;
+BA_DEF_ BO_  "Sync" INT 0 1;
+BA_DEF_ BO_  "Mux" INT 0 1;
+BA_DEF_ BO_  "Identifier Number" INT 0 100000;
+BA_DEF_ BO_  "Slot Length" INT 0 100000;
+BA_DEF_ BO_  "Slot Start" INT 0 100000;
+BA_DEF_DEF_  "DBName" "";
+BA_DEF_DEF_  "SM Parameters" "";
+BA_DEF_DEF_  "Baud Rate" 20;
+BA_DEF_DEF_  "Cycle Length" 0;
+BA_DEF_DEF_  "Max Static Id" 0;
+BA_DEF_DEF_  "Max Id" 0;
+BA_DEF_DEF_  "Macrotick Length" 0;
+BA_DEF_DEF_  "Channel Number" 0;
+BA_DEF_DEF_  "BusType" "FlexRay";
+BA_DEF_DEF_  "Sync" 0;
+BA_DEF_DEF_  "Mux" 0;
+BA_DEF_DEF_  "Identifier Number" 0;
+BA_DEF_DEF_  "Slot Length" 0;
+BA_DEF_DEF_  "Slot Start" 0;
+BA_ "BusType" "MOST";
+BA_ "DBName" "FlexRay";
+SIG_VALTYPE_ 3221225472 M_float : 1;
+SIG_VALTYPE_ 3221225472 I_float : 1;
+SIG_VALTYPE_ 3221225472 M_float : 1;
+SIG_VALTYPE_ 3221225472 I_float : 1;
+SIG_VALTYPE_ 2147483654 M_float : 1;
+SIG_VALTYPE_ 2147483654 I_float : 1;
+SIG_VALTYPE_ 2147483714 M_float : 1;
+SIG_VALTYPE_ 2147483714 I_float : 1;
+SIG_VALTYPE_ 2147483713 M_float : 1;
+SIG_VALTYPE_ 2147483713 I_float : 1;
+SIG_VALTYPE_ 2147483653 M_float : 1;
+SIG_VALTYPE_ 2147483653 I_float : 1;
+

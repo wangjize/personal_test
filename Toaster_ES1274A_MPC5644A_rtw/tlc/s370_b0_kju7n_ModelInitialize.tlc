@@ -1,0 +1,231 @@
+%implements s370_b0_kju7n_ModelInitialize "C"
+
+%function ModelInitialize(block, system) Output
+%assign cfgTxt = ""
+%openfile cfgTxt
+%assign localVarDecl = ""
+%assign tlcStartFcnOfS347B0 = OpaqueTLCBlockFcn("Start", 347, 0, 8, 11)
+%assign tlcStartFcnOfS347B2 = OpaqueTLCBlockFcn("Start", 347, 2, 8, 11)
+%assign tlcStartFcnOfS347B4 = OpaqueTLCBlockFcn("Start", 347, 4, 8, 11)
+%assign tlcStartFcnOfS347B6 = OpaqueTLCBlockFcn("Start", 347, 6, 8, 11)
+%assign tlcStartFcnOfS347B8 = OpaqueTLCBlockFcn("Start", 347, 8, 8, 11)
+%assign tlcStartFcnOfS347B10 = OpaqueTLCBlockFcn("Start", 347, 10, 8, 11)
+%<SLibInsertAsyncTaskInitializeCode(system)>
+%<SLibWriteMachineInitialize()>
+%<SLibCGIRDumpSystemUserCode(347, "Start", "Header")>\
+%<SLibCGIRDumpSystemUserCode(347, "Start", "Body")>\
+%assign   Start_open_Task_Call1_347_0 = ""
+%openfile Start_open_Task_Call1_347_0
+
+/* Start for S-Function (EcoCoder_Task): '<S5>/Task_Call1' incorporates:
+ *  SubSystem: '<S5>/PwrOnCtrl'
+ */
+%closefile Start_open_Task_Call1_347_0
+
+%assign    Start_body_Task_Call1_347_0 = ""
+%openfile  Start_body_Task_Call1_347_0
+
+%if !SLibCGSysFcnIsEmptyForTid(CompiledModel.System[37], "Start",0)
+%<SLibCG_DumpSSCode("/*@[a347b*/",SLibCGIRGenReusableSysCall("PwrOnCtrl_p", [], 37, 0, 0, 0, 20, 347),"/*@]*/")>\
+
+%endif
+%<SLibCG_DumpSSCode("/*@[a3470*/",tlcStartFcnOfS347B0,"/*@]*/")>\
+%closefile Start_body_Task_Call1_347_0
+
+%assign    Start_close_Task_Call1_347_0 = ""
+%openfile  Start_close_Task_Call1_347_0
+
+/* End of Start for S-Function (EcoCoder_Task): '<S5>/Task_Call1' */
+%closefile Start_close_Task_Call1_347_0
+%<SLibCG_DumpSSCode(Start_open_Task_Call1_347_0, Start_body_Task_Call1_347_0, Start_close_Task_Call1_347_0)>
+
+
+%assign   Start_open_Task_Call1_e_347_3 = ""
+%openfile Start_open_Task_Call1_e_347_3
+
+/* Start for S-Function (EcoCoder_Task): '<S4>/Task_Call1' incorporates:
+ *  SubSystem: '<S4>/Power Off Management'
+ */
+%closefile Start_open_Task_Call1_e_347_3
+
+%assign    Start_body_Task_Call1_e_347_3 = ""
+%openfile  Start_body_Task_Call1_e_347_3
+
+%if !SLibCGSysFcnIsEmptyForTid(CompiledModel.System[34], "Start",0)
+%<SLibCG_DumpSSCode("/*@[a347c*/",SLibCGIRGenReusableSysCall("Start", [], 34, 0, 0, 0, 20, 347),"/*@]*/")>\
+
+%endif
+%<SLibCG_DumpSSCode("/*@[a3472*/",tlcStartFcnOfS347B2,"/*@]*/")>\
+%closefile Start_body_Task_Call1_e_347_3
+
+%assign    Start_close_Task_Call1_e_347_3 = ""
+%openfile  Start_close_Task_Call1_e_347_3
+
+/* End of Start for S-Function (EcoCoder_Task): '<S4>/Task_Call1' */
+%closefile Start_close_Task_Call1_e_347_3
+%<SLibCG_DumpSSCode(Start_open_Task_Call1_e_347_3, Start_body_Task_Call1_e_347_3, Start_close_Task_Call1_e_347_3)>
+
+
+%assign   Start_open_Task_Call_347_5 = ""
+%openfile Start_open_Task_Call_347_5
+
+/* Start for S-Function (EcoCoder_Task): '<S4>/Task_Call' */
+%closefile Start_open_Task_Call_347_5
+
+%assign    Start_body_Task_Call_347_5 = ""
+%openfile  Start_body_Task_Call_347_5
+
+%<SLibCG_DumpSSCode("/*@[a3474*/",tlcStartFcnOfS347B4,"/*@]*/")>\
+%closefile Start_body_Task_Call_347_5
+
+%assign    Start_close_Task_Call_347_5 = ""
+%openfile  Start_close_Task_Call_347_5
+
+/* End of Start for S-Function (EcoCoder_Task): '<S4>/Task_Call' */
+%closefile Start_close_Task_Call_347_5
+%<SLibCG_DumpSSCode(Start_open_Task_Call_347_5, Start_body_Task_Call_347_5, Start_close_Task_Call_347_5)>
+
+
+%assign   Start_open_TaskTrigger2_347_7 = ""
+%openfile Start_open_TaskTrigger2_347_7
+
+/* Start for S-Function (EcoCoder_Task): '<Root>/Task Trigger2' incorporates:
+ *  SubSystem: '<Root>/Main1'
+ */
+%closefile Start_open_TaskTrigger2_347_7
+
+%assign    Start_body_TaskTrigger2_347_7 = ""
+%openfile  Start_body_TaskTrigger2_347_7
+
+%if !SLibCGSysFcnIsEmptyForTid(CompiledModel.System[346], "Start",0)
+%<SLibCG_DumpSSCode("/*@[a347d*/",SLibCGIRGenReusableSysCall("Start", [], 346, 0, 0, 0, 20, 347),"/*@]*/")>\
+
+%endif
+%<SLibCG_DumpSSCode("/*@[a3476*/",tlcStartFcnOfS347B6,"/*@]*/")>\
+%closefile Start_body_TaskTrigger2_347_7
+
+%assign    Start_close_TaskTrigger2_347_7 = ""
+%openfile  Start_close_TaskTrigger2_347_7
+
+/* End of Start for S-Function (EcoCoder_Task): '<Root>/Task Trigger2' */
+%closefile Start_close_TaskTrigger2_347_7
+%<SLibCG_DumpSSCode(Start_open_TaskTrigger2_347_7, Start_body_TaskTrigger2_347_7, Start_close_TaskTrigger2_347_7)>
+
+
+%assign   Start_open_TaskTrigger_347_9 = ""
+%openfile Start_open_TaskTrigger_347_9
+
+/* Start for S-Function (EcoCoder_Task): '<S1>/Task Trigger' */
+%closefile Start_open_TaskTrigger_347_9
+
+%assign    Start_body_TaskTrigger_347_9 = ""
+%openfile  Start_body_TaskTrigger_347_9
+
+%<SLibCG_DumpSSCode("/*@[a3478*/",tlcStartFcnOfS347B8,"/*@]*/")>\
+%closefile Start_body_TaskTrigger_347_9
+
+%assign    Start_close_TaskTrigger_347_9 = ""
+%openfile  Start_close_TaskTrigger_347_9
+
+/* End of Start for S-Function (EcoCoder_Task): '<S1>/Task Trigger' */
+%closefile Start_close_TaskTrigger_347_9
+%<SLibCG_DumpSSCode(Start_open_TaskTrigger_347_9, Start_body_TaskTrigger_347_9, Start_close_TaskTrigger_347_9)>
+
+%if !WHITE_SPACE(tlcStartFcnOfS347B10)
+
+/* Start for S-Function (ASW_Schedule): '<S1>/ASWSchedule_Conf' */
+%<SLibCG_DumpSSCode("/*@[a3479*/",tlcStartFcnOfS347B10,"/*@]*/")>\
+%endif
+%<SLibCGIRDumpSystemUserCode(347, "Start", "Trailer")>\
+PrevZCSigState.ShutdownPower_Trig_ZCE = ZERO_ZCSIG;
+PrevZCSigState.SoftwareReset_Trig_ZCE = ZERO_ZCSIG;
+PrevZCSigState.StoreAllNVMData_Trig_ZCE = ZERO_ZCSIG;
+%assign   SystemInitialize_open_Task_Call1_347_0 = ""
+%openfile SystemInitialize_open_Task_Call1_347_0
+
+/* SystemInitialize for S-Function (EcoCoder_Task): '<S5>/Task_Call1' incorporates:
+ *  SubSystem: '<S5>/PwrOnCtrl'
+ */
+%closefile SystemInitialize_open_Task_Call1_347_0
+
+%assign    SystemInitialize_body_Task_Call1_347_0 = ""
+%openfile  SystemInitialize_body_Task_Call1_347_0
+
+%if !SLibCGSysFcnIsEmptyForTid(CompiledModel.System[37], "SystemInitialize",0)
+%<SLibCG_DumpSSCode("/*@[a347e*/",SLibCGIRGenReusableSysCall("PwrOnCtrl_c", [], 37, 0, 4, 0, 20, 347),"/*@]*/")>\
+
+
+%endif
+%closefile SystemInitialize_body_Task_Call1_347_0
+
+%assign    SystemInitialize_close_Task_Call1_347_0 = ""
+%openfile  SystemInitialize_close_Task_Call1_347_0
+
+/* End of SystemInitialize for S-Function (EcoCoder_Task): '<S5>/Task_Call1' */
+%closefile SystemInitialize_close_Task_Call1_347_0
+%<SLibCG_DumpSSCode(SystemInitialize_open_Task_Call1_347_0, SystemInitialize_body_Task_Call1_347_0, SystemInitialize_close_Task_Call1_347_0)>
+
+
+%assign   SystemInitialize_open_Task_Call1_e_347_3 = ""
+%openfile SystemInitialize_open_Task_Call1_e_347_3
+
+/* SystemInitialize for S-Function (EcoCoder_Task): '<S4>/Task_Call1' incorporates:
+ *  SubSystem: '<S4>/Power Off Management'
+ */
+%closefile SystemInitialize_open_Task_Call1_e_347_3
+
+%assign    SystemInitialize_body_Task_Call1_e_347_3 = ""
+%openfile  SystemInitialize_body_Task_Call1_e_347_3
+
+%if !SLibCGSysFcnIsEmptyForTid(CompiledModel.System[34], "SystemInitialize",0)
+%<SLibCG_DumpSSCode("/*@[a347f*/",SLibCGIRGenReusableSysCall("SystemInitialize", [], 34, 0, 4, 0, 20, 347),"/*@]*/")>\
+
+
+%endif
+%closefile SystemInitialize_body_Task_Call1_e_347_3
+
+%assign    SystemInitialize_close_Task_Call1_e_347_3 = ""
+%openfile  SystemInitialize_close_Task_Call1_e_347_3
+
+/* End of SystemInitialize for S-Function (EcoCoder_Task): '<S4>/Task_Call1' */
+%closefile SystemInitialize_close_Task_Call1_e_347_3
+%<SLibCG_DumpSSCode(SystemInitialize_open_Task_Call1_e_347_3, SystemInitialize_body_Task_Call1_e_347_3, SystemInitialize_close_Task_Call1_e_347_3)>
+
+
+%assign   SystemInitialize_open_TaskTrigger2_347_7 = ""
+%openfile SystemInitialize_open_TaskTrigger2_347_7
+
+/* SystemInitialize for S-Function (EcoCoder_Task): '<Root>/Task Trigger2' incorporates:
+ *  SubSystem: '<Root>/Main1'
+ */
+%closefile SystemInitialize_open_TaskTrigger2_347_7
+
+%assign    SystemInitialize_body_TaskTrigger2_347_7 = ""
+%openfile  SystemInitialize_body_TaskTrigger2_347_7
+
+%if !SLibCGSysFcnIsEmptyForTid(CompiledModel.System[346], "SystemInitialize",0)
+%<SLibCG_DumpSSCode("/*@[a3480*/",SLibCGIRGenReusableSysCall("SystemInitialize", [], 346, 0, 4, 0, 20, 347),"/*@]*/")>\
+
+
+%endif
+%closefile SystemInitialize_body_TaskTrigger2_347_7
+
+%assign    SystemInitialize_close_TaskTrigger2_347_7 = ""
+%openfile  SystemInitialize_close_TaskTrigger2_347_7
+
+/* End of SystemInitialize for S-Function (EcoCoder_Task): '<Root>/Task Trigger2' */
+%closefile SystemInitialize_close_TaskTrigger2_347_7
+%<SLibCG_DumpSSCode(SystemInitialize_open_TaskTrigger2_347_7, SystemInitialize_body_TaskTrigger2_347_7, SystemInitialize_close_TaskTrigger2_347_7)>
+
+%<SLibInsertInitPeriodicCStatesFcn(system)>
+%closefile cfgTxt
+%<cfgTxt>
+%endfunction
+%function ModelInitializeFcnProtoType(block, system) Output
+%assign fcnProtoType = ""
+%openfile fcnProtoType
+static void ModelInitialize(\
+%assign comma = ""
+%closefile fcnProtoType
+%<SLibCG_SetFcnProtoType(8, 11, fcnProtoType)>
+%endfunction

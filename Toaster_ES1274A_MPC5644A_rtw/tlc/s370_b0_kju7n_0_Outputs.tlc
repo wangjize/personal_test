@@ -1,0 +1,66 @@
+%implements s370_b0_kju7n_0_Outputs "C"
+
+%function Outputs(block, system) Output
+%assign cfgTxt = ""
+%openfile cfgTxt
+%assign localVarDecl = ""
+/* Chart: '<S68>/alterOutputByHiLoTicks' */
+/*@>40f57*/if (/*@>4e755*/localDW->/*@>4ea1e*/temporalCounter_i1/*@>40f56*/ < /*@>4e08f*/65535U) {
+    /*@>4e75c*/localDW->/*@>4ea21*/temporalCounter_i1/*@>4e9c6*/++;
+}
+/*@>40f65*/if (/*@>4e76a*/localDW->/*@>4ea24*/is_active_c9_LeafEcoTronDBWLib/*@>40f64*/ == /*@>4e097*/0U) {
+    /*@>4e778*/localDW->/*@>4ea2a*/is_active_c9_LeafEcoTronDBWLib/*@>40f96*/ = /*@>4e9b5*/1U;
+    /*@>4e77f*/localDW->/*@>4ea2d*/is_c9_LeafEcoTronDBWLib/*@>40f9a*/ = /*@>4e0b0*/IN_lo;
+    /*@>4e794*/localDW->/*@>4ea36*/temporalCounter_i1/*@>40f99*/ = /*@>4e9b8*/0U;
+    *bOut_o/*@>40fa0*/ = /*@>4e0b1*/false;
+} else /*@>4dfb7*/if (/*@>4e771*/localDW->/*@>4ea27*/is_c9_LeafEcoTronDBWLib/*@>4dfb6*/ == /*@>4e7c9*/IN_hi) {
+    *bOut_o/*@>40f89*/ = /*@>4e0a6*/true;
+    /*@>40f81*/if (/*@>4e78d*/localDW->/*@>4ea33*/temporalCounter_i1/*@>40f8d*/ >= /*@>4e4e2*/tick_hi) {
+        /*@>4e7a2*/localDW->/*@>4ea3c*/is_c9_LeafEcoTronDBWLib/*@>40f83*/ = /*@>4e0a5*/IN_lo;
+        /*@>4e7b0*/localDW->/*@>4ea42*/temporalCounter_i1/*@>40f82*/ = /*@>4e9be*/0U;
+        *bOut_o/*@>40f92*/ = /*@>4e0a9*/false;
+    }
+} else {
+    *bOut_o/*@>40f74*/ = /*@>4e09d*/false;
+    /*@>40f6c*/if (/*@>4e786*/localDW->/*@>4ea30*/temporalCounter_i1/*@>40f78*/ >= /*@>4e4e0*/tick_lo) {
+        /*@>4e79b*/localDW->/*@>4ea39*/is_c9_LeafEcoTronDBWLib/*@>40f6e*/ = /*@>4e09c*/IN_hi;
+        /*@>4e7a9*/localDW->/*@>4ea3f*/temporalCounter_i1/*@>40f6d*/ = /*@>4e9bb*/0U;
+        *bOut_o/*@>40f7d*/ = /*@>4e0a0*/true;
+    }
+}
+/* End of Chart: '<S68>/alterOutputByHiLoTicks' */
+%closefile cfgTxt
+%<cfgTxt>
+%assign rtmArgSys = ::CompiledModel.System[::CompiledModel.System[::CompiledModel.RTWCGModules.RTWCGModule[0].CGSystemIdx].NonInlinedParentSystemIdx]
+%if SysFcnArgNeeded("Output", rtmArgSys.Interface.RTMArgDef, rtmArgSys.CurrentTID, FcnSysModuleIsRateGrouping(rtmArgSys, "Output"))
+%<SLibCG_AccessArg(0, 2, 0)>
+%endif
+%if SLibCG_ArgAccessed(0, 2, 0)
+%<SLibAccessArg(rtmArgSys.Interface.RTMArgDef, "Output", rtmArgSys.CurrentTID, FcnSysModuleIsRateGrouping(rtmArgSys, "Output"))>
+%endif
+%if (IsModelReferenceBaseSys(rtmArgSys) && (IsModelRefScalableBuild() || GenerateClassInterface)) ||...
+(GenerateClassInterface && SLibIsMultiInstanceServer(rtmArgSys))
+%<SLibCG_UndoAccessArg(0, 2, 0)>
+%endif
+%<LibSetSystemField(system, "CachedOutputLocalVars", localVarDecl)>
+%endfunction
+%function OutputsFcnProtoType(block, system) Output
+%assign fcnProtoType = ""
+%openfile fcnProtoType
+static void alterOutputByHiLoTicks(\
+%assign comma = ""
+%if SLibCG_ArgAccessed(0, 2, 0)
+%<comma>%<::tSimStructType> * const %<::tSimStruct>\
+%assign comma = ", "
+%endif
+%<comma>uint16_T tick_lo\
+%assign comma = ", "
+%<comma>uint16_T tick_hi\
+%assign comma = ", "
+%<comma>boolean_T *bOut_o\
+%assign comma = ", "
+%<comma>rtDW_alterOutputByHiLoTicks *localDW\
+%assign comma = ", "
+%closefile fcnProtoType
+%<SLibCG_SetFcnProtoType(0, 2, fcnProtoType)>
+%endfunction

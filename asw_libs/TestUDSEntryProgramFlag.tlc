@@ -1,0 +1,34 @@
+%% File : TestUDSEntryProgramFlag.tlc
+
+%implements  TestUDSEntryProgramFlag "C"
+%%assign ::ModelHeader=0
+%% Function: blockTypeSetup ==========================================================
+%%
+%% Purpose:
+%%      Add some macro defines for the analog registers.
+%%
+/%
+%/
+%function BlockTypeSetup(block, system) void
+
+%endfunction
+
+
+%function BlockInstanceSetup(block,system) void
+   
+
+%endfunction %% BlockInstanceSetup
+%% Function: Outputs ==========================================================
+%%
+%% Purpose:
+%%      Code generation rules for mdlOutputs function.
+%%
+%function Outputs(block, system) Output
+
+  %assign y0 = LibBlockOutputSignal(0, "", "", 0) 
+  %<y0> =*((uint8_T*)0x0001A110);
+
+
+%endfunction
+
+%% [EOF] TestUDSEntryProgramFlag.tlc

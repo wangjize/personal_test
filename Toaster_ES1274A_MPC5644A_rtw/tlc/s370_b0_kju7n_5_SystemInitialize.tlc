@@ -1,0 +1,37 @@
+%implements s370_b0_kju7n_5_SystemInitialize "C"
+
+%function SystemInitialize(block, system) Output
+%assign cfgTxt = ""
+%openfile cfgTxt
+%assign localVarDecl = ""
+DWork.PowerOffManagement_PREV_T = %<(SLibCG_SE(LibGetClockTick(1)))>;
+/* InitializeConditions for UnitDelay: '<S386>/Unit Delay7' */
+/*@>54436*/DWork./*@>55035*/UnitDelay7_DSTATE/*@>411cc*/ = /*@>52af0*/true;
+/* InitializeConditions for UnitDelay: '<S386>/Unit Delay4' */
+/*@>5443c*/DWork./*@>55038*/UnitDelay4_DSTATE/*@>411d8*/ = /*@>52af1*/true;
+/* InitializeConditions for UnitDelay: '<S386>/Unit Delay5' */
+/*@>54442*/DWork./*@>5503b*/UnitDelay5_DSTATE/*@>411e4*/ = /*@>52af2*/true;
+/* InitializeConditions for UnitDelay: '<S386>/Unit Delay6' */
+/*@>54448*/DWork./*@>5503e*/UnitDelay6_DSTATE/*@>411f0*/ = /*@>52af3*/true;
+/* SystemInitialize for Enabled SubSystem: '<S386>/KeyCycle' */
+/* SystemInitialize for Atomic SubSystem: '<S389>/ER_xxxx' */
+/* InitializeConditions for UnitDelay: '<S398>/Unit Delay' */
+/*@>5444e*/DWork./*@>55041*/UnitDelay_DSTATE_lm/*@>4121d*/ = /*@>52af4*/true;
+/* End of SystemInitialize for SubSystem: '<S389>/ER_xxxx' */
+
+/* SystemInitialize for Atomic SubSystem: '<S389>/ER_xxxx1' */
+/* InitializeConditions for UnitDelay: '<S399>/Unit Delay' */
+/*@>54454*/DWork./*@>55044*/UnitDelay_DSTATE_nu/*@>41229*/ = /*@>52af5*/true;
+/* End of SystemInitialize for SubSystem: '<S389>/ER_xxxx1' */
+/* End of SystemInitialize for SubSystem: '<S386>/KeyCycle' */
+%closefile cfgTxt
+%<cfgTxt>
+%endfunction
+%function SystemInitializeFcnProtoType(block, system) Output
+%assign fcnProtoType = ""
+%openfile fcnProtoType
+static void SystemInitialize(\
+%assign comma = ""
+%closefile fcnProtoType
+%<SLibCG_SetFcnProtoType(5, 1, fcnProtoType)>
+%endfunction

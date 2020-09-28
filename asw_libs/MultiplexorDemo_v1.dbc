@@ -1,0 +1,484 @@
+VERSION "0.5"
+
+
+NS_ : 
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+	SG_MUL_VAL_
+
+BS_:
+
+BU_: MCU VCU
+
+
+BO_ 1 MultiplexedMessage: 8 VCU
+ SG_ MultiplexedSignal001 m1 : 32|16@1- (1,0) [0|0] ""  MCU
+ SG_ MultiplexedSignal002 m2 : 32|16@1- (1,0) [0|0] ""  MCU
+ SG_ MultiplexedSignal003 m3 : 32|16@1- (1,0) [0|0] ""  MCU
+ SG_ MultiplexedSignal004 m4 : 32|16@1- (1,0) [0|0] ""  MCU
+ SG_ MultiplexedSignal005 m5 : 32|16@1- (1,0) [0|0] ""  MCU
+ SG_ MultiplexedSignal006 m6 : 32|16@1- (1,0) [0|0] ""  MCU
+ SG_ MultiplexedSignal007 m7 : 32|16@1- (1,0) [0|0] ""  MCU
+ SG_ MultiplexedSignal008 m8 : 32|16@1- (1,0) [0|0] ""  MCU
+ SG_ MultiplexedSignal009 m9 : 32|16@1- (1,0) [0|0] ""  MCU
+ SG_ MultiplexedSignal010 m10 : 32|16@1- (1,0) [0|0] ""  MCU
+ SG_ MultiplexedSignal011 m11 : 32|16@1- (1,0) [0|0] ""  MCU
+ SG_ MultiplexedSignal012 m12 : 32|16@1- (1,0) [0|0] ""  MCU
+ SG_ MultiplexedSignal013 m13 : 32|16@1- (1,0) [0|0] ""  MCU
+ SG_ MultiplexedSignal014 m14 : 32|16@1- (1,0) [0|0] ""  MCU
+ SG_ MultiplexedSignal015 m15 : 32|16@1- (1,0) [0|0] ""  MCU
+ SG_ MultiplexedSignal016 m16 : 32|16@1- (1,0) [0|0] ""  MCU
+ SG_ MultiplexedSignal017 m17 : 32|16@1- (1,0) [0|0] ""  MCU
+ SG_ MultiplexedSignal018 m18 : 32|16@1- (1,0) [0|0] ""  MCU
+ SG_ MultiplexedSignal019 m19 : 32|16@1- (1,0) [0|0] ""  MCU
+ SG_ MultiplexedSignal020 m20 : 32|16@1- (1,0) [0|0] ""  MCU
+ SG_ MultiplexedSignal021 m21 : 32|16@1- (1,0) [0|0] ""  MCU
+ SG_ MultiplexedSignal022 m22 : 32|16@1- (1,0) [0|0] ""  MCU
+ SG_ MultiplexedSignal023 m23 : 32|16@1- (1,0) [0|0] ""  MCU
+ SG_ MultiplexedSignal024 m24 : 32|16@1- (1,0) [0|0] ""  MCU
+ SG_ MultiplexedSignal025 m25 : 32|16@1- (1,0) [0|0] ""  MCU
+ SG_ MultiplexedSignal026 m26 : 32|16@1- (1,0) [0|0] ""  MCU
+ SG_ MultiplexedSignal027 m27 : 32|16@1- (1,0) [0|0] ""  MCU
+ SG_ MultiplexedSignal028 m28 : 32|16@1- (1,0) [0|0] ""  MCU
+ SG_ MultiplexedSignal029 m29 : 32|16@1- (1,0) [0|0] ""  MCU
+ SG_ MultiplexedSignal030 m30 : 32|16@1- (1,0) [0|0] ""  MCU
+ SG_ MultiplexedSignal031 m31 : 32|16@1- (1,0) [0|0] ""  MCU
+ SG_ MultiplexedSignal032 m32 : 32|16@1- (1,0) [0|0] ""  MCU
+ SG_ MultiplexedSignal033 m33 : 32|16@1- (1,0) [0|0] ""  MCU
+ SG_ MultiplexedSignal034 m34 : 32|16@1- (1,0) [0|0] ""  MCU
+ SG_ MultiplexedSignal035 m35 : 32|16@1- (1,0) [0|0] ""  MCU
+ SG_ MultiplexedSignal036 m36 : 32|16@1- (1,0) [0|0] ""  MCU
+ SG_ MultiplexedSignal037 m37 : 32|16@1- (1,0) [0|0] ""  MCU
+ SG_ MultiplexedSignal038 m38 : 32|16@1- (1,0) [0|0] ""  MCU
+ SG_ MultiplexedSignal039 m39 : 32|16@1- (1,0) [0|0] ""  MCU
+ SG_ MultiplexedSignal040 m40 : 32|16@1- (1,0) [0|0] ""  MCU
+ SG_ MultiplexedSignal041 m41 : 32|16@1- (1,0) [0|0] ""  MCU
+ SG_ MultiplexedSignal042 m42 : 32|16@1- (1,0) [0|0] ""  MCU
+ SG_ MultiplexedSignal043 m43 : 32|16@1- (1,0) [0|0] ""  MCU
+ SG_ MultiplexedSignal044 m44 : 32|16@1- (1,0) [0|0] ""  MCU
+ SG_ MultiplexedSignal045 m45 : 32|16@1- (1,0) [0|0] ""  MCU
+ SG_ MultiplexedSignal046 m46 : 32|16@1- (1,0) [0|0] ""  MCU
+ SG_ MultiplexedSignal047 m47 : 32|16@1- (1,0) [0|0] ""  MCU
+ SG_ MultiplexedSignal048 m48 : 32|16@1- (1,0) [0|0] ""  MCU
+ SG_ MultiplexedSignal049 m49 : 32|16@1- (1,0) [0|0] ""  MCU
+ SG_ MultiplexedSignal050 m50 : 32|16@1- (1,0) [0|0] ""  MCU
+ SG_ MultiplexedSignal051 m51 : 32|16@1- (1,0) [0|0] ""  MCU
+ SG_ MultiplexedSignal052 m52 : 32|16@1- (1,0) [0|0] ""  MCU
+ SG_ MultiplexedSignal053 m53 : 32|16@1- (1,0) [0|0] ""  MCU
+ SG_ MultiplexedSignal054 m54 : 32|16@1- (1,0) [0|0] ""  MCU
+ SG_ MultiplexedSignal055 m55 : 32|16@1- (1,0) [0|0] ""  MCU
+ SG_ MultiplexedSignal056 m56 : 32|16@1- (1,0) [0|0] ""  MCU
+ SG_ MultiplexedSignal057 m57 : 32|16@1- (1,0) [0|0] ""  MCU
+ SG_ MultiplexedSignal058 m58 : 32|16@1- (1,0) [0|0] ""  MCU
+ SG_ MultiplexedSignal059 m59 : 32|16@1- (1,0) [0|0] ""  MCU
+ SG_ MultiplexedSignal060 m60 : 32|16@1- (1,0) [0|0] ""  MCU
+ SG_ MultiplexedSignal061 m61 : 32|16@1- (1,0) [0|0] ""  MCU
+ SG_ MultiplexedSignal062 m62 : 32|16@1- (1,0) [0|0] ""  MCU
+ SG_ MultiplexedSignal063 m63 : 32|16@1- (1,0) [0|0] ""  MCU
+ SG_ MultiplexedSignal064 m64 : 32|16@1- (1,0) [0|0] ""  MCU
+ SG_ MultiplexedSignal065 m65 : 32|16@1- (1,0) [0|0] ""  MCU
+ SG_ MultiplexedSignal066 m66 : 32|16@1- (1,0) [0|0] ""  MCU
+ SG_ MultiplexedSignal067 m67 : 32|16@1- (1,0) [0|0] ""  MCU
+ SG_ MultiplexedSignal068 m68 : 32|16@1- (1,0) [0|0] ""  MCU
+ SG_ MultiplexedSignal069 m69 : 32|16@1- (1,0) [0|0] ""  MCU
+ SG_ MultiplexedSignal070 m70 : 32|16@1- (1,0) [0|0] ""  MCU
+ SG_ MultiplexedSignal071 m71 : 32|16@1- (1,0) [0|0] ""  MCU
+ SG_ MultiplexedSignal072 m72 : 32|16@1- (1,0) [0|0] ""  MCU
+ SG_ MultiplexedSignal073 m73 : 32|16@1- (1,0) [0|0] ""  MCU
+ SG_ MultiplexedSignal074 m74 : 32|16@1- (1,0) [0|0] ""  MCU
+ SG_ MultiplexedSignal075 m75 : 32|16@1- (1,0) [0|0] ""  MCU
+ SG_ MultiplexedSignal076 m76 : 32|16@1- (1,0) [0|0] ""  MCU
+ SG_ MultiplexedSignal077 m77 : 32|16@1- (1,0) [0|0] ""  MCU
+ SG_ MultiplexedSignal078 m78 : 32|16@1- (1,0) [0|0] ""  MCU
+ SG_ MultiplexedSignal079 m79 : 32|16@1- (1,0) [0|0] ""  MCU
+ SG_ MultiplexedSignal080 m80 : 32|16@1- (1,0) [0|0] ""  MCU
+ SG_ MultiplexedSignal081 m81 : 32|16@1- (1,0) [0|0] ""  MCU
+ SG_ MultiplexedSignal082 m82 : 32|16@1- (1,0) [0|0] ""  MCU
+ SG_ MultiplexedSignal083 m83 : 32|16@1- (1,0) [0|0] ""  MCU
+ SG_ MultiplexedSignal084 m84 : 32|16@1- (1,0) [0|0] ""  MCU
+ SG_ MultiplexedSignal085 m85 : 32|16@1- (1,0) [0|0] ""  MCU
+ SG_ MultiplexedSignal086 m86 : 32|16@1- (1,0) [0|0] ""  MCU
+ SG_ MultiplexedSignal087 m87 : 32|16@1- (1,0) [0|0] ""  MCU
+ SG_ MultiplexedSignal088 m88 : 32|16@1- (1,0) [0|0] ""  MCU
+ SG_ MultiplexedSignal089 m89 : 32|16@1- (1,0) [0|0] ""  MCU
+ SG_ MultiplexedSignal090 m90 : 32|16@1- (1,0) [0|0] ""  MCU
+ SG_ MultiplexedSignal091 m91 : 32|16@1- (1,0) [0|0] ""  MCU
+ SG_ MultiplexedSignal092 m92 : 32|16@1- (1,0) [0|0] ""  MCU
+ SG_ MultiplexedSignal093 m93 : 32|16@1- (1,0) [0|0] ""  MCU
+ SG_ MultiplexedSignal094 m94 : 32|16@1- (1,0) [0|0] ""  MCU
+ SG_ MultiplexedSignal095 m95 : 32|16@1- (1,0) [0|0] ""  MCU
+ SG_ MultiplexedSignal096 m96 : 32|16@1- (1,0) [0|0] ""  MCU
+ SG_ MultiplexedSignal097 m97 : 32|16@1- (1,0) [0|0] ""  MCU
+ SG_ MultiplexedSignal098 m98 : 32|16@1- (1,0) [0|0] ""  MCU
+ SG_ MultiplexedSignal099 m99 : 32|16@1- (1,0) [0|0] ""  MCU
+ SG_ MultiplexedSignal100 m100 : 32|16@1- (1,0) [0|0] ""  MCU
+ SG_ MultiplexedSignal101 m101 : 32|16@1- (1,0) [0|0] ""  MCU
+ SG_ MultiplexedSignal102 m102 : 32|16@1- (1,0) [0|0] ""  MCU
+ SG_ MultiplexedSignal103 m103 : 32|16@1- (1,0) [0|0] ""  MCU
+ SG_ MultiplexedSignal104 m104 : 32|16@1- (1,0) [0|0] ""  MCU
+ SG_ MultiplexedSignal105 m105 : 32|16@1- (1,0) [0|0] ""  MCU
+ SG_ MultiplexedSignal106 m106 : 32|16@1- (1,0) [0|0] ""  MCU
+ SG_ MultiplexedSignal107 m107 : 32|16@1- (1,0) [0|0] ""  MCU
+ SG_ MultiplexedSignal108 m108 : 32|16@1- (1,0) [0|0] ""  MCU
+ SG_ MultiplexedSignal109 m109 : 32|16@1- (1,0) [0|0] ""  MCU
+ SG_ MultiplexedSignal110 m110 : 32|16@1- (1,0) [0|0] ""  MCU
+ SG_ MultiplexedSignal111 m111 : 32|16@1- (1,0) [0|0] ""  MCU
+ SG_ MultiplexedSignal112 m112 : 32|16@1- (1,0) [0|0] ""  MCU
+ SG_ MultiplexedSignal113 m113 : 32|16@1- (1,0) [0|0] ""  MCU
+ SG_ MultiplexedSignal114 m114 : 32|16@1- (1,0) [0|0] ""  MCU
+ SG_ MultiplexedSignal115 m115 : 32|16@1- (1,0) [0|0] ""  MCU
+ SG_ MultiplexedSignal116 m116 : 32|16@1- (1,0) [0|0] ""  MCU
+ SG_ MultiplexedSignal117 m117 : 32|16@1- (1,0) [0|0] ""  MCU
+ SG_ MultiplexedSignal118 m118 : 32|16@1- (1,0) [0|0] ""  MCU
+ SG_ MultiplexedSignal119 m119 : 32|16@1- (1,0) [0|0] ""  MCU
+ SG_ MultiplexedSignal120 m120 : 32|16@1- (1,0) [0|0] ""  MCU
+ SG_ MultiplexedSignal121 m121 : 32|16@1- (1,0) [0|0] ""  MCU
+ SG_ MultiplexedSignal122 m122 : 32|16@1- (1,0) [0|0] ""  MCU
+ SG_ MultiplexedSignal123 m123 : 32|16@1- (1,0) [0|0] ""  MCU
+ SG_ MultiplexedSignal124 m124 : 32|16@1- (1,0) [0|0] ""  MCU
+ SG_ MultiplexedSignal125 m125 : 32|16@1- (1,0) [0|0] ""  MCU
+ SG_ MultiplexedSignal126 m126 : 32|16@1- (1,0) [0|0] ""  MCU
+ SG_ MultiplexedSignal127 m127 : 32|16@1- (1,0) [0|0] ""  MCU
+ SG_ MultiplexedSignal128 m128 : 32|16@1- (1,0) [0|0] ""  MCU
+ SG_ MultiplexedSignal129 m129 : 32|16@1- (1,0) [0|0] ""  MCU
+ SG_ MultiplexedSignal130 m130 : 32|16@1- (1,0) [0|0] ""  MCU
+ SG_ MultiplexedSignal131 m131 : 32|16@1- (1,0) [0|0] ""  MCU
+ SG_ MultiplexedSignal132 m132 : 32|16@1- (1,0) [0|0] ""  MCU
+ SG_ MultiplexedSignal133 m133 : 32|16@1- (1,0) [0|0] ""  MCU
+ SG_ MultiplexedSignal134 m134 : 32|16@1- (1,0) [0|0] ""  MCU
+ SG_ MultiplexedSignal135 m135 : 32|16@1- (1,0) [0|0] ""  MCU
+ SG_ MultiplexedSignal136 m136 : 32|16@1- (1,0) [0|0] ""  MCU
+ SG_ MultiplexedSignal137 m137 : 32|16@1- (1,0) [0|0] ""  MCU
+ SG_ MultiplexedSignal138 m138 : 32|16@1- (1,0) [0|0] ""  MCU
+ SG_ MultiplexedSignal139 m139 : 32|16@1- (1,0) [0|0] ""  MCU
+ SG_ MultiplexedSignal140 m140 : 32|16@1- (1,0) [0|0] ""  MCU
+ SG_ MultiplexedSignal141 m141 : 32|16@1- (1,0) [0|0] ""  MCU
+ SG_ MultiplexedSignal142 m142 : 32|16@1- (1,0) [0|0] ""  MCU
+ SG_ MultiplexedSignal143 m143 : 32|16@1- (1,0) [0|0] ""  MCU
+ SG_ MultiplexedSignal144 m144 : 32|16@1- (1,0) [0|0] ""  MCU
+ SG_ MultiplexedSignal145 m145 : 32|16@1- (1,0) [0|0] ""  MCU
+ SG_ MultiplexedSignal146 m146 : 32|16@1- (1,0) [0|0] ""  MCU
+ SG_ MultiplexedSignal147 m147 : 32|16@1- (1,0) [0|0] ""  MCU
+ SG_ MultiplexedSignal148 m148 : 32|16@1- (1,0) [0|0] ""  MCU
+ SG_ MultiplexedSignal149 m149 : 32|16@1- (1,0) [0|0] ""  MCU
+ SG_ MultiplexedSignal150 m150 : 32|16@1- (1,0) [0|0] ""  MCU
+ SG_ MultiplexedSignal151 m151 : 32|16@1- (1,0) [0|0] ""  MCU
+ SG_ MultiplexedSignal152 m152 : 32|16@1- (1,0) [0|0] ""  MCU
+ SG_ MultiplexedSignal153 m153 : 32|16@1- (1,0) [0|0] ""  MCU
+ SG_ MultiplexedSignal154 m154 : 32|16@1- (1,0) [0|0] ""  MCU
+ SG_ MultiplexedSignal155 m155 : 32|16@1- (1,0) [0|0] ""  MCU
+ SG_ MultiplexedSignal156 m156 : 32|16@1- (1,0) [0|0] ""  MCU
+ SG_ MultiplexedSignal157 m157 : 32|16@1- (1,0) [0|0] ""  MCU
+ SG_ MultiplexedSignal158 m158 : 32|16@1- (1,0) [0|0] ""  MCU
+ SG_ MultiplexedSignal159 m159 : 32|16@1- (1,0) [0|0] ""  MCU
+ SG_ MultiplexedSignal160 m160 : 32|16@1- (1,0) [0|0] ""  MCU
+ SG_ MultiplexedSignal161 m161 : 32|16@1- (1,0) [0|0] ""  MCU
+ SG_ MultiplexedSignal162 m162 : 32|16@1- (1,0) [0|0] ""  MCU
+ SG_ MultiplexedSignal163 m163 : 32|16@1- (1,0) [0|0] ""  MCU
+ SG_ MultiplexedSignal164 m164 : 32|16@1- (1,0) [0|0] ""  MCU
+ SG_ MultiplexedSignal165 m165 : 32|16@1- (1,0) [0|0] ""  MCU
+ SG_ MultiplexedSignal166 m166 : 32|16@1- (1,0) [0|0] ""  MCU
+ SG_ MultiplexedSignal167 m167 : 32|16@1- (1,0) [0|0] ""  MCU
+ SG_ MultiplexedSignal168 m168 : 32|16@1- (1,0) [0|0] ""  MCU
+ SG_ MultiplexedSignal169 m169 : 32|16@1- (1,0) [0|0] ""  MCU
+ SG_ MultiplexedSignal170 m170 : 32|16@1- (1,0) [0|0] ""  MCU
+ SG_ MultiplexedSignal171 m171 : 32|16@1- (1,0) [0|0] ""  MCU
+ SG_ MultiplexedSignal172 m172 : 32|16@1- (1,0) [0|0] ""  MCU
+ SG_ MultiplexedSignal173 m173 : 32|16@1- (1,0) [0|0] ""  MCU
+ SG_ MultiplexedSignal174 m174 : 32|16@1- (1,0) [0|0] ""  MCU
+ SG_ MultiplexedSignal175 m175 : 32|16@1- (1,0) [0|0] ""  MCU
+ SG_ MultiplexedSignal176 m176 : 32|16@1- (1,0) [0|0] ""  MCU
+ SG_ MultiplexedSignal177 m177 : 32|16@1- (1,0) [0|0] ""  MCU
+ SG_ MultiplexedSignal178 m178 : 32|16@1- (1,0) [0|0] ""  MCU
+ SG_ MultiplexedSignal179 m179 : 32|16@1- (1,0) [0|0] ""  MCU
+ SG_ MultiplexedSignal180 m180 : 32|16@1- (1,0) [0|0] ""  MCU
+ SG_ MultiplexedSignal181 m181 : 32|16@1- (1,0) [0|0] ""  MCU
+ SG_ MultiplexedSignal182 m182 : 32|16@1- (1,0) [0|0] ""  MCU
+ SG_ MultiplexedSignal183 m183 : 32|16@1- (1,0) [0|0] ""  MCU
+ SG_ MultiplexedSignal184 m184 : 32|16@1- (1,0) [0|0] ""  MCU
+ SG_ MultiplexedSignal185 m185 : 32|16@1- (1,0) [0|0] ""  MCU
+ SG_ MultiplexedSignal186 m186 : 32|16@1- (1,0) [0|0] ""  MCU
+ SG_ MultiplexedSignal187 m187 : 32|16@1- (1,0) [0|0] ""  MCU
+ SG_ MultiplexedSignal188 m188 : 32|16@1- (1,0) [0|0] ""  MCU
+ SG_ MultiplexedSignal189 m189 : 32|16@1- (1,0) [0|0] ""  MCU
+ SG_ MultiplexedSignal190 m190 : 32|16@1- (1,0) [0|0] ""  MCU
+ SG_ MultiplexedSignal191 m191 : 32|16@1- (1,0) [0|0] ""  MCU
+ SG_ MultiplexedSignal192 m192 : 32|16@1- (1,0) [0|0] ""  MCU
+ SG_ MultiplexedSignal193 m193 : 32|16@1- (1,0) [0|0] ""  MCU
+ SG_ MultiplexedSignal194 m194 : 32|16@1- (1,0) [0|0] ""  MCU
+ SG_ MultiplexedSignal195 m195 : 32|16@1- (1,0) [0|0] ""  MCU
+ SG_ MultiplexedSignal196 m196 : 32|16@1- (1,0) [0|0] ""  MCU
+ SG_ MultiplexedSignal197 m197 : 32|16@1- (1,0) [0|0] ""  MCU
+ SG_ MultiplexedSignal198 m198 : 32|16@1- (1,0) [0|0] ""  MCU
+ SG_ MultiplexedSignal199 m199 : 32|16@1- (1,0) [0|0] ""  MCU
+ SG_ MultiplexedSignal200 m200 : 32|16@1- (1,0) [0|0] ""  MCU
+ SG_ MultiplexedSignal201 m201 : 32|16@1- (1,0) [0|0] ""  MCU
+ SG_ MultiplexedSignal202 m202 : 32|16@1- (1,0) [0|0] ""  MCU
+ SG_ MultiplexedSignal203 m203 : 32|16@1- (1,0) [0|0] ""  MCU
+ SG_ MultiplexedSignal204 m204 : 32|16@1- (1,0) [0|0] ""  MCU
+ SG_ MultiplexedSignal205 m205 : 32|16@1- (1,0) [0|0] ""  MCU
+ SG_ MultiplexedSignal206 m206 : 32|16@1- (1,0) [0|0] ""  MCU
+ SG_ MultiplexedSignal207 m207 : 32|16@1- (1,0) [0|0] ""  MCU
+ SG_ MultiplexedSignal208 m208 : 32|16@1- (1,0) [0|0] ""  MCU
+ SG_ MultiplexedSignal209 m209 : 32|16@1- (1,0) [0|0] ""  MCU
+ SG_ MultiplexedSignal210 m210 : 32|16@1- (1,0) [0|0] ""  MCU
+ SG_ MultiplexedSignal211 m211 : 32|16@1- (1,0) [0|0] ""  MCU
+ SG_ MultiplexedSignal212 m212 : 32|16@1- (1,0) [0|0] ""  MCU
+ SG_ MultiplexedSignal213 m213 : 32|16@1- (1,0) [0|0] ""  MCU
+ SG_ MultiplexedSignal214 m214 : 32|16@1- (1,0) [0|0] ""  MCU
+ SG_ MultiplexedSignal215 m215 : 32|16@1- (1,0) [0|0] ""  MCU
+ SG_ MultiplexedSignal216 m216 : 32|16@1- (1,0) [0|0] ""  MCU
+ SG_ MultiplexedSignal217 m217 : 32|16@1- (1,0) [0|0] ""  MCU
+ SG_ MultiplexedSignal218 m218 : 32|16@1- (1,0) [0|0] ""  MCU
+ SG_ MultiplexedSignal219 m219 : 32|16@1- (1,0) [0|0] ""  MCU
+ SG_ MultiplexedSignal220 m220 : 32|16@1- (1,0) [0|0] ""  MCU
+ SG_ MultiplexedSignal221 m221 : 32|16@1- (1,0) [0|0] ""  MCU
+ SG_ MultiplexedSignal222 m222 : 32|16@1- (1,0) [0|0] ""  MCU
+ SG_ MultiplexedSignal223 m223 : 32|16@1- (1,0) [0|0] ""  MCU
+ SG_ MultiplexedSignal224 m224 : 32|16@1- (1,0) [0|0] ""  MCU
+ SG_ MultiplexedSignal225 m225 : 32|16@1- (1,0) [0|0] ""  MCU
+ SG_ MultiplexedSignal226 m226 : 32|16@1- (1,0) [0|0] ""  MCU
+ SG_ MultiplexedSignal227 m227 : 32|16@1- (1,0) [0|0] ""  MCU
+ SG_ MultiplexedSignal228 m228 : 32|16@1- (1,0) [0|0] ""  MCU
+ SG_ MultiplexedSignal229 m229 : 32|16@1- (1,0) [0|0] ""  MCU
+ SG_ MultiplexedSignal230 m230 : 32|16@1- (1,0) [0|0] ""  MCU
+ SG_ MultiplexedSignal231 m231 : 32|16@1- (1,0) [0|0] ""  MCU
+ SG_ MultiplexedSignal232 m232 : 32|16@1- (1,0) [0|0] ""  MCU
+ SG_ MultiplexedSignal233 m233 : 32|16@1- (1,0) [0|0] ""  MCU
+ SG_ MultiplexedSignal234 m234 : 32|16@1- (1,0) [0|0] ""  MCU
+ SG_ MultiplexedSignal235 m235 : 32|16@1- (1,0) [0|0] ""  MCU
+ SG_ MultiplexedSignal236 m236 : 32|16@1- (1,0) [0|0] ""  MCU
+ SG_ MultiplexedSignal237 m237 : 32|16@1- (1,0) [0|0] ""  MCU
+ SG_ MultiplexedSignal238 m238 : 32|16@1- (1,0) [0|0] ""  MCU
+ SG_ MultiplexedSignal239 m239 : 32|16@1- (1,0) [0|0] ""  MCU
+ SG_ MultiplexedSignal240 m240 : 32|16@1- (1,0) [0|0] ""  MCU
+ SG_ MultiplexedSignal241 m241 : 32|16@1- (1,0) [0|0] ""  MCU
+ SG_ MultiplexedSignal242 m242 : 32|16@1- (1,0) [0|0] ""  MCU
+ SG_ MultiplexedSignal243 m243 : 32|16@1- (1,0) [0|0] ""  MCU
+ SG_ MultiplexedSignal244 m244 : 32|16@1- (1,0) [0|0] ""  MCU
+ SG_ MultiplexedSignal245 m245 : 32|16@1- (1,0) [0|0] ""  MCU
+ SG_ MultiplexedSignal246 m246 : 32|16@1- (1,0) [0|0] ""  MCU
+ SG_ MultiplexedSignal247 m247 : 32|16@1- (1,0) [0|0] ""  MCU
+ SG_ MultiplexedSignal248 m248 : 32|16@1- (1,0) [0|0] ""  MCU
+ SG_ MultiplexedSignal249 m249 : 32|16@1- (1,0) [0|0] ""  MCU
+ SG_ MultiplexedSignal250 m250 : 32|16@1- (1,0) [0|0] ""  MCU
+ SG_ MultiplexedSignal251 m251 : 32|16@1- (1,0) [0|0] ""  MCU
+ SG_ MultiplexedSignal252 m252 : 32|16@1- (1,0) [0|0] ""  MCU
+ SG_ MultiplexedSignal253 m253 : 32|16@1- (1,0) [0|0] ""  MCU
+ SG_ MultiplexedSignal254 m254 : 32|16@1- (1,0) [0|0] ""  MCU
+ SG_ MultiplexedSignal255 m255 : 32|16@1- (1,0) [0|0] ""  MCU
+ SG_ MultiplexedSignal256 m256 : 32|16@1- (1,0) [0|0] ""  MCU
+ SG_ MultiplexedSignal257 m257 : 32|16@1- (1,0) [0|0] ""  MCU
+ SG_ MultiplexedSignal258 m258 : 32|16@1- (1,0) [0|0] ""  MCU
+ SG_ MultiplexedSignal259 m259 : 32|16@1- (1,0) [0|0] ""  MCU
+ SG_ MultiplexedSignal260 m260 : 32|16@1- (1,0) [0|0] ""  MCU
+ SG_ MultiplexedSignal261 m261 : 32|16@1- (1,0) [0|0] ""  MCU
+ SG_ MultiplexedSignal262 m262 : 32|16@1- (1,0) [0|0] ""  MCU
+ SG_ MultiplexedSignal263 m263 : 32|16@1- (1,0) [0|0] ""  MCU
+ SG_ MultiplexedSignal264 m264 : 32|16@1- (1,0) [0|0] ""  MCU
+ SG_ MultiplexedSignal265 m265 : 32|16@1- (1,0) [0|0] ""  MCU
+ SG_ MessageMultiplexor M : 0|16@1+ (1,0) [0|65535] ""  MCU
+
+
+
+CM_ "VC to PD CAN bus encompassing messages required for motor control and high level functional logging (motor development signals). It does not encompass diagnostic (including programming and calibration) messages.";
+CM_ BU_ MCU "PD Motor Unit (Front Left)";
+CM_ BU_ VCU "Vehicle Controller";
+CM_ SG_ 1 MessageMultiplexor "Message multiplexor.";
+BA_DEF_ EV_  "GenEnvIsGeneratedDsp" ENUM  "No","Yes";
+BA_DEF_ EV_  "GenEnvMsgOffset" INT 0 2147483647;
+BA_DEF_ EV_  "GenEnvMsgName" STRING ;
+BA_DEF_ EV_  "GenEnvIsGeneratedSnd" ENUM  "No","Yes";
+BA_DEF_ EV_  "GenEnvControlType" ENUM  "NoControl","SliderHoriz","SliderVert","PushButton","Edit","BitmapSwitch";
+BA_DEF_ EV_  "GenEnvAutoGenCtrl" ENUM  "No","Yes";
+BA_DEF_ SG_  "GenSigAltSetting" STRING ;
+BA_DEF_ SG_  "GenSigSendType" ENUM  "Cyclic","OnWrite","OnWriteWithRepetition","OnChange","OnChangeWithRepetition","IfActive","IfActiveWithRepetition";
+BA_DEF_ SG_  "GenSigAutoGenSnd" ENUM  "No","Yes";
+BA_DEF_ SG_  "GenSigAutoGenDsp" ENUM  "No","Yes";
+BA_DEF_ SG_  "GenSigReceiveSetting" STRING ;
+BA_DEF_ SG_  "GenSigEVName" STRING ;
+BA_DEF_ SG_  "GenSigPreSetting" STRING ;
+BA_DEF_ SG_  "GenSigPostSetting" STRING ;
+BA_DEF_ SG_  "GenSigAssignSetting" STRING ;
+BA_DEF_ SG_  "GenSigConditionalSend" STRING ;
+BA_DEF_ SG_  "GenSigPreIfSetting" STRING ;
+BA_DEF_ SG_  "GenSigPostIfSetting" STRING ;
+BA_DEF_ SG_  "NWM-WakeupAllowed" ENUM  "No","Yes";
+BA_DEF_ SG_  "GenSigEnvVarType" ENUM  "int","float","undef";
+BA_DEF_ BO_  "GenMsgFastOnStart" INT 0 100000;
+BA_DEF_ BO_  "GenMsgStartDelayTime" INT 0 100000;
+BA_DEF_ BO_  "GenMsgILSupport" ENUM  "No","Yes";
+BA_DEF_ BO_  "GenMsgCycleTimeFast" INT 2 100000;
+BA_DEF_ BO_  "NmMessage" ENUM  "no","yes";
+BA_DEF_ BO_  "DiagResponse" ENUM  "no","yes";
+BA_DEF_ BO_  "DiagRequest" ENUM  "no","yes";
+BA_DEF_ BO_  "GenMsgDelayTime" INT 1 1000;
+BA_DEF_ BO_  "GenMsgAutoGenSnd" ENUM  "No","Yes";
+BA_DEF_ BO_  "GenMsgAutoGenDsp" ENUM  "No","Yes";
+BA_DEF_ BO_  "GenMsgEVName" STRING ;
+BA_DEF_ BO_  "GenMsgPreSetting" STRING ;
+BA_DEF_ BO_  "GenMsgPostSetting" STRING ;
+BA_DEF_ BO_  "GenMsgConditionalSend" STRING ;
+BA_DEF_ BO_  "GenMsgPreIfSetting" STRING ;
+BA_DEF_ BO_  "GenMsgPostIfSetting" STRING ;
+BA_DEF_ BO_  "GenMsgAltSetting" STRING ;
+BA_DEF_ BO_  "GenMsgNrOfRepetition" INT 0 999999;
+BA_DEF_ BU_  "CANoeStartDelay" INT 0 0;
+BA_DEF_ BU_  "CANoeDrift" INT 0 0;
+BA_DEF_ BU_  "CANoeJitterMin" INT 0 0;
+BA_DEF_ BU_  "CANoeJitterMax" INT 0 0;
+BA_DEF_ BU_  "ECU" STRING ;
+BA_DEF_ BU_  "NodeLayerModules" STRING ;
+BA_DEF_ BU_  "TpAddressingMode" INT 0 3;
+BA_DEF_ BU_  "ILUsed" ENUM  "Yes","No";
+BA_DEF_ BU_  "NmStationAddress" INT 0 63;
+BA_DEF_ BU_  "NmNode" ENUM  "no","yes";
+BA_DEF_ BU_  "TpTxIdentifier" HEX 0 536870911;
+BA_DEF_ BU_  "TpRxIdentifier" HEX 0 536870911;
+BA_DEF_ BU_  "Diagnose-Stationsadresse" HEX 0 255;
+BA_DEF_ BU_  "TpRxMask" HEX 0 65535;
+BA_DEF_ BU_  "TpCanBus" INT 1 2;
+BA_DEF_ BU_  "TpUseFC" INT 0 1;
+BA_DEF_ BU_  "TpNodeBaseAddress" HEX 0 33554431;
+BA_DEF_ BU_  "GenNodSleepTime" INT 0 1000000;
+BA_DEF_ BU_  "GenNodAutoGenSnd" ENUM  "No","Yes";
+BA_DEF_ BU_  "GenNodAutoGenDsp" ENUM  "No","Yes";
+BA_DEF_  "GenNWMSleepTime" INT 0 1000000;
+BA_DEF_  "GenEnvVarEndingDsp" STRING ;
+BA_DEF_  "GenEnvVarEndingSnd" STRING ;
+BA_DEF_  "GenEnvVarPrefix" STRING ;
+BA_DEF_  "NmBaseAddress" HEX 1024 1055;
+BA_DEF_  "GenNWMApCanOff" STRING ;
+BA_DEF_  "GenNWMApCanOn" STRING ;
+BA_DEF_  "GenNWMApCanSleep" STRING ;
+BA_DEF_  "GenNWMGotoMode_Awake" STRING ;
+BA_DEF_  "GenNWMGotoMode_BusSleep" STRING ;
+BA_DEF_  "GenNWMTalkNM" STRING ;
+BA_DEF_  "DbcPartNum" STRING ;
+BA_DEF_  "DbcIssue" STRING ;
+BA_DEF_  "DbcVersion" STRING ;
+BA_DEF_  "DBName" STRING ;
+BA_DEF_  "Baudrate" INT 500000 1000000;
+BA_DEF_  "BusType" STRING ;
+BA_DEF_  "NmType" STRING ;
+BA_DEF_  "Manufacturer" STRING ;
+BA_DEF_ SG_  "GenSigStartValue" INT 0 0;
+BA_DEF_ SG_  "GenSigInactiveValue" INT 0 0;
+BA_DEF_ BO_  "GenMsgCycleTime" INT 0 0;
+BA_DEF_ BO_  "GenMsgSendType" ENUM  "Cyclic","RemoteDataRequest","OnDemand","AsRequired","NotUsed","NotUsed","NotUsed","IfActive","NoMsgSendType","NotUsed";
+BA_DEF_DEF_  "GenEnvIsGeneratedDsp" "No";
+BA_DEF_DEF_  "GenEnvMsgOffset" 0;
+BA_DEF_DEF_  "GenEnvMsgName" "";
+BA_DEF_DEF_  "GenEnvIsGeneratedSnd" "No";
+BA_DEF_DEF_  "GenEnvControlType" "";
+BA_DEF_DEF_  "GenEnvAutoGenCtrl" "No";
+BA_DEF_DEF_  "GenSigAltSetting" "";
+BA_DEF_DEF_  "GenSigSendType" "Cyclic";
+BA_DEF_DEF_  "GenSigAutoGenSnd" "";
+BA_DEF_DEF_  "GenSigAutoGenDsp" "";
+BA_DEF_DEF_  "GenSigReceiveSetting" "";
+BA_DEF_DEF_  "GenSigEVName" "";
+BA_DEF_DEF_  "GenSigPreSetting" "";
+BA_DEF_DEF_  "GenSigPostSetting" "";
+BA_DEF_DEF_  "GenSigAssignSetting" "";
+BA_DEF_DEF_  "GenSigConditionalSend" "";
+BA_DEF_DEF_  "GenSigPreIfSetting" "";
+BA_DEF_DEF_  "GenSigPostIfSetting" "";
+BA_DEF_DEF_  "NWM-WakeupAllowed" "";
+BA_DEF_DEF_  "GenSigEnvVarType" "undef";
+BA_DEF_DEF_  "GenMsgFastOnStart" 0;
+BA_DEF_DEF_  "GenMsgStartDelayTime" 0;
+BA_DEF_DEF_  "GenMsgILSupport" "Yes";
+BA_DEF_DEF_  "GenMsgCycleTimeFast" 100;
+BA_DEF_DEF_  "NmMessage" "no";
+BA_DEF_DEF_  "DiagResponse" "no";
+BA_DEF_DEF_  "DiagRequest" "no";
+BA_DEF_DEF_  "GenMsgDelayTime" 1;
+BA_DEF_DEF_  "GenMsgAutoGenSnd" "";
+BA_DEF_DEF_  "GenMsgAutoGenDsp" "";
+BA_DEF_DEF_  "GenMsgEVName" "";
+BA_DEF_DEF_  "GenMsgPreSetting" "";
+BA_DEF_DEF_  "GenMsgPostSetting" "";
+BA_DEF_DEF_  "GenMsgConditionalSend" "";
+BA_DEF_DEF_  "GenMsgPreIfSetting" "";
+BA_DEF_DEF_  "GenMsgPostIfSetting" "";
+BA_DEF_DEF_  "GenMsgAltSetting" "";
+BA_DEF_DEF_  "GenMsgNrOfRepetition" 0;
+BA_DEF_DEF_  "CANoeStartDelay" 0;
+BA_DEF_DEF_  "CANoeDrift" 0;
+BA_DEF_DEF_  "CANoeJitterMin" 0;
+BA_DEF_DEF_  "CANoeJitterMax" 0;
+BA_DEF_DEF_  "ECU" "";
+BA_DEF_DEF_  "NodeLayerModules" "";
+BA_DEF_DEF_  "TpAddressingMode" 1;
+BA_DEF_DEF_  "ILUsed" "Yes";
+BA_DEF_DEF_  "NmStationAddress" 0;
+BA_DEF_DEF_  "NmNode" "no";
+BA_DEF_DEF_  "TpTxIdentifier" 1;
+BA_DEF_DEF_  "TpRxIdentifier" 1;
+BA_DEF_DEF_  "Diagnose-Stationsadresse" 0;
+BA_DEF_DEF_  "TpRxMask" 255;
+BA_DEF_DEF_  "TpCanBus" 1;
+BA_DEF_DEF_  "TpUseFC" 1;
+BA_DEF_DEF_  "TpNodeBaseAddress" 1536;
+BA_DEF_DEF_  "GenNodSleepTime" 0;
+BA_DEF_DEF_  "GenNodAutoGenSnd" "";
+BA_DEF_DEF_  "GenNodAutoGenDsp" "";
+BA_DEF_DEF_  "GenNWMSleepTime" 0;
+BA_DEF_DEF_  "GenEnvVarEndingDsp" "Dsp_";
+BA_DEF_DEF_  "GenEnvVarEndingSnd" "_";
+BA_DEF_DEF_  "GenEnvVarPrefix" "Env";
+BA_DEF_DEF_  "NmBaseAddress" 1024;
+BA_DEF_DEF_  "GenNWMApCanOff" "apCanOff()";
+BA_DEF_DEF_  "GenNWMApCanOn" "apCanOn()";
+BA_DEF_DEF_  "GenNWMApCanSleep" "apCanSleep()";
+BA_DEF_DEF_  "GenNWMGotoMode_Awake" "GotoMode_Awake()";
+BA_DEF_DEF_  "GenNWMGotoMode_BusSleep" "GotoMode_BusSleep()";
+BA_DEF_DEF_  "GenNWMTalkNM" "TalkNM()";
+BA_DEF_DEF_  "DbcPartNum" "";
+BA_DEF_DEF_  "DbcIssue" "";
+BA_DEF_DEF_  "DbcVersion" "";
+BA_DEF_DEF_  "DBName" "";
+BA_DEF_DEF_  "Baudrate" 500000;
+BA_DEF_DEF_  "BusType" "";
+BA_DEF_DEF_  "NmType" "";
+BA_DEF_DEF_  "Manufacturer" "Protean";
+BA_DEF_DEF_  "GenSigStartValue" 0;
+BA_DEF_DEF_  "GenSigInactiveValue" 0;
+BA_DEF_DEF_  "GenMsgCycleTime" 0;
+BA_DEF_DEF_  "GenMsgSendType" "Cyclic";
+BA_ "DbcPartNum" "D3060011";
+BA_ "DbcIssue" "X04";
+BA_ "Baudrate" 500000;
+BA_ "BusType" "CAN";
+BA_ "NmType" "Protean";
+BA_ "Manufacturer" "Protean";
+BA_ "DbcVersion" "V3.00";
+BA_ "DBName" "VCU_MCU";
+BA_ "GenMsgCycleTime" BO_ 1 100;
+

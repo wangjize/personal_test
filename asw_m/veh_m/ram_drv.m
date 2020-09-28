@@ -1,0 +1,20 @@
+vehDrv_trqReq = EcoObj.Signal;
+vehDrv_trqReq.RTWInfo.Alias = '';
+vehDrv_trqReq.RTWInfo.Alias = '';
+vehDrv_trqReq.Description = '';
+vehDrv_trqReq.RTWInfo.CustomStorageClass = 'Measurement';
+vehDrv_trqReq.Description = '';
+vehDrv_trqReq.Description = '';
+vehDrv_trqReq.Description = '';
+vehDrv_trqReq.Description = '';
+vehDrv_trqReq.DataType = 'DT_trq_Sgl';
+vehDrv_trqReq.Description = '';
+vehDrv_trqReq.Description = '';
+vehDrv_trqReq.DocUnits = '';
+vehDrv_trqReq.Dimensions = -1;
+vehDrv_trqReq.Description = '';
+vehDrv_trqReq.Complexity = 'auto';
+vehDrv_trqReq.SampleTime = -1;
+vehDrv_trqReq.SamplingMode = 'auto';
+vehDrv_trqReq.InitialValue = '';
+

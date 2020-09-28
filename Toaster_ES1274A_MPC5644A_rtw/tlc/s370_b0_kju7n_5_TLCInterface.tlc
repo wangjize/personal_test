@@ -1,0 +1,52 @@
+%implements s370_b0_kju7n_5_TLCInterface "C"
+
+%function getOutputAddr_34_17_5_0_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&/*@<54eef*//*@>54ee9*/B./*@>54ef4*/SwitchInput_ReadKeyOn"
+%endfunction
+
+%function getOutput_34_17_5_0_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "/*@>54f01*/B./*@>54f0d*/SwitchInput_ReadKeyOn"
+%endfunction
+
+%function getInputAddr_21_0_5_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&/*@<54f32*//*@>54f2c*/B./*@>54f37*/LogicAND1"
+%endfunction
+
+%function getInput_21_0_5_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "/*@>54f44*/B./*@>54f50*/LogicAND1"
+%endfunction
+
+%function getInputAddr_29_1_5_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return ""
+%endfunction
+
+%function getInput_29_1_5_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return ""
+%endfunction
+
+%function getInputAddr_31_1_5_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return ""
+%endfunction
+
+%function getInput_31_1_5_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return ""
+%endfunction
+
+%function getOutputAddr_34_17_5_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&/*@<54fc5*//*@>54fbf*/B./*@>54fca*/SwitchInput_ReadKeyOn"
+%endfunction
+
+%function getOutput_34_17_5_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "/*@>54fd7*/B./*@>54fe3*/SwitchInput_ReadKeyOn"
+%endfunction
+

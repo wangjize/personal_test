@@ -1,0 +1,323 @@
+VERSION ""
+
+
+NS_ : 
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+	SG_MUL_VAL_
+
+BS_:
+
+BU_: HCU BMS MCU
+
+
+BO_ 2147495937 Test_S_3: 8 Vector__XXX
+ SG_ Test_U82 : 40|8@1+ (0.5,-10) [-10|117.5] "" Vector__XXX
+ SG_ Test_S162 : 48|16@1- (0.5,0) [-16384|16383.5] "" Vector__XXX
+ SG_ Test_S24 : 16|24@1- (2,1) [0|0] "" Vector__XXX
+ SG_ Test_S12 : 0|12@1- (0.5,1) [0|0] "" Vector__XXX
+
+BO_ 2147495936 Test_S_2: 8 HCU
+ SG_ Test_U8 : 40|8@1+ (-0.5,-10) [-137.5|-10] "" Vector__XXX
+ SG_ Test_S16 : 48|16@1- (-0.5,0) [-9|0] "" Vector__XXX
+ SG_ Test_S24 : 16|24@1- (2,1) [0|0] "" Vector__XXX
+ SG_ Test_S12 : 0|12@1- (0.5,1) [0|0] "" Vector__XXX
+
+BO_ 534 MCU_STATUS_4: 8 MCU
+ SG_ LiveCounter4 : 63|4@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ MotorRotationCount : 55|8@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ DCVoltage : 39|16@0+ (1,0) [0|65535] "" Vector__XXX
+ SG_ IPMError : 8|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ UnderVoltageError : 9|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ Under12vVoltageError : 10|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ InverterOverTemperatureWarning : 11|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ WindingOverTemperatureWarning : 12|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ UnderVoltageWarning : 13|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ DC_Current : 23|16@0+ (1,-1000) [-1000|1000] "A" Vector__XXX
+ SG_ OverVoltageWarning : 14|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ CANCommunicationError : 7|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ WindingTemperatureSensorError : 6|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ ResolverError : 5|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ InverterOverTemperatureError : 4|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ WindingOverTemperatureError : 3|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ OverSpeedError : 2|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ OverCurrentError : 1|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ OverVoltageError : 0|1@0+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 275 HCU_COMMAND: 8 HCU
+ SG_ Demand_Speed : 55|16@0+ (1,-15000) [0|0] "" Vector__XXX
+ SG_ Demand_Torque : 37|14@0+ (1,-5000) [0|0] "" Vector__XXX
+ SG_ FaultReset : 39|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ Demand_LimitValid : 38|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ Demand_LimitLow : 19|12@0+ (4,0) [0|0] "" Vector__XXX
+ SG_ Demand_LimitHigh : 15|12@0+ (4,0) [0|0] "" Vector__XXX
+ SG_ Live_Counter : 7|4@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ Control_Mode : 3|3@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ MCU_Enable : 0|1@0+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 533 MCU_STATUS_5: 8 MCU
+ SG_ LiveCounter4 : 63|4@0+ (1,0) [0|15] "" Vector__XXX
+ SG_ HardwareErrorCode6 : 47|8@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ HardwareErrorCode5 : 39|8@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ HardwareErrorCode4 : 31|8@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ HardwareErrorCode3 : 23|8@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ HardwareErrorCode2 : 15|8@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ HardwareErrorCode1 : 7|8@0+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 802 BMS_HCU_3: 7 BMS
+ SG_ OverVoltageSts : 50|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ OverCurrentSts : 49|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ HVILSts : 5|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ batteryPackSts : 4|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ BMS_Energy : 31|16@0+ (0.01,0) [0|200] "" Vector__XXX
+ SG_ BMS_Capacity : 15|16@0+ (0.01,0) [0|655.35] "" Vector__XXX
+ SG_ BMS_VCU_3_Heatbeat : 3|4@0+ (1,0) [0|15] "" Vector__XXX
+
+BO_ 804 BMS_HCU_2: 8 BMS
+ SG_ BMS_HeatSysSts : 9|2@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ BMS_NegIsoR : 63|8@0+ (10,0) [0|2550] "k¦¸" Vector__XXX
+ SG_ BMS_SustDischgPwrAllwd : 39|8@0+ (1,0) [0|200] "kW" Vector__XXX
+ SG_ BMS_SustChgPwrAllwd : 23|8@0+ (1,-200) [-200|0] "kW" Vector__XXX
+ SG_ BMS_PrechgRlySts : 4|1@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ BMS_PosRlySts : 3|1@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ BMS_PosIsoR : 55|8@0+ (10,0) [0|2550] "k¦¸" Vector__XXX
+ SG_ BMS_NegRlySts : 5|1@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ BMS_MoisSts : 15|4@0+ (10,0) [0|15] "%" Vector__XXX
+ SG_ BMS_InstDischgPwrAllwd : 47|8@0+ (1,0) [0|200] "kW" Vector__XXX
+ SG_ BMS_InstChgPwrAllwd : 31|8@0+ (1,-200) [-200|0] "kW" Vector__XXX
+ SG_ BMS_CoolSysSts : 11|2@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ BMS_ChgSts : 2|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ BMS_ChgrRlySts : 6|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ BMS_ChgCabSts : 0|1@0+ (1,0) [0|1] "" Vector__XXX
+
+BO_ 803 BMS_HCU_1: 8 BMS
+ SG_ BMS_LTemp : 63|8@0+ (1,-40) [-40|200] "¡æ" Vector__XXX
+ SG_ BMS_HTemp : 55|8@0+ (1,-40) [-40|200] "¡æ" Vector__XXX
+ SG_ BMS_PackCurr : 39|16@0+ (1,-1000) [-1000|1000] "A" Vector__XXX
+ SG_ BMS_PackVolt : 23|16@0+ (1,0) [0|800] "V" Vector__XXX
+ SG_ BMS_SOH : 15|8@0+ (1,0) [0|100] "%" Vector__XXX
+ SG_ BMS_SelfChkSts : 7|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ BMS_HVConSts : 5|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ BMS_PrechgSts : 4|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ BMS_VCU_1_Heatbeat : 3|4@0+ (1,0) [0|15] "" Vector__XXX
+
+BO_ 785 BMS_HCU_0: 8 BMS
+ SG_ DC_CC : 3|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ AC_CC : 2|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ BMS_CellLVolt : 55|16@0+ (0.00390625,0) [0|255.99609375] "V" Vector__XXX
+ SG_ BMS_CellLVoltNum : 47|8@0+ (1,0) [0|255] "" Vector__XXX
+ SG_ BMS_CellHVolt : 31|16@0+ (0.00390625,0) [0|0] "V" Vector__XXX
+ SG_ BMS_CellHVoltNum : 23|8@0+ (1,0) [0|255] "" Vector__XXX
+ SG_ BMS_SOC : 15|8@0+ (0.5,0) [0|100] "%" Vector__XXX
+ SG_ BMS_SysFltLvl : 7|3@0+ (1,0) [0|4] "" Vector__XXX
+ SG_ BMS_Md : 4|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ BMS_VCU_0_Heatbeat : 1|2@0+ (1,0) [0|3] "" Vector__XXX
+
+BO_ 288 HCU_BMS_0: 1 HCU
+ SG_ VCU_ChrageRly_Status : 5|1@0+ (1,0) [0|0] ""  BMS
+ SG_ VCU_BMS_PwrCmd : 4|1@0+ (1,0) [0|1] ""  BMS
+ SG_ VCU_BMS_0_Heartbeat : 3|4@0+ (1,0) [0|15] ""  BMS
+
+BO_ 530 MCU_STATUS_2: 8 MCU
+ SG_ FailGrade : 59|4@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ TorqueLimitLow : 39|16@0+ (1,-5000) [-5000|0] "" Vector__XXX
+ SG_ TorqueLimitHigh : 23|16@0+ (1,0) [0|5000] "Nm" Vector__XXX
+ SG_ MotorTemperature : 7|8@0+ (1,-40) [-40|215] "¡æ" Vector__XXX
+ SG_ LiveCounter1 : 63|4@0+ (1,0) [0|15] "" Vector__XXX
+ SG_ MCUTemperature : 15|8@0+ (1,-40) [-40|215] "¡æ" Vector__XXX
+
+BO_ 531 MCU_STATUS_3: 8 MCU
+ SG_ DC_voltageLiimitLow : 55|16@0+ (0.1,-750) [0|0] "" Vector__XXX
+ SG_ DC_voltageLiimitHigh : 39|16@0+ (0.1,0) [0|0] "" Vector__XXX
+ SG_ DC_CurrentLiimitLow : 23|16@0+ (0.1,-400) [0|0] "" Vector__XXX
+ SG_ DC_CurrentLiimitHigh : 7|16@0+ (0.1,0) [0|0] "" Vector__XXX
+
+BO_ 529 MCU_STATUS_1: 8 MCU
+ SG_ IGBT_Enable_Feedback : 54|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ ActiveDischargeEnable : 53|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ MoterACCurrent : 39|16@0+ (0.1,0) [0|1000] "" Vector__XXX
+ SG_ Precharge_Allow : 52|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ WorkMode : 59|4@0+ (1,0) [0|8] "" Vector__XXX
+ SG_ LiveCounter0 : 63|4@0+ (1,0) [0|15] "" Vector__XXX
+ SG_ MoterTorque : 23|16@0+ (1,-5000) [-5000|5000] "Nm" Vector__XXX
+ SG_ MoterSpeed : 7|16@0+ (1,-15000) [-15000|15000] "rpm" Vector__XXX
+
+
+
+BA_DEF_ EV_  "GenEnvAutoGenCtrl" ENUM  "No","Yes";
+BA_DEF_ EV_  "GenEnvControlType" ENUM  "NoControl","SliderHoriz","SliderVert","PushButton","Edit","BitmapSwitch";
+BA_DEF_ EV_  "GenEnvIsGeneratedSnd" ENUM  "No","Yes";
+BA_DEF_ EV_  "GenEnvMsgName" STRING ;
+BA_DEF_ EV_  "GenEnvMsgOffset" INT 0 2147483647;
+BA_DEF_ EV_  "GenEnvIsGeneratedDsp" ENUM  "No","Yes";
+BA_DEF_ SG_  "GenSigEnvVarType" ENUM  "int","float","undef";
+BA_DEF_ SG_  "NWM-WakeupAllowed" ENUM  "No","Yes";
+BA_DEF_ SG_  "GenSigPostIfSetting" STRING ;
+BA_DEF_ SG_  "GenSigPreIfSetting" STRING ;
+BA_DEF_ SG_  "GenSigConditionalSend" STRING ;
+BA_DEF_ SG_  "GenSigAssignSetting" STRING ;
+BA_DEF_ SG_  "GenSigPostSetting" STRING ;
+BA_DEF_ SG_  "GenSigPreSetting" STRING ;
+BA_DEF_ SG_  "GenSigEVName" STRING ;
+BA_DEF_ SG_  "GenSigReceiveSetting" STRING ;
+BA_DEF_ SG_  "GenSigAutoGenDsp" ENUM  "No","Yes";
+BA_DEF_ SG_  "GenSigStartValue" FLOAT 0 100000000000;
+BA_DEF_ SG_  "GenSigInactiveValue" INT 0 100000;
+BA_DEF_ SG_  "GenSigAutoGenSnd" ENUM  "No","Yes";
+BA_DEF_ SG_  "GenSigSendType" ENUM  "Cyclic","OnWrite","OnWriteWithRepetition","OnChange","OnChangeWithRepetition","IfActive","IfActiveWithRepetition";
+BA_DEF_ SG_  "GenSigAltSetting" STRING ;
+BA_DEF_ BO_  "GenMsgNrOfRepetition" INT 0 999999;
+BA_DEF_ BO_  "GenMsgAltSetting" STRING ;
+BA_DEF_ BO_  "GenMsgPostIfSetting" STRING ;
+BA_DEF_ BO_  "GenMsgPreIfSetting" STRING ;
+BA_DEF_ BO_  "GenMsgConditionalSend" STRING ;
+BA_DEF_ BO_  "GenMsgPostSetting" STRING ;
+BA_DEF_ BO_  "GenMsgPreSetting" STRING ;
+BA_DEF_ BO_  "GenMsgEVName" STRING ;
+BA_DEF_ BO_  "GenMsgAutoGenDsp" ENUM  "No","Yes";
+BA_DEF_ BO_  "GenMsgAutoGenSnd" ENUM  "No","Yes";
+BA_DEF_ BO_  "GenMsgDelayTime" INT 1 1000;
+BA_DEF_ BO_  "GenMsgCycleTime" INT 2 50000;
+BA_DEF_ BO_  "GenMsgSendType" ENUM  "Cyclic","not_used","not_used","not_used","not_used","Cyclic","not_used","IfActive";
+BA_DEF_ BO_  "DiagRequest" ENUM  "no","yes";
+BA_DEF_ BO_  "DiagResponse" ENUM  "no","yes";
+BA_DEF_ BO_  "NmMessage" ENUM  "no","yes";
+BA_DEF_ BO_  "GenMsgCycleTimeFast" INT 2 100000;
+BA_DEF_ BO_  "GenMsgILSupport" ENUM  "No","Yes";
+BA_DEF_ BO_  "GenMsgStartDelayTime" INT 0 100000;
+BA_DEF_ BO_  "GenMsgFastOnStart" INT 0 100000;
+BA_DEF_ BU_  "GenNodAutoGenDsp" ENUM  "No","Yes";
+BA_DEF_ BU_  "GenNodAutoGenSnd" ENUM  "No","Yes";
+BA_DEF_ BU_  "GenNodSleepTime" INT 0 1000000;
+BA_DEF_ BU_  "TpNodeBaseAddress" HEX 0 33554431;
+BA_DEF_ BU_  "TpUseFC" INT 0 1;
+BA_DEF_ BU_  "TpCanBus" INT 1 2;
+BA_DEF_ BU_  "TpRxMask" HEX 0 65535;
+BA_DEF_ BU_  "Diagnose-Stationsadresse" HEX 0 255;
+BA_DEF_ BU_  "TpRxIdentifier" HEX 0 536870911;
+BA_DEF_ BU_  "TpTxIdentifier" HEX 0 536870911;
+BA_DEF_ BU_  "NmNode" ENUM  "no","yes";
+BA_DEF_ BU_  "NmStationAddress" INT 0 63;
+BA_DEF_ BU_  "ILUsed" ENUM  "Yes","No";
+BA_DEF_ BU_  "TpAddressingMode" INT 0 3;
+BA_DEF_  "GenNWMTalkNM" STRING ;
+BA_DEF_  "GenNWMGotoMode_BusSleep" STRING ;
+BA_DEF_  "GenNWMGotoMode_Awake" STRING ;
+BA_DEF_  "GenNWMApCanSleep" STRING ;
+BA_DEF_  "GenNWMApCanOn" STRING ;
+BA_DEF_  "GenNWMApCanOff" STRING ;
+BA_DEF_  "NmBaseAddress" HEX 1024 1055;
+BA_DEF_  "GenEnvVarPrefix" STRING ;
+BA_DEF_  "GenEnvVarEndingSnd" STRING ;
+BA_DEF_  "GenEnvVarEndingDsp" STRING ;
+BA_DEF_  "GenNWMSleepTime" INT 0 1000000;
+BA_DEF_  "DBName" STRING ;
+BA_DEF_  "BusType" STRING ;
+BA_DEF_ BU_  "NodeLayerModules" STRING ;
+BA_DEF_ BU_  "ECU" STRING ;
+BA_DEF_ BU_  "CANoeJitterMax" INT 0 0;
+BA_DEF_ BU_  "CANoeJitterMin" INT 0 0;
+BA_DEF_ BU_  "CANoeDrift" INT 0 0;
+BA_DEF_ BU_  "CANoeStartDelay" INT 0 0;
+BA_DEF_DEF_  "GenEnvAutoGenCtrl" "No";
+BA_DEF_DEF_  "GenEnvControlType" "";
+BA_DEF_DEF_  "GenEnvIsGeneratedSnd" "No";
+BA_DEF_DEF_  "GenEnvMsgName" "";
+BA_DEF_DEF_  "GenEnvMsgOffset" 0;
+BA_DEF_DEF_  "GenEnvIsGeneratedDsp" "No";
+BA_DEF_DEF_  "GenSigEnvVarType" "undef";
+BA_DEF_DEF_  "NWM-WakeupAllowed" "";
+BA_DEF_DEF_  "GenSigPostIfSetting" "";
+BA_DEF_DEF_  "GenSigPreIfSetting" "";
+BA_DEF_DEF_  "GenSigConditionalSend" "";
+BA_DEF_DEF_  "GenSigAssignSetting" "";
+BA_DEF_DEF_  "GenSigPostSetting" "";
+BA_DEF_DEF_  "GenSigPreSetting" "";
+BA_DEF_DEF_  "GenSigEVName" "";
+BA_DEF_DEF_  "GenSigReceiveSetting" "";
+BA_DEF_DEF_  "GenSigAutoGenDsp" "";
+BA_DEF_DEF_  "GenSigStartValue" 0;
+BA_DEF_DEF_  "GenSigInactiveValue" 0;
+BA_DEF_DEF_  "GenSigAutoGenSnd" "";
+BA_DEF_DEF_  "GenSigSendType" "Cyclic";
+BA_DEF_DEF_  "GenSigAltSetting" "";
+BA_DEF_DEF_  "GenMsgNrOfRepetition" 0;
+BA_DEF_DEF_  "GenMsgAltSetting" "";
+BA_DEF_DEF_  "GenMsgPostIfSetting" "";
+BA_DEF_DEF_  "GenMsgPreIfSetting" "";
+BA_DEF_DEF_  "GenMsgConditionalSend" "";
+BA_DEF_DEF_  "GenMsgPostSetting" "";
+BA_DEF_DEF_  "GenMsgPreSetting" "";
+BA_DEF_DEF_  "GenMsgEVName" "";
+BA_DEF_DEF_  "GenMsgAutoGenDsp" "";
+BA_DEF_DEF_  "GenMsgAutoGenSnd" "";
+BA_DEF_DEF_  "GenMsgDelayTime" 1;
+BA_DEF_DEF_  "GenMsgCycleTime" 2;
+BA_DEF_DEF_  "GenMsgSendType" "not_used";
+BA_DEF_DEF_  "DiagRequest" "no";
+BA_DEF_DEF_  "DiagResponse" "no";
+BA_DEF_DEF_  "NmMessage" "no";
+BA_DEF_DEF_  "GenMsgCycleTimeFast" 100;
+BA_DEF_DEF_  "GenMsgILSupport" "Yes";
+BA_DEF_DEF_  "GenMsgStartDelayTime" 0;
+BA_DEF_DEF_  "GenMsgFastOnStart" 0;
+BA_DEF_DEF_  "GenNodAutoGenDsp" "";
+BA_DEF_DEF_  "GenNodAutoGenSnd" "";
+BA_DEF_DEF_  "GenNodSleepTime" 0;
+BA_DEF_DEF_  "TpNodeBaseAddress" 1536;
+BA_DEF_DEF_  "TpUseFC" 1;
+BA_DEF_DEF_  "TpCanBus" 1;
+BA_DEF_DEF_  "TpRxMask" 255;
+BA_DEF_DEF_  "Diagnose-Stationsadresse" 0;
+BA_DEF_DEF_  "TpRxIdentifier" 1;
+BA_DEF_DEF_  "TpTxIdentifier" 1;
+BA_DEF_DEF_  "NmNode" "no";
+BA_DEF_DEF_  "NmStationAddress" 0;
+BA_DEF_DEF_  "ILUsed" "Yes";
+BA_DEF_DEF_  "TpAddressingMode" 1;
+BA_DEF_DEF_  "GenNWMTalkNM" "TalkNM()";
+BA_DEF_DEF_  "GenNWMGotoMode_BusSleep" "GotoMode_BusSleep()";
+BA_DEF_DEF_  "GenNWMGotoMode_Awake" "GotoMode_Awake()";
+BA_DEF_DEF_  "GenNWMApCanSleep" "apCanSleep()";
+BA_DEF_DEF_  "GenNWMApCanOn" "apCanOn()";
+BA_DEF_DEF_  "GenNWMApCanOff" "apCanOff()";
+BA_DEF_DEF_  "NmBaseAddress" 1024;
+BA_DEF_DEF_  "GenEnvVarPrefix" "Env";
+BA_DEF_DEF_  "GenEnvVarEndingSnd" "_";
+BA_DEF_DEF_  "GenEnvVarEndingDsp" "Dsp_";
+BA_DEF_DEF_  "GenNWMSleepTime" 0;
+BA_DEF_DEF_  "DBName" "";
+BA_DEF_DEF_  "BusType" "";
+BA_DEF_DEF_  "NodeLayerModules" "";
+BA_DEF_DEF_  "ECU" "";
+BA_DEF_DEF_  "CANoeJitterMax" 0;
+BA_DEF_DEF_  "CANoeJitterMin" 0;
+BA_DEF_DEF_  "CANoeDrift" 0;
+BA_DEF_DEF_  "CANoeStartDelay" 0;
+BA_ "DBName" "EV_Demo2";
+
